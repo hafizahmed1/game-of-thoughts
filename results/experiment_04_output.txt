@@ -1,0 +1,66 @@
+PROMPT:
+
+Design a simple two-player board game.
+
+Theme: a simple two-player strategy board game about collecting treasure
+
+Provide:
+1. Game name
+2. Objective
+3. Setup
+4. Turn structure
+5. Rules
+6. Winning condition
+
+Ensure the game rules are logically consistent.
+
+
+==================================================
+
+MODEL RESPONSE:
+### Game Name: **Gold Rush Gulch**
+
+**Theme:** Two rival prospectors are racing to scavenge gold nuggets from a dangerous, shifting canyon floor before a storm hits.
+
+---
+
+### 1. Objective
+Be the first player to collect **5 Gold Nuggets** or have the most nuggets when the board is cleared.
+
+---
+
+### 2. Setup
+*   **The Board:** A 5x5 grid of squares.
+*   **The Treasure:** Place 10 Gold Nuggets (tokens) randomly on the squares. No square can hold more than one nugget.
+*   **The Players:** Each player places their "Prospector" pawn on opposite corners of the board.
+*   **The Obstacles:** Place 3 "Rock" tokens on any empty squares to block movement.
+
+---
+
+### 3. Turn Structure
+Players take turns performing **two actions**. You may choose the same action twice or two different actions:
+1.  **Move:** Move your pawn one square (orthogonally—up, down, left, or right). You cannot move through Rocks or the other player.
+2.  **Scavenge:** If you are on a square with a Gold Nugget, pick it up and add it to your inventory.
+3.  **Shift:** Choose one "Rock" token and move it to any adjacent empty square.
+
+---
+
+### 4. Rules
+*   **Collision:** You cannot move into a square occupied by the other player.
+*   **Inventory:** Players keep their collected nuggets in a visible pile beside the board. 
+*   **The Shifting Canyon:** If you end your turn on a square that was adjacent to a Rock, you may move that Rock one space as a *free action* (this does not count toward your two main actions).
+*   **Exhaustion:** If a player is completely blocked by Rocks and the other player, they must skip their turn, and the opponent may choose to move one Rock anywhere on the board to "clear a path."
+
+---
+
+### 5. Winning Condition
+*   **Instant Win:** The game ends immediately when a player collects their **5th Gold Nugget**.
+*   **Board Clear:** If all 10 Gold Nuggets have been collected and nobody has 5, the player with the most nuggets wins. 
+*   **Tie-Breaker:** If both players have 5 nuggets, the player who collected their 5th nugget first wins.
+
+---
+
+### Strategy Tips:
+*   **Blocking:** Use your "Shift" actions to wall off your opponent from clusters of gold.
+*   **Efficiency:** Plan your movement so you end your turn next to a Rock, giving you the free "Shift" action to sabotage your opponent’s path on your next turn.
+*   **Aggression:** Sometimes it is better to move a Rock to block a path than to move your own character.

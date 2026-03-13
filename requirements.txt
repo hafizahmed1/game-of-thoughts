@@ -4,3 +4,4 @@ numpy
 pandas
 matplotlib
 jupyter
+python-docs
