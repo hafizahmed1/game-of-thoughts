@@ -1,0 +1,64 @@
+PROMPT
+
+Design a simple two-player board game.
+
+Theme: a simple two-player strategy board game about collecting treasure
+
+Provide:
+1. Game name
+2. Objective
+3. Setup
+4. Turn structure
+5. Rules
+6. Winning condition
+
+Ensure the game rules are logically consistent.
+
+
+============================================================
+
+MODEL RESPONSE
+### Game Name: **Island Dash**
+
+**Island Dash** is a fast-paced game of movement, risk-taking, and greedy treasure hunting on a 5x5 grid.
+
+---
+
+### 1. Objective
+Be the first player to collect **3 Treasure Chests** and return to your starting corner, or be the player with the most Treasure Chests if the board is cleared.
+
+---
+
+### 2. Setup
+*   **The Board:** A 5x5 grid.
+*   **Treasure:** Place 8 "Treasure" tokens randomly on the board, but leave the four corner squares empty.
+*   **Players:** Each player chooses a corner (Player A at top-left, Player B at bottom-right). Each player starts with their "Collector" pawn on their respective corner square.
+
+---
+
+### 3. Turn Structure
+On each turn, a player performs the following actions in order:
+1.  **Move:** Move your pawn exactly 1 or 2 squares (horizontally or vertically, no diagonals).
+2.  **Action:** If you land on a square with a Treasure, you may pick it up. 
+
+---
+
+### 4. Rules
+*   **Movement:** You cannot move through the other player’s pawn. You cannot move onto a square already occupied by the other player.
+*   **Collecting:** Only one Treasure can be held at a time. 
+*   **Banking:** To "bank" a Treasure, you must move your pawn back to your starting corner square. Once you arrive at your starting square, the treasure is officially yours and is removed from the board/placed in your score pile. You are then free to head back out for more.
+*   **Stealing:** If you end your turn on a square adjacent (horizontally or vertically) to the opponent, you may "Bump" them. The opponent must drop their held treasure on their current square and retreat to an adjacent square of their choice. You cannot steal a treasure that has already been "banked."
+*   **Passing:** You cannot pass your turn. You must move.
+
+---
+
+### 5. Winning Condition
+The game ends immediately when:
+1.  **Victory:** A player successfully banks their 3rd Treasure.
+2.  **Exhaustion:** All 8 Treasures have been banked. In this case, the player with the most banked Treasures wins. If tied, the game is a draw.
+
+---
+
+### Strategy Tips
+*   **The Weight of Greed:** Because you must return to your corner to bank a treasure, you are vulnerable while carrying loot. Do you go for the treasure closest to your base, or risk moving deeper into the board where your opponent might bump you?
+*   **The Bump:** Using your movement to end your turn next to an opponent is a powerful defensive tool. Even if you aren't carrying treasure, "bumping" them can force them to drop their treasure far away from their banking corner.

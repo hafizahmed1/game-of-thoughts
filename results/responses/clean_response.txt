@@ -1,0 +1,7 @@
+Here are the rules for the game:
+
+*   **Setup:** Use a 3x3 grid.
+*   **Turns:** Player One places an "X" in an empty space, followed by Player Two placing an "O" in an empty space.
+*   **Turn Sequence:** Players continue alternating turns until the game ends.
+*   **Winning:** The first player to align three of their symbols (Xs or Os) in a row—horizontally, vertically, or diagonally—wins the game.
+*   **Draw:** If the grid is completely filled and no player has achieved three in a row, the game ends in a draw.

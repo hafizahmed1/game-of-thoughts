@@ -1,0 +1,14 @@
+
+You are given the rules of a board game.
+
+Game rules:
+Tic-Tac-Toe is played on a 3x3 grid.
+Two players take turns placing X and O.
+A player can place a mark anywhere.
+The first player to place three marks in a row wins.
+The game ends when the board is full.
+
+Task:
+1. Explain the rules clearly in bullet points.
+2. Keep all important constraints.
+3. Do not invent new rules.
