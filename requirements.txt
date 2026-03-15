@@ -6,3 +6,5 @@ pandas
 matplotlib
 jupyter
 python-docs
+python-docx
+pypdf
