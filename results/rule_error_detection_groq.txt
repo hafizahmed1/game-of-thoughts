@@ -1,0 +1,61 @@
+BROKEN RULES
+
+Tic-Tac-Toe is played on a 3x3 grid.
+Two players take turns placing X and O.
+A player can place a mark anywhere.
+The first player to place three marks in a row wins.
+The game ends when the board is full.
+
+============================================================
+
+PROMPT
+
+
+You are given the rules of a board game.
+
+Game rules:
+Tic-Tac-Toe is played on a 3x3 grid.
+Two players take turns placing X and O.
+A player can place a mark anywhere.
+The first player to place three marks in a row wins.
+The game ends when the board is full.
+
+Task:
+1. Identify missing or ambiguous rules.
+2. Explain why they are problematic.
+3. Suggest a corrected version of the rules.
+
+
+============================================================
+
+MODEL RESPONSE
+
+### Missing or Ambiguous Rules
+
+1. **Winning Conditions**: The rules only mention winning when a player places three marks in a row. However, it does not specify if this can be horizontally, vertically, or diagonally. This ambiguity could lead to confusion about what constitutes a winning condition.
+2. **Turn Order**: The rules state that two players take turns, but it does not specify who starts first. This could lead to confusion or disputes at the beginning of the game.
+3. **Full Board Condition**: The rules mention that the game ends when the board is full, but it does not specify what happens in this scenario. Is the game a draw, or is there another outcome?
+4. **Mark Placement**: The rules state that a player can place a mark anywhere, but it does not specify if a player can place a mark on a space that is already occupied. This could lead to confusion or disputes during gameplay.
+
+### Problematic Rules
+
+These missing or ambiguous rules are problematic because they can lead to:
+
+* Confusion among players about the game's objectives and rules.
+* Disputes or arguments during gameplay due to unclear expectations.
+* Inconsistent gameplay experiences, as different players may interpret the rules differently.
+
+### Corrected Version of the Rules
+
+Here is a revised version of the rules that addresses the missing or ambiguous rules:
+
+1. **Gameplay**: Tic-Tac-Toe is played on a 3x3 grid.
+2. **Player Turns**: Two players, X and O, take turns placing their marks on the grid. Player X goes first, followed by Player O.
+3. **Mark Placement**: A player can place their mark (X or O) on any empty space on the grid. A player cannot place their mark on a space that is already occupied by their own mark or their opponent's mark.
+4. **Winning Conditions**: A player wins the game when they place three of their marks in a row, either:
+	* Horizontally (across a row).
+	* Vertically (up a column).
+	* Diagonally (from top-left to bottom-right or top-right to bottom-left).
+5. **Game End**: The game ends when a player wins or when the grid is completely filled (i.e., all spaces are occupied). If the grid is completely filled and no player has won, the game is a draw.
+
+These revised rules provide a clear and comprehensive outline of the game, eliminating ambiguity and ensuring a consistent gameplay experience for all players.

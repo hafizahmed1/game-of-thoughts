@@ -1,0 +1,7 @@
+Here are the rules of the Tic-Tac-Toe game in bullet points:
+
+* The game is played on a 3x3 grid.
+* There are two players who take turns placing their marks (X and O) on the grid.
+* A player can place their mark (X or O) anywhere on the grid that is empty.
+* The first player to get three of their marks in a row (horizontally, vertically, or diagonally) wins the game.
+* The game ends when the grid is full, if no player has won by then.

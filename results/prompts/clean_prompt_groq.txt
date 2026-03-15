@@ -1,0 +1,14 @@
+
+You are given the rules of a board game.
+
+Game rules:
+Create a 3x3 grid
+Player One places an X in a space
+Player Two places an O in a space
+Repeat until one player has three Xs or Os in a row or until the grid is filled.
+The player with three in a row wins.  If the grid is filled, the game is a draw.
+
+Task:
+1. Explain the rules clearly in bullet points.
+2. Keep all important constraints.
+3. Do not invent new rules.

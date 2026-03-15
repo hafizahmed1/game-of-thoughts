@@ -1,12 +1,14 @@
 import sys
-import os
 import csv
+import time
+from pathlib import Path
 
-# allow importing from src/
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 from src.prompts.templates import get_valid_move_prompt
-from src.utils.helpers import generate_text
+from src.utils.helpers import generate_text, get_provider
 from src.evaluation.metrics import parse_move
 from src.games.tictactoe import TicTacToe
 
@@ -19,18 +21,27 @@ Three marks in a row wins.
 If the grid fills without a winner, the game is a draw.
 """
 
-
 TEST_CASES = [
-    {"board": [["X","X"," "],[" ","O"," "],[" "," "," "]], "player":"O"},
-    {"board": [["X"," "," "],["O","X"," "],[" "," ","O"]], "player":"X"},
-    {"board": [["O","X","O"],["X"," "," "],[" "," ","X"]], "player":"O"},
-    {"board": [["X","O","X"],["O","X"," "],[" "," ","O"]], "player":"X"},
-    {"board": [[" "," "," "],[" ","X"," "],[" "," ","O"]], "player":"X"},
-    {"board": [["X","O"," "],[" ","O","X"],[" "," "," "]], "player":"X"},
-    {"board": [["X"," ","O"],[" ","X"," "],["O"," "," "]], "player":"O"},
-    {"board": [[" ","O"," "],["X"," ","X"],[" "," ","O"]], "player":"X"},
-    {"board": [["X"," "," "],[" ","O"," "],[" "," ","X"]], "player":"O"},
-    {"board": [["O"," ","X"],[" ","X"," "],[" ","O"," "]], "player":"O"},
+    {"board": [["X", "X", " "], [" ", "O", " "], [" ", " ", " "]], "player": "O"},
+    {"board": [["X", " ", " "], ["O", "X", " "], [" ", " ", "O"]], "player": "X"},
+    {"board": [["O", "X", "O"], ["X", " ", " "], [" ", " ", "X"]], "player": "O"},
+    {"board": [["X", "O", "X"], ["O", "X", " "], [" ", " ", "O"]], "player": "X"},
+    {"board": [[" ", " ", " "], [" ", "X", " "], [" ", " ", "O"]], "player": "X"},
+    {"board": [["X", "O", " "], [" ", "O", "X"], [" ", " ", " "]], "player": "X"},
+    {"board": [["X", " ", "O"], [" ", "X", " "], ["O", " ", " "]], "player": "O"},
+    {"board": [[" ", "O", " "], ["X", " ", "X"], [" ", " ", "O"]], "player": "X"},
+    {"board": [["X", " ", " "], [" ", "O", " "], [" ", " ", "X"]], "player": "O"},
+    {"board": [["O", " ", "X"], [" ", "X", " "], [" ", "O", " "]], "player": "O"},
+    {"board": [["X", "X", " "], ["O", " ", " "], [" ", " ", "O"]], "player": "O"},
+    {"board": [["O", "O", " "], ["X", " ", " "], [" ", "X", " "]], "player": "X"},
+    {"board": [["X", " ", "X"], ["O", "O", " "], [" ", " ", " "]], "player": "X"},
+    {"board": [[" ", " ", " "], ["X", "O", " "], [" ", " ", " "]], "player": "X"},
+    {"board": [["O", " ", " "], [" ", "X", " "], [" ", " ", "O"]], "player": "X"},
+    {"board": [["X", "O", "X"], [" ", "O", " "], [" ", " ", " "]], "player": "X"},
+    {"board": [[" ", "X", " "], ["O", "O", "X"], [" ", " ", " "]], "player": "O"},
+    {"board": [["X", " ", " "], [" ", "O", "X"], [" ", " ", "O"]], "player": "X"},
+    {"board": [["O", "X", " "], [" ", "O", " "], [" ", " ", "X"]], "player": "O"},
+    {"board": [[" ", " ", " "], [" ", "X", "O"], [" ", " ", "X"]], "player": "O"},
 ]
 
 
@@ -49,41 +60,46 @@ def make_game_from_board(board, player):
 
 
 def check_winner(board, player):
-    """
-    Check if the given player has three in a row.
-    """
     lines = []
-
-    # rows
     lines.extend(board)
-
-    # columns
     lines.extend([[board[r][c] for r in range(3)] for c in range(3)])
-
-    # diagonals
     lines.append([board[i][i] for i in range(3)])
     lines.append([board[i][2 - i] for i in range(3)])
-
     return any(all(cell == player for cell in line) for line in lines)
 
 
 def is_winning_move(game, row, col, player):
-    """
-    Check if placing a mark here wins immediately.
-    """
     if not game.is_valid_move(row, col):
         return False
 
     temp_board = [r[:] for r in game.board]
     temp_board[row][col] = player
-
     return check_winner(temp_board, player)
 
+
+def generate_text_with_retry(prompt, provider, base_delay=5, retry_delay=15):
+    if provider == "gemini":
+        time.sleep(base_delay)
+
+    while True:
+        try:
+            return generate_text(prompt)
+        except Exception as e:
+            msg = str(e)
+            if provider == "gemini" and ("429" in msg or "RESOURCE_EXHAUSTED" in msg):
+                print(f"Rate limit hit. Waiting {retry_delay} seconds before retrying...")
+                time.sleep(retry_delay)
+            else:
+                raise
+
+
 def main():
+    provider = get_provider()
 
-    os.makedirs("results", exist_ok=True)
+    results_dir = ROOT / "results"
+    results_dir.mkdir(exist_ok=True)
 
-    csv_path = "results/tables/move_prediction_results.csv"
+    csv_path = results_dir / f"move_prediction_{provider}.csv"
 
     total = len(TEST_CASES)
     parsed_count = 0
@@ -91,9 +107,7 @@ def main():
     optimal_count = 0
 
     with open(csv_path, "w", newline="", encoding="utf-8") as csvfile:
-
         writer = csv.writer(csvfile)
-
         writer.writerow([
             "test_id",
             "player",
@@ -105,18 +119,14 @@ def main():
         ])
 
         for i, case in enumerate(TEST_CASES, start=1):
-
             board = case["board"]
             player = case["player"]
 
             game = make_game_from_board(board, player)
-
             board_text = board_to_text(board)
-
             prompt = get_valid_move_prompt(RULES, board_text, player)
 
-            response = generate_text(prompt)
-
+            response = generate_text_with_retry(prompt, provider)
             move = parse_move(response)
 
             parsed_move_text = ""
@@ -124,7 +134,6 @@ def main():
             is_optimal = False
 
             if move is not None:
-
                 parsed_count += 1
 
                 row, col = move
@@ -133,7 +142,6 @@ def main():
                 is_valid = game.is_valid_move(row, col)
 
                 if is_valid:
-
                     valid_count += 1
 
                     if is_winning_move(game, row, col, player):
@@ -150,7 +158,7 @@ def main():
                 is_optimal
             ])
 
-            print(f"\nTest {i}")
+            print(f"\nTest {i} [{provider}]")
             print(board_text)
             print("Response:", response)
             print("Parsed:", parsed_move_text if parsed_move_text else "None")
@@ -160,15 +168,17 @@ def main():
 
     valid_rate = valid_count / total if total else 0
     optimal_rate = optimal_count / total if total else 0
+    parsed_rate = parsed_count / total if total else 0
 
     print("\nSUMMARY")
+    print("Provider:", provider)
     print("Total tests:", total)
     print("Parsed moves:", parsed_count)
+    print("Parsed move rate:", round(parsed_rate, 2))
     print("Valid moves:", valid_count)
     print("Valid move rate:", round(valid_rate, 2))
     print("Optimal moves:", optimal_count)
     print("Optimal move rate:", round(optimal_rate, 2))
-
     print("\nSaved results to:", csv_path)
 
 

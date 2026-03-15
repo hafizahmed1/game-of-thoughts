@@ -1,0 +1,61 @@
+test_id,player,board_text,model_response,parsed_move,is_valid,is_optimal
+1,O,"X | X | -
+- | O | -
+- | - | -","row=2, col=2","(2,2)",True,False
+2,X,"X | - | -
+O | X | -
+- | - | O","row=0, col=1","(0,1)",True,False
+3,O,"O | X | O
+X | - | -
+- | - | X","row=1, col=1","(1,1)",True,False
+4,X,"X | O | X
+O | X | -
+- | - | O","row=2, col=0","(2,0)",True,True
+5,X,"- | - | -
+- | X | -
+- | - | O","row=0, col=0","(0,0)",True,False
+6,X,"X | O | -
+- | O | X
+- | - | -","row=2, col=0","(2,0)",True,False
+7,O,"X | - | O
+- | X | -
+O | - | -","row=1, col=1","(1,1)",False,False
+8,X,"- | O | -
+X | - | X
+- | - | O","row=1, col=1","(1,1)",True,True
+9,O,"X | - | -
+- | O | -
+- | - | X","row=0, col=1","(0,1)",True,False
+10,O,"O | - | X
+- | X | -
+- | O | -","row=1, col=1","(1,1)",False,False
+11,O,"X | X | -
+O | - | -
+- | - | O","row=1, col=1","(1,1)",True,False
+12,X,"O | O | -
+X | - | -
+- | X | -","row=1, col=1","(1,1)",True,False
+13,X,"X | - | X
+O | O | -
+- | - | -","row=2, col=0","(2,0)",True,False
+14,X,"- | - | -
+X | O | -
+- | - | -","row=2, col=2","(2,2)",True,False
+15,X,"O | - | -
+- | X | -
+- | - | O","row=0, col=1","(0,1)",True,False
+16,X,"X | O | X
+- | O | -
+- | - | -","row=2, col=0","(2,0)",True,False
+17,O,"- | X | -
+O | O | X
+- | - | -","row=2, col=0","(2,0)",True,False
+18,X,"X | - | -
+- | O | X
+- | - | O","row=0, col=1","(0,1)",True,False
+19,O,"O | X | -
+- | O | -
+- | - | X","row=0, col=2","(0,2)",True,False
+20,O,"- | - | -
+- | X | O
+- | - | X","row=0, col=0","(0,0)",True,False

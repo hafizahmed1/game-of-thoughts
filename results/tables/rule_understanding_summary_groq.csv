@@ -1,0 +1,4 @@
+condition,rule_completeness_score,invented_rules,missed_constraints,notes
+clean,0.86,0,1,
+raw,0.86,0,1,
+broken,0.71,0,2,

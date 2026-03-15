@@ -29,3 +29,33 @@ X | - | X
 10,O,"O | - | X
 - | X | -
 - | O | -","row=2, col=0","(2,0)",True,False
+11,O,"X | X | -
+O | - | -
+- | - | O","row=0, col=2","(0,2)",True,False
+12,X,"O | O | -
+X | - | -
+- | X | -","row=0, col=2","(0,2)",True,False
+13,X,"X | - | X
+O | O | -
+- | - | -","row=0, col=1","(0,1)",True,True
+14,X,"- | - | -
+X | O | -
+- | - | -","row=0, col=0","(0,0)",True,False
+15,X,"O | - | -
+- | X | -
+- | - | O","row=0, col=1","(0,1)",True,False
+16,X,"X | O | X
+- | O | -
+- | - | -","row=1, col=2","(1,2)",True,False
+17,O,"- | X | -
+O | O | X
+- | - | -","row=0, col=0","(0,0)",True,False
+18,X,"X | - | -
+- | O | X
+- | - | O","row=0, col=1","(0,1)",True,False
+19,O,"O | X | -
+- | O | -
+- | - | X","row=2, col=0","(2,0)",True,False
+20,O,"- | - | -
+- | X | O
+- | - | X","row=0, col=2","(0,2)",True,False

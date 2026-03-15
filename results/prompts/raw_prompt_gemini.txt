@@ -1,26 +1,4 @@
-condition,prompt,model_response,rule_completeness_score,invented_rules,missed_constraints,notes
-clean,"
-You are given the rules of a board game.
 
-Game rules:
-Create a 3x3 grid
-Player One places an X in a space
-Player Two places an O in a space
-Repeat until one player has three Xs or Os in a row or until the grid is filled.
-The player with three in a row wins.  If the grid is filled, the game is a draw.
-
-Task:
-1. Explain the rules clearly in bullet points.
-2. Keep all important constraints.
-3. Do not invent new rules.
-","Here are the rules for the game:
-
-*   **Setup:** Use a 3x3 grid.
-*   **Turns:** Players take turns placing their mark in an empty space.
-*   **Symbols:** Player One uses ""X"" and Player Two uses ""O.""
-*   **Winning:** A player wins by being the first to align three of their symbols in a row (horizontally, vertically, or diagonally).
-*   **Draw:** If all spaces in the grid are filled without either player achieving three in a row, the game ends in a draw.",,,,
-raw,"
 You are given the rules of a board game.
 
 Game rules:
@@ -189,43 +167,3 @@ Task:
 1. Explain the rules clearly in bullet points.
 2. Keep all important constraints.
 3. Do not invent new rules.
-","Based on the provided document, here are the rules for Tic Tac Toe:
-
-*   **Setup:** Draw a 3x3 grid (two horizontal parallel lines intersected by two vertical parallel lines) on a piece of paper using a writing implement (pencil, pen, or crayon).
-*   **Players:** The game is for two players. One player is ""Player One"" and the other is ""Player Two.""
-*   **Starting the Game:** Determine who is Player One and who is Player Two using any agreed-upon method, such as Rock Paper Scissors.
-*   **Turn Order:** Players take turns placing their designated symbol into an unoccupied space on the grid. It is not a race; players must alternate turns.
-*   **Symbols:** 
-    *   Player One uses an ""X.""
-    *   Player Two uses an ""O.""
-*   **Gameplay:** Players continue to take turns placing their symbol into an unoccupied space until one player achieves three in a row or the grid is filled.
-*   **Winning:** A player wins by placing three of their symbols in a row (horizontally, vertically, or diagonally). 
-*   **Draws:** If the grid is filled completely and no player has achieved three in a row, the game ends in a draw.
-*   **Constraints:**
-    *   Only use the spaces created by the 3x3 grid.
-    *   You can only place a symbol in an unoccupied space.
-    *   Players must use ""X"" and ""O"" symbols; no other letters or symbols are permitted.
-    *   The game is for players 4 years of age and older (as a recommended guideline).
-    *   This is a two-player game; third or fourth players act only as observers.",,,,
-broken,"
-You are given the rules of a board game.
-
-Game rules:
-Tic-Tac-Toe is played on a 3x3 grid.
-Two players take turns placing X and O.
-A player can place a mark anywhere.
-The first player to place three marks in a row wins.
-The game ends when the board is full.
-
-Task:
-1. Explain the rules clearly in bullet points.
-2. Keep all important constraints.
-3. Do not invent new rules.
-","Here are the rules for Tic-Tac-Toe:
-
-*   **Grid:** The game is played on a 3x3 grid.
-*   **Players:** Two players participate, with one using ""X"" and the other using ""O.""
-*   **Turns:** Players take turns placing their respective marks on the board.
-*   **Placement:** A player can place their mark in any empty space on the grid.
-*   **Winning Condition:** The first player to successfully place three of their marks in a row (horizontally, vertically, or diagonally) wins the game.
-*   **End of Game:** The game concludes once a player wins or the board is completely filled.",,,,
