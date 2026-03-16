@@ -26,39 +26,31 @@ def read_pdf(file_path: Path) -> str:
 def read_rules_file(file_path: Path) -> str:
     if file_path.suffix == ".txt":
         return read_txt(file_path)
-
     if file_path.suffix == ".docx":
         return read_docx(file_path)
-
     if file_path.suffix == ".pdf":
         return read_pdf(file_path)
-
     raise ValueError(f"Unsupported rules format: {file_path}")
 
 
-def find_rules_file(game_folder: Path) -> Path:
+def find_first_matching_file(folder: Path, stem: str):
     for ext in ["txt", "docx", "pdf"]:
-        path = game_folder / f"rules.{ext}"
+        path = folder / f"{stem}.{ext}"
         if path.exists():
             return path
-
-    raise FileNotFoundError(f"No rules file found in {game_folder}")
+    return None
 
 
 def load_game_data(game_slug: str) -> dict:
     base = Path("data/raw") / game_slug
 
-    rules_file = find_rules_file(base)
-    rules_text = read_rules_file(rules_file)
+    rules_file = find_first_matching_file(base, "rules")
+    if rules_file is None:
+        raise FileNotFoundError(f"No rules file found in {base}")
 
-    broken_rules_text = None
-    for ext in ["txt", "docx", "pdf"]:
-        broken_file = base / f"broken_rules.{ext}"
-        if broken_file.exists():
-            broken_rules_text = read_rules_file(broken_file)
-            break
+    broken_rules_file = find_first_matching_file(base, "broken_rules")
 
     return {
-        "rules_text": rules_text,
-        "broken_rules_text": broken_rules_text,
+        "rules_text": read_rules_file(rules_file),
+        "broken_rules_text": read_rules_file(broken_rules_file) if broken_rules_file else None,
     }

@@ -17,6 +17,10 @@ class BaseGame(ABC):
         pass
 
     @abstractmethod
+    def get_rules_summary(self) -> str:
+        pass
+
+    @abstractmethod
     def initial_state(self) -> GameState:
         pass
 

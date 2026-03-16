@@ -31,11 +31,25 @@ class TicTacToeGame(BaseGame):
         return "\n".join(rows)
 
     def parse_move(self, raw_output: str) -> Tuple[int, int]:
-        parts = raw_output.strip().replace(",", " ").split()
-        if len(parts) < 2:
-            raise ValueError("Could not parse move")
-        return int(parts[0]), int(parts[1])
+        cleaned = (
+            raw_output.strip()
+            .replace("(", " ")
+            .replace(")", " ")
+            .replace(",", " ")
+        )
 
+        parts = cleaned.split()
+
+        numbers = []
+        for part in parts:
+            if part.lstrip("-").isdigit():
+                numbers.append(int(part))
+
+        if len(numbers) < 2:
+            raise ValueError(f"Could not parse move from: {raw_output}")
+
+        return numbers[0], numbers[1]
+    
     def is_valid_move(self, state: TicTacToeState, move, player: str) -> bool:
         r, c = move
         return 0 <= r < 3 and 0 <= c < 3 and state.board[r][c] == " "
@@ -68,3 +82,13 @@ class TicTacToeGame(BaseGame):
             if line[0] != " " and line.count(line[0]) == 3:
                 return line[0]
         return None
+    
+    def get_rules_summary(self) -> str:
+        return (
+            "Tic-Tac-Toe rules:\n"
+            "- The board is a 3x3 grid.\n"
+            "- Two players alternate turns: X then O.\n"
+            "- A move must be placed in an empty cell.\n"
+            "- A player wins by placing 3 marks in a row horizontally, vertically, or diagonally.\n"
+            "- If all cells are filled and nobody has 3 in a row, the game is a draw."
+        )

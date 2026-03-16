@@ -3,7 +3,7 @@ from src.games.registry import create_game
 from src.prompts.prompt_builder import build_rule_understanding_prompt
 
 
-def run_rule_understanding(game_slug: str) -> dict:
+def run_rule_understanding(game_slug: str, model) -> dict:
     data = load_game_data(game_slug)
     game = create_game(game_slug, data["rules_text"])
 
@@ -12,9 +12,11 @@ def run_rule_understanding(game_slug: str) -> dict:
         rules_text=game.get_rules_text(),
     )
 
+    response = model.generate(prompt)
+
     return {
         "game_slug": game_slug,
         "game_name": game.name,
-        "rules_text": game.get_rules_text(),
         "prompt": prompt,
+        "response": response,
     }

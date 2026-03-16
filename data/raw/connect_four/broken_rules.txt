@@ -1,0 +1,5 @@
+Connect Four is played on a 6x7 vertical grid.
+Two players take turns placing pieces in any position on the board.
+A player may place a piece even if there are empty spaces below it.
+The first player to connect five pieces in a row wins.
+If the board is full, the game continues until someone wins.
