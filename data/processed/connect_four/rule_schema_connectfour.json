@@ -1,0 +1,71 @@
+{
+  "required_items": {
+    "board_size": [
+      "6 rows and 7 columns",
+      "7 columns",
+      "6x7",
+      "grid of 6 by 7"
+    ],
+    "players": [
+      "two-player game",
+      "two players"
+    ],
+    "turn_order": [
+      "alternate turns",
+      "take turns"
+    ],
+    "move_type": [
+      "drop a disc into a column",
+      "choose a column",
+      "place a disc in a column"
+    ],
+    "gravity": [
+      "falls to the lowest available space",
+      "drops to the bottom",
+      "disc falls down"
+    ],
+    "illegal_full_column": [
+      "cannot play in a full column",
+      "column is full",
+      "illegal if the column is full"
+    ],
+    "win_condition": [
+      "connect four",
+      "four in a row",
+      "horizontal",
+      "vertical",
+      "diagonal"
+    ],
+    "draw_condition": [
+      "draw",
+      "board is full",
+      "no moves left",
+      "no player wins"
+    ]
+  },
+  "forbidden_items": {
+    "manual_row_choice": [
+      "choose any row",
+      "place in any cell",
+      "select any position on the board"
+    ],
+    "three_players": [
+      "three-player game",
+      "three players can play",
+      "more than two players"
+    ],
+    "floating_disc": [
+      "disc stays where placed",
+      "does not fall",
+      "can place disc in mid-air"
+    ],
+    "wrong_win_condition": [
+      "three in a row wins",
+      "connect three wins"
+    ],
+    "allow_full_column": [
+      "can place in a full column",
+      "column can be overfilled"
+    ]
+  }
+}

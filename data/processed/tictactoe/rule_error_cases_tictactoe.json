@@ -1,0 +1,13 @@
+[
+  {
+    "id": "ttt_err_001",
+    "rules_text": "Broken rules: Tic-Tac-Toe is played on a 3x3 grid. Two players take turns placing X and O. A player can place a mark anywhere. The first player to place three marks in a row wins. The game ends when the board is full.",
+    "gold_errors": [
+      "does not specify which player uses x and which uses o",
+      "does not specify alternating turns",
+      "allows placing a mark anywhere",
+      "does not specify horizontal vertical or diagonal win conditions",
+      "does not mention draw if the board is full without a winner"
+    ]
+  }
+]
