@@ -2,255 +2,307 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
+from typing import Iterable
 
 import matplotlib.pyplot as plt
 import pandas as pd
 
 
-ROOT = Path(__file__).resolve().parents[1]
-TABLES_DIR = ROOT / "results" / "tables"
-FIGURES_DIR = ROOT / "results" / "figures"
+def load_simulation_data(input_path: Path) -> pd.DataFrame:
+    if input_path.is_file():
+        df = pd.read_csv(input_path)
+        return df
 
-FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+    csv_files = sorted(
+        p for p in input_path.glob("*_simulation_results.csv")
+        if p.name != "all_simulation_results.csv"
+    )
+
+    if not csv_files:
+        raise FileNotFoundError(
+            f"No simulation CSV files found in: {input_path}"
+        )
+
+    frames = []
+    for csv_file in csv_files:
+        frames.append(pd.read_csv(csv_file))
+
+    return pd.concat(frames, ignore_index=True)
 
 
-def load_simulation_data(csv_path: str | None = None) -> pd.DataFrame:
-    path = Path(csv_path) if csv_path else TABLES_DIR / "all_simulation_results.csv"
+def add_derived_columns(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
 
-    if not path.exists():
-        raise FileNotFoundError(f"Simulation results file not found: {path}")
+    # Normalize text columns
+    for col in ["winner", "stopped_reason", "model", "game", "provider"]:
+        if col in df.columns:
+            df[col] = df[col].fillna("").astype(str)
 
-    df = pd.read_csv(path)
+    # Case-level metrics
+    df["is_completed"] = df["stopped_reason"].eq("terminal_state_reached")
+    df["is_initially_terminal"] = df["total_turns"].eq(0) & df["completed_turns"].eq(0)
+    df["is_non_terminal_case"] = ~df["is_initially_terminal"]
+    df["has_invalid_turn"] = df["invalid_turns"] > 0
+    df["has_valid_turn"] = df["valid_turns"] > 0
 
-    required_columns = {
-        "game",
-        "model",
-        "completed_turns",
-        "stopped_reason",
-        "winner",
-        "total_turns",
-        "valid_turns",
-        "invalid_turns",
-    }
+    # Safe division
+    df["move_accuracy_case"] = df.apply(
+        lambda row: (row["valid_turns"] / row["total_turns"]) if row["total_turns"] > 0 else 0.0,
+        axis=1,
+    )
+    df["invalid_move_rate_case"] = df.apply(
+        lambda row: (row["invalid_turns"] / row["total_turns"]) if row["total_turns"] > 0 else 0.0,
+        axis=1,
+    )
 
-    missing = required_columns - set(df.columns)
-    if missing:
-        raise ValueError(f"Missing required columns in simulation CSV: {sorted(missing)}")
+    # Winner helpers
+    df["x_win"] = df["winner"].eq("X")
+    df["o_win"] = df["winner"].eq("O")
+    df["draw"] = df["winner"].str.lower().eq("draw")
 
     return df
 
 
-def prepare_metrics(df: pd.DataFrame) -> pd.DataFrame:
-    summary = (
-        df.groupby(["model", "game"], as_index=False)
-        .agg(
-            total_cases=("case_id", "count"),
-            total_turns=("total_turns", "sum"),
-            valid_turns=("valid_turns", "sum"),
-            invalid_turns=("invalid_turns", "sum"),
-            avg_completed_turns=("completed_turns", "mean"),
-            terminal_cases=("stopped_reason", lambda s: (s == "terminal_state_reached").sum()),
-        )
+def summarize_all_cases(df: pd.DataFrame) -> pd.DataFrame:
+    grouped = df.groupby(["model", "game"], dropna=False)
+
+    summary = grouped.agg(
+        cases=("case_id", "count"),
+        completed_cases=("is_completed", "sum"),
+        non_terminal_cases=("is_non_terminal_case", "sum"),
+        terminal_start_cases=("is_initially_terminal", "sum"),
+        total_turns=("total_turns", "sum"),
+        valid_turns=("valid_turns", "sum"),
+        invalid_turns=("invalid_turns", "sum"),
+        avg_completed_turns=("completed_turns", "mean"),
+        x_wins=("x_win", "sum"),
+        o_wins=("o_win", "sum"),
+        draws=("draw", "sum"),
+    ).reset_index()
+
+    summary["completion_rate"] = summary["completed_cases"] / summary["cases"]
+    summary["move_accuracy"] = summary.apply(
+        lambda row: (row["valid_turns"] / row["total_turns"]) if row["total_turns"] > 0 else 0.0,
+        axis=1,
+    )
+    summary["invalid_move_rate"] = summary.apply(
+        lambda row: (row["invalid_turns"] / row["total_turns"]) if row["total_turns"] > 0 else 0.0,
+        axis=1,
     )
 
-    summary["valid_move_rate"] = summary["valid_turns"] / summary["total_turns"]
-    summary["invalid_move_rate"] = summary["invalid_turns"] / summary["total_turns"]
-    summary["terminal_completion_rate"] = summary["terminal_cases"] / summary["total_cases"]
+    # Win rates among completed cases only
+    summary["x_win_rate"] = summary.apply(
+        lambda row: (row["x_wins"] / row["completed_cases"]) if row["completed_cases"] > 0 else 0.0,
+        axis=1,
+    )
+    summary["o_win_rate"] = summary.apply(
+        lambda row: (row["o_wins"] / row["completed_cases"]) if row["completed_cases"] > 0 else 0.0,
+        axis=1,
+    )
+    summary["draw_rate"] = summary.apply(
+        lambda row: (row["draws"] / row["completed_cases"]) if row["completed_cases"] > 0 else 0.0,
+        axis=1,
+    )
 
-    return summary
+    return summary.sort_values(["game", "model"]).reset_index(drop=True)
 
 
-def save_grouped_bar(
-    data: pd.DataFrame,
-    value_col: str,
-    title: str,
-    ylabel: str,
-    output_path: Path,
-) -> None:
-    pivot = data.pivot(index="game", columns="model", values=value_col)
+def summarize_non_terminal_cases_only(df: pd.DataFrame) -> pd.DataFrame:
+    filtered = df[df["is_non_terminal_case"]].copy()
 
-    ax = pivot.plot(kind="bar", figsize=(8, 5))
-    ax.set_title(title)
+    if filtered.empty:
+        return pd.DataFrame()
+
+    grouped = filtered.groupby(["model", "game"], dropna=False)
+
+    summary = grouped.agg(
+        non_terminal_cases=("case_id", "count"),
+        completed_cases=("is_completed", "sum"),
+        total_turns=("total_turns", "sum"),
+        valid_turns=("valid_turns", "sum"),
+        invalid_turns=("invalid_turns", "sum"),
+        avg_completed_turns=("completed_turns", "mean"),
+        x_wins=("x_win", "sum"),
+        o_wins=("o_win", "sum"),
+        draws=("draw", "sum"),
+    ).reset_index()
+
+    summary["completion_rate"] = summary["completed_cases"] / summary["non_terminal_cases"]
+    summary["move_accuracy"] = summary.apply(
+        lambda row: (row["valid_turns"] / row["total_turns"]) if row["total_turns"] > 0 else 0.0,
+        axis=1,
+    )
+    summary["invalid_move_rate"] = summary.apply(
+        lambda row: (row["invalid_turns"] / row["total_turns"]) if row["total_turns"] > 0 else 0.0,
+        axis=1,
+    )
+    summary["x_win_rate"] = summary.apply(
+        lambda row: (row["x_wins"] / row["completed_cases"]) if row["completed_cases"] > 0 else 0.0,
+        axis=1,
+    )
+    summary["o_win_rate"] = summary.apply(
+        lambda row: (row["o_wins"] / row["completed_cases"]) if row["completed_cases"] > 0 else 0.0,
+        axis=1,
+    )
+    summary["draw_rate"] = summary.apply(
+        lambda row: (row["draws"] / row["completed_cases"]) if row["completed_cases"] > 0 else 0.0,
+        axis=1,
+    )
+
+    return summary.sort_values(["game", "model"]).reset_index(drop=True)
+
+
+def percent_columns(df: pd.DataFrame, columns: Iterable[str]) -> pd.DataFrame:
+    out = df.copy()
+    for col in columns:
+        if col in out.columns:
+            out[col] = (out[col] * 100).round(2)
+    return out
+
+
+def save_markdown_table(df: pd.DataFrame, output_path: Path, title: str) -> None:
+    lines = [f"# {title}", ""]
+    lines.append(df.to_markdown(index=False))
+    lines.append("")
+    output_path.write_text("\n".join(lines), encoding="utf-8")
+
+
+def plot_metric_by_game(summary_df: pd.DataFrame, metric: str, ylabel: str, output_path: Path) -> None:
+    if summary_df.empty:
+        return
+
+    pivot = summary_df.pivot(index="game", columns="model", values=metric).fillna(0)
+
+    ax = pivot.plot(kind="bar", figsize=(9, 5))
+    ax.set_title(metric.replace("_", " ").title())
     ax.set_xlabel("Game")
     ax.set_ylabel(ylabel)
     ax.legend(title="Model")
     plt.xticks(rotation=0)
     plt.tight_layout()
-    plt.savefig(output_path, dpi=200, bbox_inches="tight")
+    plt.savefig(output_path, dpi=200)
     plt.close()
 
 
-def save_model_bar(
-    data: pd.DataFrame,
-    value_col: str,
-    title: str,
-    ylabel: str,
-    output_path: Path,
-) -> None:
-    aggregated = (
-        data.groupby("model", as_index=False)[value_col]
-        .mean()
-        .sort_values(value_col, ascending=False)
-    )
+def plot_stacked_outcomes(summary_df: pd.DataFrame, output_path: Path) -> None:
+    if summary_df.empty:
+        return
 
-    ax = aggregated.plot(kind="bar", x="model", y=value_col, legend=False, figsize=(7, 5))
-    ax.set_title(title)
-    ax.set_xlabel("Model")
-    ax.set_ylabel(ylabel)
-    plt.xticks(rotation=0)
+    df = summary_df.copy()
+    df["label"] = df["game"] + " | " + df["model"]
+
+    plot_df = df.set_index("label")[["x_wins", "o_wins", "draws"]]
+    ax = plot_df.plot(kind="bar", stacked=True, figsize=(10, 5))
+    ax.set_title("Completed Game Outcomes")
+    ax.set_xlabel("Game | Model")
+    ax.set_ylabel("Count")
+    plt.xticks(rotation=30, ha="right")
     plt.tight_layout()
-    plt.savefig(output_path, dpi=200, bbox_inches="tight")
+    plt.savefig(output_path, dpi=200)
     plt.close()
-
-
-def save_stopped_reason_chart(df: pd.DataFrame, output_path: Path) -> None:
-    counts = (
-        df.groupby(["model", "stopped_reason"])
-        .size()
-        .unstack(fill_value=0)
-    )
-
-    ax = counts.plot(kind="bar", figsize=(9, 5))
-    ax.set_title("Simulation Stop Reasons by Model")
-    ax.set_xlabel("Model")
-    ax.set_ylabel("Number of Cases")
-    ax.legend(title="Stop Reason")
-    plt.xticks(rotation=0)
-    plt.tight_layout()
-    plt.savefig(output_path, dpi=200, bbox_inches="tight")
-    plt.close()
-
-
-def save_winner_chart(df: pd.DataFrame, output_path: Path) -> None:
-    winner_df = df.copy()
-    winner_df["winner"] = winner_df["winner"].fillna("none")
-
-    counts = (
-        winner_df.groupby(["model", "winner"])
-        .size()
-        .unstack(fill_value=0)
-    )
-
-    ax = counts.plot(kind="bar", figsize=(9, 5))
-    ax.set_title("Game Outcomes by Model")
-    ax.set_xlabel("Model")
-    ax.set_ylabel("Number of Cases")
-    ax.legend(title="Winner")
-    plt.xticks(rotation=0)
-    plt.tight_layout()
-    plt.savefig(output_path, dpi=200, bbox_inches="tight")
-    plt.close()
-
-
-def save_summary_table(summary: pd.DataFrame, output_path: Path) -> None:
-    table = summary.copy()
-
-    for col in ["valid_move_rate", "invalid_move_rate", "terminal_completion_rate"]:
-        table[col] = (table[col] * 100).round(2)
-
-    table["avg_completed_turns"] = table["avg_completed_turns"].round(2)
-
-    table = table[
-        [
-            "model",
-            "game",
-            "total_cases",
-            "total_turns",
-            "valid_turns",
-            "invalid_turns",
-            "valid_move_rate",
-            "invalid_move_rate",
-            "avg_completed_turns",
-            "terminal_cases",
-            "terminal_completion_rate",
-        ]
-    ]
-
-    table.to_csv(output_path, index=False)
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Create report-quality figures from simulation results.")
+    parser = argparse.ArgumentParser(description="Analyze simulation CSV results.")
     parser.add_argument(
-        "--csv",
-        default=None,
-        help="Optional path to simulation CSV. Defaults to results/tables/all_simulation_results.csv",
+        "--input",
+        type=str,
+        default="results/tables/all_simulation_results.csv",
+        help="Path to all_simulation_results.csv or a folder containing *_simulation_results.csv files.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        type=str,
+        default="results/analysis",
+        help="Directory to save summary tables and plots.",
     )
     args = parser.parse_args()
 
-    df = load_simulation_data(args.csv)
-    summary = prepare_metrics(df)
+    input_path = Path(args.input)
+    output_dir = Path(args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    save_summary_table(summary, TABLES_DIR / "simulation_report_summary.csv")
+    df = load_simulation_data(input_path)
+    df = add_derived_columns(df)
 
-    save_model_bar(
-        summary,
-        value_col="valid_move_rate",
-        title="Average Valid Move Rate by Model",
-        ylabel="Valid Move Rate",
-        output_path=FIGURES_DIR / "valid_move_rate_by_model.png",
+    all_cases_summary = summarize_all_cases(df)
+    non_terminal_summary = summarize_non_terminal_cases_only(df)
+
+    all_cases_pretty = percent_columns(
+        all_cases_summary,
+        ["completion_rate", "move_accuracy", "invalid_move_rate", "x_win_rate", "o_win_rate", "draw_rate"],
+    )
+    non_terminal_pretty = percent_columns(
+        non_terminal_summary,
+        ["completion_rate", "move_accuracy", "invalid_move_rate", "x_win_rate", "o_win_rate", "draw_rate"],
+    ) if not non_terminal_summary.empty else non_terminal_summary
+
+    # Save raw processed rows
+    df.to_csv(output_dir / "simulation_rows_processed.csv", index=False)
+
+    # Save CSV summaries
+    all_cases_pretty.to_csv(output_dir / "summary_all_cases.csv", index=False)
+    if not non_terminal_pretty.empty:
+        non_terminal_pretty.to_csv(output_dir / "summary_non_terminal_cases.csv", index=False)
+
+    # Save Markdown tables
+    save_markdown_table(
+        all_cases_pretty,
+        output_dir / "summary_all_cases.md",
+        "Simulation Summary (All Cases)",
     )
 
-    save_model_bar(
-        summary,
-        value_col="invalid_move_rate",
-        title="Average Invalid Move Rate by Model",
+    if not non_terminal_pretty.empty:
+        save_markdown_table(
+            non_terminal_pretty,
+            output_dir / "summary_non_terminal_cases.md",
+            "Simulation Summary (Non-Terminal Cases Only)",
+        )
+
+    # Plots
+    plot_metric_by_game(
+        all_cases_summary,
+        metric="completion_rate",
+        ylabel="Completion Rate",
+        output_path=output_dir / "plot_completion_rate.png",
+    )
+    plot_metric_by_game(
+        all_cases_summary,
+        metric="move_accuracy",
+        ylabel="Move Accuracy",
+        output_path=output_dir / "plot_move_accuracy.png",
+    )
+    plot_metric_by_game(
+        all_cases_summary,
+        metric="invalid_move_rate",
         ylabel="Invalid Move Rate",
-        output_path=FIGURES_DIR / "invalid_move_rate_by_model.png",
+        output_path=output_dir / "plot_invalid_move_rate.png",
     )
-
-    save_model_bar(
-        summary,
-        value_col="avg_completed_turns",
-        title="Average Completed Turns by Model",
+    plot_metric_by_game(
+        all_cases_summary,
+        metric="avg_completed_turns",
         ylabel="Average Completed Turns",
-        output_path=FIGURES_DIR / "average_completed_turns_by_model.png",
+        output_path=output_dir / "plot_avg_completed_turns.png",
+    )
+    plot_stacked_outcomes(
+        all_cases_summary,
+        output_path=output_dir / "plot_outcomes_stacked.png",
     )
 
-    save_model_bar(
-        summary,
-        value_col="terminal_completion_rate",
-        title="Average Terminal Completion Rate by Model",
-        ylabel="Terminal Completion Rate",
-        output_path=FIGURES_DIR / "terminal_completion_rate_by_model.png",
-    )
-
-    save_grouped_bar(
-        summary,
-        value_col="valid_move_rate",
-        title="Valid Move Rate by Game and Model",
-        ylabel="Valid Move Rate",
-        output_path=FIGURES_DIR / "valid_move_rate_by_game_and_model.png",
-    )
-
-    save_grouped_bar(
-        summary,
-        value_col="avg_completed_turns",
-        title="Average Completed Turns by Game and Model",
-        ylabel="Average Completed Turns",
-        output_path=FIGURES_DIR / "average_completed_turns_by_game_and_model.png",
-    )
-
-    save_grouped_bar(
-        summary,
-        value_col="terminal_completion_rate",
-        title="Terminal Completion Rate by Game and Model",
-        ylabel="Terminal Completion Rate",
-        output_path=FIGURES_DIR / "terminal_completion_rate_by_game_and_model.png",
-    )
-
-    save_stopped_reason_chart(
-        df,
-        FIGURES_DIR / "stopped_reasons_by_model.png",
-    )
-
-    save_winner_chart(
-        df,
-        FIGURES_DIR / "outcomes_by_model.png",
-    )
-
-    print(f"Saved report summary table to: {TABLES_DIR / 'simulation_report_summary.csv'}")
-    print(f"Saved figures to: {FIGURES_DIR}")
+    print("\nSaved analysis to:")
+    print(output_dir.resolve())
+    print("\nFiles:")
+    print("- simulation_rows_processed.csv")
+    print("- summary_all_cases.csv")
+    print("- summary_all_cases.md")
+    if not non_terminal_summary.empty:
+        print("- summary_non_terminal_cases.csv")
+        print("- summary_non_terminal_cases.md")
+    print("- plot_completion_rate.png")
+    print("- plot_move_accuracy.png")
+    print("- plot_invalid_move_rate.png")
+    print("- plot_avg_completed_turns.png")
+    print("- plot_outcomes_stacked.png")
 
 
 if __name__ == "__main__":

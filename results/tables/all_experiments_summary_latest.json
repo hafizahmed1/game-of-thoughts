@@ -1,0 +1,100 @@
+[
+  {
+    "experiment": "rule_understanding",
+    "game": "tictactoe",
+    "model": "llama-3.1-8b-instant",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "rule_understanding",
+    "game": "tictactoe",
+    "model": "qwen/qwen3-32b",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "rule_understanding",
+    "game": "connect_four",
+    "model": "llama-3.1-8b-instant",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "rule_understanding",
+    "game": "connect_four",
+    "model": "qwen/qwen3-32b",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "game_simulation",
+    "game": "tictactoe",
+    "model": "llama-3.1-8b-instant",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "game_simulation",
+    "game": "tictactoe",
+    "model": "qwen/qwen3-32b",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "game_simulation",
+    "game": "connect_four",
+    "model": "llama-3.1-8b-instant",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "game_simulation",
+    "game": "connect_four",
+    "model": "qwen/qwen3-32b",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "rule_error_detection",
+    "game": "tictactoe",
+    "model": "llama-3.1-8b-instant",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "rule_error_detection",
+    "game": "tictactoe",
+    "model": "qwen/qwen3-32b",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "rule_error_detection",
+    "game": "connect_four",
+    "model": "llama-3.1-8b-instant",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "rule_error_detection",
+    "game": "connect_four",
+    "model": "qwen/qwen3-32b",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "game_generation",
+    "game": "general",
+    "model": "llama-3.1-8b-instant",
+    "exit_code": 0,
+    "status": "success"
+  },
+  {
+    "experiment": "game_generation",
+    "game": "general",
+    "model": "qwen/qwen3-32b",
+    "exit_code": 0,
+    "status": "success"
+  }
+]

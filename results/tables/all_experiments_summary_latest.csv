@@ -1,0 +1,15 @@
+experiment,game,model,exit_code,status
+rule_understanding,tictactoe,llama-3.1-8b-instant,0,success
+rule_understanding,tictactoe,qwen/qwen3-32b,0,success
+rule_understanding,connect_four,llama-3.1-8b-instant,0,success
+rule_understanding,connect_four,qwen/qwen3-32b,0,success
+game_simulation,tictactoe,llama-3.1-8b-instant,0,success
+game_simulation,tictactoe,qwen/qwen3-32b,0,success
+game_simulation,connect_four,llama-3.1-8b-instant,0,success
+game_simulation,connect_four,qwen/qwen3-32b,0,success
+rule_error_detection,tictactoe,llama-3.1-8b-instant,0,success
+rule_error_detection,tictactoe,qwen/qwen3-32b,0,success
+rule_error_detection,connect_four,llama-3.1-8b-instant,0,success
+rule_error_detection,connect_four,qwen/qwen3-32b,0,success
+game_generation,general,llama-3.1-8b-instant,0,success
+game_generation,general,qwen/qwen3-32b,0,success

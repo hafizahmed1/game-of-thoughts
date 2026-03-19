@@ -6,6 +6,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from src.config import ACTIVE_MODELS, DEFAULT_GAMES
+
 
 ROOT = Path(__file__).resolve().parent
 EXPERIMENTS_DIR = ROOT / "experiments"
@@ -18,25 +20,25 @@ EXPERIMENTS = [
     {
         "name": "rule_understanding",
         "script": EXPERIMENTS_DIR / "rule_understanding.py",
-        "models": ["gemini", "groq"],
-        "games": ["tictactoe", "connect_four"],
+        "models": ACTIVE_MODELS,
+        "games": DEFAULT_GAMES,
     },
     {
         "name": "game_simulation",
         "script": EXPERIMENTS_DIR / "game_simulation.py",
-        "models": ["gemini", "groq"],
-        "games": ["tictactoe", "connect_four"],
+        "models": ACTIVE_MODELS,
+        "games": DEFAULT_GAMES,
     },
     {
         "name": "rule_error_detection",
         "script": EXPERIMENTS_DIR / "rule_error_detection.py",
-        "models": ["gemini", "groq"],
-        "games": ["tictactoe", "connect_four"],
+        "models": ACTIVE_MODELS,
+        "games": DEFAULT_GAMES,
     },
     {
         "name": "game_generation",
         "script": EXPERIMENTS_DIR / "game_generation.py",
-        "models": ["gemini", "groq"],
+        "models": ACTIVE_MODELS,
         "games": [None],
     },
 ]

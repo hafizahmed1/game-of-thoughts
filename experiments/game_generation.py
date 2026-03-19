@@ -1,4 +1,3 @@
-import os
 import sys
 from pathlib import Path
 
@@ -10,53 +9,22 @@ if str(ROOT) not in sys.path:
 
 load_dotenv(ROOT / ".env")
 
+from src.config import SUPPORTED_MODELS
 from src.prompts.prompt_builder import build_game_generation_prompt
-from src.llm.gemini_model import GeminiModel
-from src.llm.groq_model import GroqModel
-
-try:
-    from google import genai
-except ImportError:
-    genai = None
+from src.llm.model_loader import load_model
 
 
-def load_model(model_name: str):
-    model_name = model_name.lower()
-
-    if model_name == "gemini":
-        if genai is None:
-            raise ImportError("google-genai is not installed.")
-
-        api_key = os.getenv("GEMINI_API_KEY")
-        selected_model = os.getenv("GEMINI_MODEL")
-
-        if not api_key:
-            raise ValueError("GEMINI_API_KEY not set in .env")
-        if not selected_model:
-            raise ValueError("GEMINI_MODEL not set in .env")
-
-        client = genai.Client(api_key=api_key)
-        return GeminiModel(client=client, model_name=selected_model)
-
-    if model_name == "groq":
-        api_key = os.getenv("GROQ_API_KEY")
-        selected_model = os.getenv("GROQ_MODEL")
-
-        if not api_key:
-            raise ValueError("GROQ_API_KEY not set in .env")
-        if not selected_model:
-            raise ValueError("GROQ_MODEL not set in .env")
-
-        return GroqModel(api_key=api_key, model_name=selected_model)
-
-    raise ValueError(f"Unsupported model: {model_name}")
+def safe_filename(text: str) -> str:
+    return text.replace("/", "_").replace("\\", "_").replace(":", "_")
 
 
 def main():
     if len(sys.argv) > 1:
         selected_model = sys.argv[1].lower()
     else:
-        selected_model = "gemini"
+        selected_model = SUPPORTED_MODELS[0]
+
+    safe_model_name = safe_filename(selected_model)
 
     model = load_model(selected_model)
 
@@ -70,8 +38,8 @@ def main():
     prompts_dir.mkdir(parents=True, exist_ok=True)
     responses_dir.mkdir(parents=True, exist_ok=True)
 
-    prompt_path = prompts_dir / f"game_generation_{selected_model}_prompt.txt"
-    response_path = responses_dir / f"game_generation_{selected_model}.txt"
+    prompt_path = prompts_dir / f"game_generation_{safe_model_name}_prompt.txt"
+    response_path = responses_dir / f"game_generation_{safe_model_name}.txt"
 
     with open(prompt_path, "w", encoding="utf-8") as f:
         f.write(prompt)

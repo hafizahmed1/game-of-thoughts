@@ -1,69 +1,47 @@
-import time
-from typing import Optional
+from __future__ import annotations
 
 from groq import Groq
+
 from src.llm.base_model import BaseModel
 
 
 class GroqModel(BaseModel):
-
     name = "groq"
 
-    def __init__(self, api_key: str, model_name: str, max_retries: int = 3):
+    def __init__(self, api_key: str, model_name: str):
         self.client = Groq(api_key=api_key)
         self.model_name = model_name
-        self.max_retries = max_retries
-
-    def _extract_text(self, response) -> Optional[str]:
-
-        try:
-            if (
-                response
-                and response.choices
-                and response.choices[0].message
-                and response.choices[0].message.content
-            ):
-                return response.choices[0].message.content.strip()
-        except Exception:
-            pass
-
-        return None
 
     def generate(self, prompt: str) -> str:
+        try:
+            request_kwargs = {
+                "model": self.model_name,
+                "messages": [{"role": "user", "content": prompt}],
+                "temperature": 0,
+            }
 
-        for attempt in range(self.max_retries):
+            # Qwen-specific: disable thinking / reasoning output
+            if self.model_name == "qwen/qwen3-32b":
+                request_kwargs["reasoning_effort"] = "none"
+                request_kwargs["reasoning_format"] = "hidden"
 
-            try:
+            completion = self.client.chat.completions.create(**request_kwargs)
 
-                response = self.client.chat.completions.create(
-                    model=self.model_name,
-                    messages=[{"role": "user", "content": prompt}],
-                )
+        except Exception as e:
+            raise RuntimeError(f"Groq API error ({self.model_name}): {e}")
 
-                text = self._extract_text(response)
+        if not completion or not completion.choices:
+            raise ValueError(f"No response from Groq model: {self.model_name}")
 
-                if text:
-                    return text
+        message = completion.choices[0].message
+        if message is None:
+            raise ValueError(f"No message returned from Groq model: {self.model_name}")
 
-                print("Empty Groq response. Retrying...")
+        content = message.content
+        if content is None:
+            raise ValueError(f"Empty content from Groq model: {self.model_name}")
 
-            except Exception as e:
+        if not isinstance(content, str):
+            content = str(content)
 
-                error_msg = str(e)
-
-                if "rate limit" in error_msg.lower():
-                    print("Groq rate limit hit. Waiting 30 seconds...")
-                    time.sleep(30)
-                    continue
-
-                if "timeout" in error_msg.lower():
-                    print("Groq timeout. Retrying...")
-                    time.sleep(10)
-                    continue
-
-                print(f"Groq error: {error_msg}")
-
-                if attempt == self.max_retries - 1:
-                    return "INVALID_RESPONSE"
-
-        return "INVALID_RESPONSE"
+        return content.strip()

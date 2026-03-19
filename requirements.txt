@@ -1,10 +1,8 @@
-google-genai
 groq
 python-dotenv
 numpy
 pandas
 matplotlib
-jupyter
-python-docs
+tabulate
 python-docx
 pypdf
