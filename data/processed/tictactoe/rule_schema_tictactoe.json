@@ -1,18 +1,27 @@
 {
   "required_items": {
-    "board_size": ["3x3", "3 by 3", "grid of 9 spaces"],
-    "players": ["two player game", "player one", "player two"],
-    "symbols": ["X", "O", "Xs", "Os"],
-    "turn_order": ["take turns", "in turn", "player one should be the first player"],
-    "legal_move": ["unoccupied space", "empty space"],
-    "win_condition": ["three in a row", "column", "diagonally"],
-    "draw_condition": ["grid is filled", "draw"],
-    "start_player": ["player one should be the first player"]
+"board_size": [
+  "6 rows and 7 columns",
+  "7 columns and 6 rows",
+  "6x7",
+  "7x6",
+  "grid of 6 by 7"
+],    "players": [
+  "two players",
+  "two-player game",
+  "two player game"
+],
+    "symbols": ["x and o", "x", "o", "xs and os"],
+    "turn_order": ["take turns", "alternate turns", "players take turns"],
+    "legal_move": ["unoccupied space", "empty space", "empty square", "available space"],
+    "win_condition": ["three in a row", "row", "column", "diagonal", "diagonally"],
+    "draw_condition": ["grid is filled", "board is full", "draw", "no empty spaces"],
+    "start_player": ["player one goes first", "player one starts", "starting player is player one"]
   },
   "forbidden_items": {
     "three_players": ["three player game", "third player participates"],
-    "free_symbol_choice": ["either player can place either an X or an O"],
-    "occupied_space_allowed": ["place in occupied space"],
+    "free_symbol_choice": ["either player can place either an x or an o"],
+    "occupied_space_allowed": ["place in occupied space", "can place on an occupied space"],
     "solo_mode": ["solo rules", "single-player official mode"]
   }
 }

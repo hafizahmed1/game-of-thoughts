@@ -6,11 +6,14 @@ import subprocess
 import sys
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[2]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from src.config import ACTIVE_MODELS, DEFAULT_GAMES
 
 
-ROOT = Path(__file__).resolve().parent
-EXPERIMENTS_DIR = ROOT / "experiments"
+EXPERIMENTS_DIR = ROOT /"src"/"scripts"/ "experiments"
 TABLES_DIR = ROOT / "results" / "tables"
 
 TABLES_DIR.mkdir(parents=True, exist_ok=True)

@@ -1,1305 +1,705 @@
-run_id,timestamp,case_id,game,provider,model,initial_board,final_board,completed_turns,stopped_reason,winner,total_turns,valid_turns,invalid_turns
-20260318_233806,20260318_233806,ttt_case_0,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+run_id,case_id,game,model,initial_board,stopped_reason,winner,valid_turns,total_turns
+20260321_000023,case_0,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: X | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: . | O | O
-2: . | . | .
-    0   1   2
-Current player: O",4,terminal_state_reached,X,4,4,0
-20260318_233806,20260318_233806,ttt_case_1,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,8,8
+20260321_000023,case_1,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: X | O | .
 2: . | . | O
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: X | O | O
-2: . | . | O
-    0   1   2
-Current player: O",3,terminal_state_reached,X,3,3,0
-20260318_233806,20260318_233806,ttt_case_2,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,3,3
+20260321_000023,case_2,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | .
-1: O | O | O
-2: . | . | X
-    0   1   2
-Current player: X",5,terminal_state_reached,O,5,5,0
-20260318_233806,20260318_233806,ttt_case_3,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,7,7
+20260321_000023,case_3,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: X | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: O | O | .
-2: X | O | .
-    0   1   2
-Current player: O",6,terminal_state_reached,X,6,6,0
-20260318_233806,20260318_233806,ttt_case_4,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,4,4
+20260321_000023,case_4,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: . | O | O
-2: . | . | .
-    0   1   2
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_233806,20260318_233806,ttt_case_5,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,7,7
+20260321_000023,case_5,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: . | O | O
-2: . | . | .
-    0   1   2
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_233806,20260318_233806,ttt_case_6,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,7,7
+20260321_000023,case_6,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: X | . | .
 2: . | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: X | O | .
-2: . | O | O
-    0   1   2
-Current player: O",6,terminal_state_reached,X,6,6,0
-20260318_233806,20260318_233806,ttt_case_7,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,6,6
+20260321_000023,case_7,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | .
 1: . | . | X
 2: . | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | O | O
-1: . | X | X
-2: . | . | X
-    0   1   2
-Current player: X",3,terminal_state_reached,O,3,3,0
-20260318_233806,20260318_233806,ttt_case_8,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,2,2
+20260321_000023,case_8,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: . | . | .
 2: O | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: . | O | O
-2: O | . | X
-    0   1   2
-Current player: O",4,terminal_state_reached,X,4,4,0
-20260318_233806,20260318_233806,ttt_case_9,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,6,6
+20260321_000023,case_9,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | O
 1: X | X | O
 2: X | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | O | O
-1: X | X | O
-2: X | . | X
-    0   1   2
-Current player: X",1,terminal_state_reached,O,1,1,0
-20260318_233806,20260318_233806,ttt_case_10,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,draw,2,2
+20260321_000023,case_10,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: X | . | .
 2: O | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | . | X
-1: X | O | X
-2: O | O | O
-    0   1   2
-Current player: X",6,terminal_state_reached,O,6,6,0
-20260318_233806,20260318_233806,ttt_case_11,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,draw,7,7
+20260321_000023,case_11,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: . | X | X
-1: O | O | O
-2: X | . | .
-    0   1   2
-Current player: X",5,terminal_state_reached,O,5,5,0
-20260318_233806,20260318_233806,ttt_case_12,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,draw,8,8
+20260321_000023,case_12,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: O | O | .
 2: O | X | X
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | O
-1: O | O | .
-2: O | X | X
-    0   1   2
-Current player: X",2,terminal_state_reached,O,2,2,0
-20260318_233806,20260318_233806,ttt_case_13,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,2,2
+20260321_000023,case_13,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: . | O | O
-2: . | . | .
-    0   1   2
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_233806,20260318_233806,ttt_case_14,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,7,7
+20260321_000023,case_14,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: O | O | .
 1: . | X | O
 2: X | X | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | O | .
-1: . | X | O
-2: X | X | X
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_233806,20260318_233806,ttt_case_15,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_000023,case_15,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: O | X | O
 1: O | O | X
 2: X | X | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | X | O
-1: O | O | X
-2: X | X | X
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_233806,20260318_233806,ttt_case_16,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_000023,case_16,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: X | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: O | O | .
-2: X | O | .
-    0   1   2
-Current player: O",6,terminal_state_reached,X,6,6,0
-20260318_233806,20260318_233806,ttt_case_17,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,4,4
+20260321_000023,case_17,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: O | . | O
 2: . | X | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | .
-1: O | O | O
-2: . | X | .
-    0   1   2
-Current player: X",2,terminal_state_reached,O,2,2,0
-20260318_233806,20260318_233806,ttt_case_18,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,4,4
+20260321_000023,case_18,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: X | . | .
 1: X | . | O
 2: . | X | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | O
-1: X | O | O
-2: . | X | O
-    0   1   2
-Current player: X",3,terminal_state_reached,O,3,3,0
-20260318_233806,20260318_233806,ttt_case_19,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,draw,4,4
+20260321_000023,case_19,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: O | X | X
 1: X | O | O
 2: O | X | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | X | X
-1: X | O | O
-2: O | X | X
-    0   1   2
-Current player: O",0,terminal_state_reached,draw,0,0,0
-20260318_233806,20260318_233806,ttt_case_20,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,draw,0,0
+20260321_000023,case_20,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: . | O | O
-2: . | . | .
-    0   1   2
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_233806,20260318_233806,ttt_case_21,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,7,7
+20260321_000023,case_21,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: X | . | .
 1: . | X | .
 2: O | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: . | X | O
-2: O | O | .
-    0   1   2
-Current player: O",4,terminal_state_reached,X,4,4,0
-20260318_233806,20260318_233806,ttt_case_22,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,5,5
+20260321_000023,case_22,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: . | O | .
 2: X | . | O
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: . | O | O
-2: X | . | O
-    0   1   2
-Current player: O",3,terminal_state_reached,X,3,3,0
-20260318_233806,20260318_233806,ttt_case_23,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",invalid_move,,2,3
+20260321_000023,case_23,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: X | X | X
 2: . | O | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: . | . | .
-1: X | X | X
-2: . | O | O
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_233806,20260318_233806,ttt_case_24,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_000023,case_24,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | O
 1: . | X | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | O | O
-1: X | X | X
-2: O | . | .
-    0   1   2
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_233806,20260318_233806,ttt_case_25,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,7,7
+20260321_000023,case_25,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | O | .
 2: X | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | . | .
-1: O | O | O
-2: X | . | X
-    0   1   2
-Current player: X",3,terminal_state_reached,O,3,3,0
-20260318_233806,20260318_233806,ttt_case_26,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,3,3
+20260321_000023,case_26,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: X | O | X
 1: X | . | .
 2: X | O | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: X | . | .
-2: X | O | O
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_233806,20260318_233806,ttt_case_27,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_000023,case_27,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: . | O | O
-2: . | . | .
-    0   1   2
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_233806,20260318_233806,ttt_case_28,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,7,7
+20260321_000023,case_28,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | X
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: . | X | X
-1: O | O | O
-2: X | . | .
-    0   1   2
-Current player: X",5,terminal_state_reached,O,5,5,0
-20260318_233806,20260318_233806,ttt_case_29,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,7,7
+20260321_000023,case_29,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | O | .
 1: . | . | .
 2: X | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: O | O | O
-2: X | X | .
-    0   1   2
-Current player: X",6,terminal_state_reached,O,6,6,0
-20260318_233806,20260318_233806,ttt_case_30,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,5,5
+20260321_000023,case_30,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | O
 1: . | X | .
 2: X | X | O
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | O | O
-1: X | X | .
-2: X | X | O
-    0   1   2
-Current player: X",2,terminal_state_reached,O,2,2,0
-20260318_233806,20260318_233806,ttt_case_31,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",invalid_move,,1,2
+20260321_000023,case_31,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | .
-1: O | O | O
-2: . | . | X
-    0   1   2
-Current player: X",5,terminal_state_reached,O,5,5,0
-20260318_233806,20260318_233806,ttt_case_32,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,7,7
+20260321_000023,case_32,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | O | .
 1: X | . | X
 2: O | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | O | .
-1: X | X | X
-2: O | O | .
-    0   1   2
-Current player: O",3,terminal_state_reached,X,3,3,0
-20260318_233806,20260318_233806,ttt_case_33,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,3,3
+20260321_000023,case_33,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | .
 1: . | . | .
 2: . | X | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | O | .
-1: X | X | X
-2: . | X | O
-    0   1   2
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_233806,20260318_233806,ttt_case_34,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,4,4
+20260321_000023,case_34,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | O
 1: . | . | X
 2: . | . | X
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | . | O
-1: X | X | X
-2: . | O | X
-    0   1   2
-Current player: O",3,terminal_state_reached,X,3,3,0
-20260318_233806,20260318_233806,ttt_case_35,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,4,4
+20260321_000023,case_35,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: O | O | .
 2: . | . | X
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | .
-1: O | O | O
-2: . | . | X
-    0   1   2
-Current player: X",2,terminal_state_reached,O,2,2,0
-20260318_233806,20260318_233806,ttt_case_36,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,4,4
+20260321_000023,case_36,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | .
 1: . | . | .
 2: . | . | X
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | X | O
-1: X | O | X
-2: X | O | X
-    0   1   2
-Current player: O",7,terminal_state_reached,draw,7,7,0
-20260318_233806,20260318_233806,ttt_case_37,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",invalid_move,,5,6
+20260321_000023,case_37,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: X | O | X
 1: O | X | X
 2: O | X | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: O | X | X
-2: O | X | O
-    0   1   2
-Current player: O",0,terminal_state_reached,draw,0,0,0
-20260318_233806,20260318_233806,ttt_case_38,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,draw,0,0
+20260321_000023,case_38,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: X | X | O
 1: X | O | O
 2: . | X | O
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | O
-1: X | O | O
-2: . | X | O
-    0   1   2
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260318_233806,20260318_233806,ttt_case_39,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_000023,case_39,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | X
 1: . | X | O
 2: X | O | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: . | . | X
-1: . | X | O
-2: X | O | .
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_233806,20260318_233806,ttt_case_40,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_000023,case_40,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: O | . | .
 2: X | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | X | O
-1: O | O | X
-2: X | X | X
-    0   1   2
-Current player: O",6,terminal_state_reached,X,6,6,0
-20260318_233806,20260318_233806,ttt_case_41,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,5,5
+20260321_000023,case_41,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: X | . | O
 2: X | O | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | . | .
-1: X | . | O
-2: X | O | .
-    0   1   2
-Current player: O",1,terminal_state_reached,X,1,1,0
-20260318_233806,20260318_233806,ttt_case_42,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,draw,5,5
+20260321_000023,case_42,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: O | X | X
 1: O | O | .
 2: X | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | X | X
-1: O | O | O
-2: X | . | X
-    0   1   2
-Current player: X",1,terminal_state_reached,O,1,1,0
-20260318_233806,20260318_233806,ttt_case_43,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,1,1
+20260321_000023,case_43,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: X | O | X
 1: X | O | X
 2: O | O | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: X | O | X
-2: O | O | .
-    0   1   2
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260318_233806,20260318_233806,ttt_case_44,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_000023,case_44,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: X | O | .
 2: X | . | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | X | .
-1: X | O | .
-2: X | . | O
-    0   1   2
-Current player: X",1,terminal_state_reached,O,1,1,0
-20260318_233806,20260318_233806,ttt_case_45,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,1,1
+20260321_000023,case_45,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | O
 1: . | . | .
 2: X | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | O | O
-1: X | O | X
-2: X | . | X
-    0   1   2
-Current player: X",5,terminal_state_reached,O,5,5,0
-20260318_233806,20260318_233806,ttt_case_46,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",invalid_move,,1,2
+20260321_000023,case_46,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: X | O | O
 1: O | O | X
 2: X | X | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | O | O
-1: O | O | X
-2: X | X | X
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_233806,20260318_233806,ttt_case_47,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_000023,case_47,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: X | . | .
 1: X | . | .
 2: X | O | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | . | .
-1: X | . | .
-2: X | O | O
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_233806,20260318_233806,ttt_case_48,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_000023,case_48,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: X | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: . | O | O
-2: . | . | .
-    0   1   2
-Current player: O",4,terminal_state_reached,X,4,4,0
-20260318_233806,20260318_233806,ttt_case_49,tictactoe,groq,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,8,8
+20260321_000023,case_49,tictactoe,llama-3.1-8b-instant,"Rows/Cols are 0-indexed.
 Board:
 0: . | O | X
 1: O | X | X
 2: . | . | O
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: O | X | X
-2: X | O | O
-    0   1   2
-Current player: O",3,terminal_state_reached,X,3,3,0
-20260318_234547,20260318_234547,ttt_case_0,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,1,1
+20260321_001339,case_0,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: X | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: O | O | O
-2: X | . | X
-    0   1   2
-Current player: X",7,terminal_state_reached,O,7,7,0
-20260318_234547,20260318_234547,ttt_case_1,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,7,7
+20260321_001339,case_1,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: X | O | .
 2: . | . | O
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: X | O | .
-2: O | . | O
-    0   1   2
-Current player: O",3,terminal_state_reached,X,3,3,0
-20260318_234547,20260318_234547,ttt_case_2,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,4,4
+20260321_001339,case_2,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: . | . | .
-1: . | . | .
-2: . | . | X
-    0   1   2
-Current player: O",0,invalid_or_unparseable_move,,1,0,1
-20260318_234547,20260318_234547,ttt_case_3,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,5,5
+20260321_001339,case_3,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: X | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | X | O
-1: O | X | X
-2: X | O | X
-    0   1   2
-Current player: O",8,terminal_state_reached,draw,8,8,0
-20260318_234547,20260318_234547,ttt_case_4,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,7,7
+20260321_001339,case_4,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: . | . | O
-1: X | X | X
-2: . | . | O
-    0   1   2
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_234547,20260318_234547,ttt_case_5,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,7,7
+20260321_001339,case_5,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | . | O
-1: X | X | X
-2: . | . | .
-    0   1   2
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_234547,20260318_234547,ttt_case_6,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,9,9
+20260321_001339,case_6,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: X | . | .
 2: . | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | O | O
-1: X | X | .
-2: . | . | X
-    0   1   2
-Current player: X",5,terminal_state_reached,O,5,5,0
-20260318_234547,20260318_234547,ttt_case_7,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,7,7
+20260321_001339,case_7,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | .
 1: . | . | X
 2: . | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | O | X
-1: . | . | X
-2: . | . | X
-    0   1   2
-Current player: O",2,terminal_state_reached,X,2,2,0
-20260318_234547,20260318_234547,ttt_case_8,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,3,3
+20260321_001339,case_8,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: . | . | .
 2: O | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: . | O | O
-2: O | . | X
-    0   1   2
-Current player: O",4,terminal_state_reached,X,4,4,0
-20260318_234547,20260318_234547,ttt_case_9,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,3,3
+20260321_001339,case_9,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | O
 1: X | X | O
 2: X | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | O | O
-1: X | X | O
-2: X | . | X
-    0   1   2
-Current player: X",1,terminal_state_reached,O,1,1,0
-20260318_234547,20260318_234547,ttt_case_10,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,1,1
+20260321_001339,case_10,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: X | . | .
 2: O | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | . | .
-1: X | X | X
-2: O | . | .
-    0   1   2
-Current player: O",3,terminal_state_reached,X,3,3,0
-20260318_234547,20260318_234547,ttt_case_11,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,6,6
+20260321_001339,case_11,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | X | O
-1: X | O | O
-2: X | . | .
-    0   1   2
-Current player: O",6,terminal_state_reached,X,6,6,0
-20260318_234547,20260318_234547,ttt_case_12,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,6,6
+20260321_001339,case_12,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: O | O | .
 2: O | X | X
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | O
-1: O | O | .
-2: O | X | X
-    0   1   2
-Current player: X",2,terminal_state_reached,O,2,2,0
-20260318_234547,20260318_234547,ttt_case_13,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,2,2
+20260321_001339,case_13,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | O | O
-1: X | X | .
-2: . | . | X
-    0   1   2
-Current player: X",6,terminal_state_reached,O,6,6,0
-20260318_234547,20260318_234547,ttt_case_14,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,7,7
+20260321_001339,case_14,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: O | O | .
 1: . | X | O
 2: X | X | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | O | .
-1: . | X | O
-2: X | X | X
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_234547,20260318_234547,ttt_case_15,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_001339,case_15,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: O | X | O
 1: O | O | X
 2: X | X | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | X | O
-1: O | O | X
-2: X | X | X
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_234547,20260318_234547,ttt_case_16,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_001339,case_16,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: X | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | X | O
-1: O | X | X
-2: X | O | X
-    0   1   2
-Current player: O",8,terminal_state_reached,draw,8,8,0
-20260318_234547,20260318_234547,ttt_case_17,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,7,7
+20260321_001339,case_17,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: O | . | O
 2: . | X | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: O | . | O
-2: . | X | O
-    0   1   2
-Current player: O",3,terminal_state_reached,X,3,3,0
-20260318_234547,20260318_234547,ttt_case_18,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,1,1
+20260321_001339,case_18,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: X | . | .
 1: X | . | O
 2: . | X | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: X | O | O
-2: X | X | O
-    0   1   2
-Current player: O",4,terminal_state_reached,X,4,4,0
-20260318_234547,20260318_234547,ttt_case_19,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,1,1
+20260321_001339,case_19,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: O | X | X
 1: X | O | O
 2: O | X | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | X | X
-1: X | O | O
-2: O | X | X
-    0   1   2
-Current player: O",0,terminal_state_reached,draw,0,0,0
-20260318_234547,20260318_234547,ttt_case_20,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,draw,0,0
+20260321_001339,case_20,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: . | . | O
-1: X | X | X
-2: . | . | O
-    0   1   2
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_234547,20260318_234547,ttt_case_21,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,7,7
+20260321_001339,case_21,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: X | . | .
 1: . | X | .
 2: O | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | . | X
-1: O | X | X
-2: O | O | O
-    0   1   2
-Current player: X",5,terminal_state_reached,O,5,5,0
-20260318_234547,20260318_234547,ttt_case_22,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,draw,6,6
+20260321_001339,case_22,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: . | O | .
 2: X | . | O
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | X
-1: O | O | .
-2: X | . | O
-    0   1   2
-Current player: O",3,terminal_state_reached,X,3,3,0
-20260318_234547,20260318_234547,ttt_case_23,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,2,2
+20260321_001339,case_23,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: X | X | X
 2: . | O | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: . | . | .
-1: X | X | X
-2: . | O | O
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_234547,20260318_234547,ttt_case_24,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_001339,case_24,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | O
 1: . | X | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: . | . | O
-1: X | X | X
-2: . | . | O
-    0   1   2
-Current player: O",3,terminal_state_reached,X,3,3,0
-20260318_234547,20260318_234547,ttt_case_25,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,draw,7,7
+20260321_001339,case_25,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | O | .
 2: X | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: O | O | O
-2: X | . | X
-    0   1   2
-Current player: X",5,terminal_state_reached,O,5,5,0
-20260318_234547,20260318_234547,ttt_case_26,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,6,6
+20260321_001339,case_26,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: X | O | X
 1: X | . | .
 2: X | O | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: X | . | .
-2: X | O | O
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_234547,20260318_234547,ttt_case_27,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_001339,case_27,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | . | O
-1: X | X | X
-2: . | . | .
-    0   1   2
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_234547,20260318_234547,ttt_case_28,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,6,6
+20260321_001339,case_28,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | X
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | O | X
-1: X | X | O
-2: X | O | X
-    0   1   2
-Current player: O",8,terminal_state_reached,X,8,8,0
-20260318_234547,20260318_234547,ttt_case_29,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,7,7
+20260321_001339,case_29,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | O | .
 1: . | . | .
 2: X | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | O | O
-1: X | . | .
-2: X | . | .
-    0   1   2
-Current player: O",3,terminal_state_reached,X,3,3,0
-20260318_234547,20260318_234547,ttt_case_30,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,5,5
+20260321_001339,case_30,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | O
 1: . | X | .
 2: X | X | O
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | . | O
-1: X | X | O
-2: X | X | O
-    0   1   2
-Current player: X",2,terminal_state_reached,O,2,2,0
-20260318_234547,20260318_234547,ttt_case_31,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,1,1
+20260321_001339,case_31,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: . | . | .
 2: . | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: . | . | .
-1: . | . | .
-2: . | . | X
-    0   1   2
-Current player: O",0,invalid_or_unparseable_move,,1,0,1
-20260318_234547,20260318_234547,ttt_case_32,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,8,8
+20260321_001339,case_32,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | O | .
 1: X | . | X
 2: O | . | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: . | O | .
-1: X | X | X
-2: O | . | .
-    0   1   2
-Current player: O",1,terminal_state_reached,X,1,1,0
-20260318_234547,20260318_234547,ttt_case_33,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,1,1
+20260321_001339,case_33,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | .
 1: . | . | .
 2: . | X | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | O | X
-1: X | O | O
-2: X | X | X
-    0   1   2
-Current player: O",7,terminal_state_reached,X,7,7,0
-20260318_234547,20260318_234547,ttt_case_34,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,draw,7,7
+20260321_001339,case_34,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | O
 1: . | . | X
 2: . | . | X
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | O | O
-1: . | X | X
-2: . | . | X
-    0   1   2
-Current player: X",2,terminal_state_reached,O,2,2,0
-20260318_234547,20260318_234547,ttt_case_35,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",invalid_move,,1,2
+20260321_001339,case_35,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: O | O | .
 2: . | . | X
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | .
-1: O | O | O
-2: . | . | X
-    0   1   2
-Current player: X",2,terminal_state_reached,O,2,2,0
-20260318_234547,20260318_234547,ttt_case_36,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,3,3
+20260321_001339,case_36,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: O | . | .
 1: . | . | .
 2: . | . | X
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: O | X | O
-1: O | X | X
-2: X | O | X
-    0   1   2
-Current player: O",7,terminal_state_reached,draw,7,7,0
-20260318_234547,20260318_234547,ttt_case_37,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,5,5
+20260321_001339,case_37,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: X | O | X
 1: O | X | X
 2: O | X | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: O | X | X
-2: O | X | O
-    0   1   2
-Current player: O",0,terminal_state_reached,draw,0,0,0
-20260318_234547,20260318_234547,ttt_case_38,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,draw,0,0
+20260321_001339,case_38,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: X | X | O
 1: X | O | O
 2: . | X | O
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | X | O
-1: X | O | O
-2: . | X | O
-    0   1   2
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260318_234547,20260318_234547,ttt_case_39,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_001339,case_39,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | X
 1: . | X | O
 2: X | O | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: . | . | X
-1: . | X | O
-2: X | O | .
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_234547,20260318_234547,ttt_case_40,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_001339,case_40,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: O | . | .
 2: X | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: O | O | O
-2: X | . | X
-    0   1   2
-Current player: X",5,terminal_state_reached,O,5,5,0
-20260318_234547,20260318_234547,ttt_case_41,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,draw,6,6
+20260321_001339,case_41,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | .
 1: X | . | O
 2: X | O | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | . | .
-1: X | . | O
-2: X | O | .
-    0   1   2
-Current player: O",1,terminal_state_reached,X,1,1,0
-20260318_234547,20260318_234547,ttt_case_42,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,X,1,1
+20260321_001339,case_42,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: O | X | X
 1: O | O | .
 2: X | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | X | X
-1: O | O | O
-2: X | . | X
-    0   1   2
-Current player: X",1,terminal_state_reached,O,1,1,0
-20260318_234547,20260318_234547,ttt_case_43,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,1,1
+20260321_001339,case_43,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: X | O | X
 1: X | O | X
 2: O | O | .
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: X | O | X
-2: O | O | .
-    0   1   2
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260318_234547,20260318_234547,ttt_case_44,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_001339,case_44,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | X | .
 1: X | O | .
 2: X | . | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | X | .
-1: X | O | .
-2: X | . | O
-    0   1   2
-Current player: X",1,terminal_state_reached,O,1,1,0
-20260318_234547,20260318_234547,ttt_case_45,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,1,1
+20260321_001339,case_45,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | . | O
 1: . | . | .
 2: X | . | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: O | O | O
-1: O | X | X
-2: X | . | X
-    0   1   2
-Current player: X",5,terminal_state_reached,O,5,5,0
-20260318_234547,20260318_234547,ttt_case_46,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,5,5
+20260321_001339,case_46,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: X | O | O
 1: O | O | X
 2: X | X | X
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | O | O
-1: O | O | X
-2: X | X | X
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_234547,20260318_234547,ttt_case_47,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_001339,case_47,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: X | . | .
 1: X | . | .
 2: X | O | O
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | . | .
-1: X | . | .
-2: X | O | O
-    0   1   2
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_234547,20260318_234547,ttt_case_48,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_001339,case_48,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: X | . | .
 1: . | . | .
 2: . | . | .
     0   1   2
-Current player: O","Rows/Cols are 0-indexed.
-Board:
-0: X | O | X
-1: O | O | O
-2: X | . | X
-    0   1   2
-Current player: X",7,terminal_state_reached,O,7,7,0
-20260318_234547,20260318_234547,ttt_case_49,tictactoe,groq,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
+Current player: O",terminal_state_reached,O,5,5
+20260321_001339,case_49,tictactoe,qwen/qwen3-32b,"Rows/Cols are 0-indexed.
 Board:
 0: . | O | X
 1: O | X | X
 2: . | . | O
     0   1   2
-Current player: X","Rows/Cols are 0-indexed.
-Board:
-0: . | O | X
-1: O | X | X
-2: X | . | O
-    0   1   2
-Current player: O",1,terminal_state_reached,X,1,1,0
-20260318_235243,20260318_235243,cf_case_0,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,X,3,3
+20260321_002804,case_0,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 X | . | . | . | . | . | .
 O | . | . | . | . | . | .
@@ -1308,17 +708,8 @@ X | X | . | . | . | O | .
 O | O | X | . | O | O | .
 X | X | O | X | O | X | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-X | . | . | . | . | . | .
-O | . | . | . | . | . | .
-X | O | . | . | . | X | .
-X | X | . | . | . | O | .
-O | O | X | . | O | O | .
-X | X | O | X | O | X | .
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_1,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_1,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | X | . | .
@@ -1327,17 +718,8 @@ Board:
 . | X | . | O | O | X | .
 X | X | O | O | X | O | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | X | . | .
-. | . | . | O | X | . | .
-. | . | . | X | X | . | .
-. | . | . | O | O | O | .
-. | X | . | O | O | X | .
-X | X | O | O | X | O | .
-0   1   2   3   4   5   6
-Current player: O",5,invalid_or_unparseable_move,,6,5,1
-20260318_235243,20260318_235243,cf_case_2,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",invalid_move,,6,7
+20260321_002804,case_2,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1346,17 +728,8 @@ Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | O | O | O | .
-. | . | . | X | X | X | .
-. | . | . | O | O | O | .
-. | . | . | X | X | X | .
-. | . | . | O | O | O | .
-. | . | . | X | X | X | X
-0   1   2   3   4   5   6
-Current player: O",19,terminal_state_reached,X,19,19,0
-20260318_235243,20260318_235243,cf_case_3,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",invalid_move,,26,27
+20260321_002804,case_3,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1365,17 +738,8 @@ Board:
 O | O | O | . | . | . | .
 X | X | X | O | . | X | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | O | . | . | . | .
-O | O | O | O | . | X | .
-X | X | X | O | . | X | X
-0   1   2   3   4   5   6
-Current player: X",2,terminal_state_reached,O,2,2,0
-20260318_235243,20260318_235243,cf_case_4,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,4,4
+20260321_002804,case_4,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1384,17 +748,8 @@ O | . | O | . | X | . | .
 O | . | O | X | X | . | X
 X | . | O | O | X | X | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-O | . | O | . | . | . | .
-O | . | O | . | X | . | .
-O | . | O | X | X | . | X
-X | . | O | O | X | X | X
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260318_235243,20260318_235243,cf_case_5,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_002804,case_5,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1403,17 +758,8 @@ X | X | X | . | . | . | O
 O | O | O | O | O | X | X
 X | X | X | O | X | O | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-X | . | . | . | . | . | O
-X | X | X | . | . | . | O
-O | O | O | O | O | X | X
-X | X | X | O | X | O | O
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260318_235243,20260318_235243,cf_case_6,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_002804,case_6,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | O | . | . | . | X | .
 . | X | O | . | . | O | .
@@ -1422,17 +768,8 @@ Board:
 . | O | O | X | O | X | X
 O | X | O | O | X | X | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | O | . | . | . | X | .
-. | X | O | . | . | O | .
-. | O | O | . | . | X | .
-. | X | X | X | X | O | O
-. | O | O | X | O | X | X
-O | X | O | O | X | X | X
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_7,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_7,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1441,17 +778,8 @@ Board:
 . | . | . | . | . | . | .
 X | X | . | . | . | . | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | X | . | . | .
-. | . | . | X | O | . | .
-. | . | . | X | O | . | .
-X | X | . | X | O | O | O
-0   1   2   3   4   5   6
-Current player: O",8,terminal_state_reached,X,8,8,0
-20260318_235243,20260318_235243,cf_case_8,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,O,19,19
+20260321_002804,case_8,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1460,17 +788,8 @@ Board:
 . | O | X | O | . | X | .
 X | O | O | X | X | O | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | O | . | X | . | . | .
-. | O | X | X | . | O | .
-. | O | X | O | . | X | .
-X | O | O | X | X | O | .
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260318_235243,20260318_235243,cf_case_9,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_002804,case_9,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | X | . | .
@@ -1479,17 +798,8 @@ Board:
 . | O | O | X | X | X | .
 X | X | O | X | O | X | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | X | O | . | .
-. | . | . | O | X | . | .
-. | . | . | X | O | X | .
-. | . | . | O | O | O | .
-. | O | O | X | X | X | .
-X | X | O | X | O | X | .
-0   1   2   3   4   5   6
-Current player: O",6,invalid_or_unparseable_move,,7,6,1
-20260318_235243,20260318_235243,cf_case_10,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,O,13,13
+20260321_002804,case_10,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1498,17 +808,8 @@ Board:
 . | . | . | . | . | . | .
 O | X | . | . | . | . | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-X | . | . | X | X | X | O
-O | . | . | O | O | O | X
-X | . | . | X | X | X | O
-O | . | . | O | O | O | X
-X | . | . | X | X | X | O
-O | X | O | O | O | O | X
-0   1   2   3   4   5   6
-Current player: X",29,terminal_state_reached,O,29,29,0
-20260318_235243,20260318_235243,cf_case_11,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,O,15,15
+20260321_002804,case_11,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1517,17 +818,8 @@ Board:
 . | . | . | X | X | . | .
 O | X | O | O | X | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | O | X | . | .
-. | . | . | O | X | . | .
-. | . | . | X | X | . | .
-O | X | O | O | X | X | O
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_12,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_12,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1536,17 +828,8 @@ Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | O | O | O | .
-. | . | . | X | X | X | .
-. | . | . | O | O | O | .
-. | . | . | X | X | X | .
-. | . | . | O | O | O | .
-. | . | . | X | X | X | X
-0   1   2   3   4   5   6
-Current player: O",19,terminal_state_reached,X,19,19,0
-20260318_235243,20260318_235243,cf_case_13,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,X,15,15
+20260321_002804,case_13,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1555,17 +838,8 @@ Board:
 . | . | X | . | . | O | X
 . | . | O | . | O | X | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | O | O | O | .
-. | . | . | X | X | X | .
-. | . | . | O | O | O | .
-. | . | . | X | X | X | X
-. | . | X | O | O | O | X
-. | . | O | X | O | X | X
-0   1   2   3   4   5   6
-Current player: O",16,terminal_state_reached,X,16,16,0
-20260318_235243,20260318_235243,cf_case_14,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",invalid_move,,18,19
+20260321_002804,case_14,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1574,17 +848,8 @@ Board:
 . | . | . | O | . | X | .
 X | X | X | O | . | O | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | O | . | . | .
-. | . | . | O | . | . | .
-. | . | . | O | . | X | .
-X | X | X | O | X | O | .
-0   1   2   3   4   5   6
-Current player: X",3,terminal_state_reached,O,3,3,0
-20260318_235243,20260318_235243,cf_case_15,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,22,22
+20260321_002804,case_15,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1593,17 +858,8 @@ Board:
 . | X | X | . | O | O | O
 X | X | O | . | X | X | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | O | . | .
-. | . | . | . | X | . | .
-. | . | . | . | O | . | O
-. | O | . | . | X | . | X
-. | X | X | O | O | O | O
-X | X | O | X | X | X | O
-0   1   2   3   4   5   6
-Current player: X",4,terminal_state_reached,O,4,4,0
-20260318_235243,20260318_235243,cf_case_16,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,2,2
+20260321_002804,case_16,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1612,17 +868,8 @@ X | . | . | . | X | . | .
 O | . | O | . | X | . | .
 O | . | O | X | X | . | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | O | O | O | .
-. | . | . | X | X | X | .
-. | . | . | O | O | O | X
-X | . | . | X | X | X | O
-O | . | O | X | X | O | X
-O | . | O | X | X | X | O
-0   1   2   3   4   5   6
-Current player: O",17,terminal_state_reached,X,17,17,0
-20260318_235243,20260318_235243,cf_case_17,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,X,15,15
+20260321_002804,case_17,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | X | . | . | . | . | .
@@ -1631,17 +878,8 @@ O | O | . | . | O | . | X
 X | X | . | X | O | O | X
 O | X | . | O | O | X | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | X | . | . | . | . | .
-O | X | . | . | O | . | .
-O | O | . | . | O | . | X
-X | X | . | X | O | O | X
-O | X | . | O | O | X | X
-0   1   2   3   4   5   6
-Current player: X",1,terminal_state_reached,O,1,1,0
-20260318_235243,20260318_235243,cf_case_18,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,O,1,1
+20260321_002804,case_18,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1650,17 +888,8 @@ Board:
 . | O | . | X | X | X | X
 . | X | O | O | X | O | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | O | X | .
-. | O | . | X | X | X | X
-. | X | O | O | X | O | O
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_19,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_19,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 X | O | . | . | . | . | .
 O | X | . | . | X | . | .
@@ -1669,17 +898,8 @@ X | O | O | . | X | O | .
 X | O | O | X | O | X | .
 O | X | O | X | O | X | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-X | O | . | . | . | . | .
-O | X | . | . | X | . | .
-X | O | O | . | X | . | .
-X | O | O | . | X | O | .
-X | O | O | X | O | X | .
-O | X | O | X | O | X | .
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260318_235243,20260318_235243,cf_case_20,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_002804,case_20,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | X | . | . | .
 . | X | . | X | X | . | .
@@ -1688,17 +908,8 @@ Board:
 X | X | O | X | X | O | X
 O | X | O | O | O | X | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | X | . | X | X | . | .
-. | O | . | O | O | . | .
-. | X | . | O | O | O | O
-X | X | O | X | X | O | X
-O | X | O | O | O | X | X
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260318_235243,20260318_235243,cf_case_21,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_002804,case_21,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1707,17 +918,8 @@ Board:
 . | . | . | . | . | O | .
 . | . | . | . | . | X | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | X | . | . | .
-. | . | . | X | . | . | .
-. | . | . | X | O | X | .
-. | . | . | X | O | O | .
-. | . | . | O | O | X | .
-0   1   2   3   4   5   6
-Current player: O",8,terminal_state_reached,X,8,8,0
-20260318_235243,20260318_235243,cf_case_22,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",invalid_move,,17,18
+20260321_002804,case_22,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1726,17 +928,8 @@ Board:
 . | . | . | . | . | . | O
 X | . | O | O | . | X | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | . | X | .
-. | . | . | . | O | X | .
-. | . | . | . | O | O | .
-. | . | . | . | O | X | .
-. | . | . | . | O | X | O
-X | . | O | O | X | X | X
-0   1   2   3   4   5   6
-Current player: X",10,terminal_state_reached,O,10,10,0
-20260318_235243,20260318_235243,cf_case_23,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,X,17,17
+20260321_002804,case_23,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1745,17 +938,8 @@ Board:
 . | O | . | . | . | . | .
 . | X | . | X | O | . | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-X | . | . | O | O | O | X
-O | . | . | X | X | X | O
-O | O | . | O | O | O | X
-X | X | X | X | X | X | O
-O | O | O | X | O | O | X
-O | X | X | X | O | X | X
-0   1   2   3   4   5   6
-Current player: O",31,terminal_state_reached,X,31,31,0
-20260318_235243,20260318_235243,cf_case_24,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,X,11,11
+20260321_002804,case_24,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 X | . | . | O | . | . | X
 O | X | . | O | . | . | O
@@ -1764,17 +948,8 @@ X | O | . | O | . | . | X
 O | O | . | X | X | . | O
 O | X | O | X | X | O | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-X | . | . | O | X | . | X
-O | X | . | O | O | . | O
-X | X | . | X | X | . | O
-X | O | X | O | O | O | X
-O | O | X | X | X | O | O
-O | X | O | X | X | O | X
-0   1   2   3   4   5   6
-Current player: O",8,terminal_state_reached,X,8,8,0
-20260318_235243,20260318_235243,cf_case_25,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",invalid_move,,1,2
+20260321_002804,case_25,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1783,17 +958,8 @@ Board:
 . | . | O | X | . | . | O
 O | . | O | X | . | . | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | X | . | . | .
-. | . | . | X | . | . | .
-. | . | O | X | . | . | O
-O | . | O | X | . | . | X
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_26,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_26,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1802,17 +968,8 @@ X | X | . | . | X | O | .
 O | X | O | O | X | O | .
 O | O | O | X | X | X | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-O | . | . | . | X | X | .
-X | X | . | . | X | O | .
-O | X | O | O | X | O | .
-O | O | O | X | X | X | .
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_27,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_27,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 X | . | . | . | O | . | .
 O | X | . | . | O | . | X
@@ -1821,17 +978,8 @@ X | O | . | X | X | . | X
 O | O | O | O | O | O | X
 O | X | O | X | X | O | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-X | . | . | . | O | . | .
-O | X | . | . | O | . | X
-X | O | . | X | X | . | O
-X | O | . | X | X | . | X
-O | O | O | O | O | O | X
-O | X | O | X | X | O | X
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260318_235243,20260318_235243,cf_case_28,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_002804,case_28,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1840,17 +988,8 @@ O | . | . | X | O | . | .
 O | . | X | O | X | O | .
 X | O | X | X | O | X | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | O | X | O | .
-. | . | . | X | O | X | .
-X | . | . | X | O | O | .
-O | . | . | X | O | X | O
-O | . | X | O | X | O | X
-X | O | X | X | O | X | O
-0   1   2   3   4   5   6
-Current player: X",12,terminal_state_reached,O,12,12,0
-20260318_235243,20260318_235243,cf_case_29,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",invalid_move,,8,9
+20260321_002804,case_29,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1859,17 +998,8 @@ Board:
 . | O | O | . | O | . | .
 X | X | O | O | X | X | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | O | . | .
-. | . | O | . | O | . | .
-. | X | X | X | O | . | .
-. | O | O | X | O | . | .
-X | X | O | O | X | X | X
-0   1   2   3   4   5   6
-Current player: X",5,terminal_state_reached,O,5,5,0
-20260318_235243,20260318_235243,cf_case_30,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",invalid_move,,5,6
+20260321_002804,case_30,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1878,17 +1008,8 @@ O | . | X | . | O | O | .
 X | O | X | . | O | O | X
 X | O | X | . | X | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | X | X | . | .
-. | . | . | O | O | O | .
-X | . | . | X | X | O | .
-O | . | X | O | O | O | .
-X | O | X | X | O | O | X
-X | O | X | O | X | X | O
-0   1   2   3   4   5   6
-Current player: X",9,terminal_state_reached,O,9,9,0
-20260318_235243,20260318_235243,cf_case_31,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",invalid_move,,4,5
+20260321_002804,case_31,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1897,17 +1018,8 @@ Board:
 X | X | X | X | O | O | X
 O | O | O | X | X | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | . | O | .
-. | . | O | . | . | X | .
-X | X | X | X | O | O | X
-O | O | O | X | X | X | O
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_32,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_32,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 X | . | . | . | . | . | .
@@ -1916,17 +1028,8 @@ X | . | . | . | . | O | .
 O | O | X | X | O | X | .
 X | X | X | O | X | O | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-O | . | O | O | O | X | X
-X | . | X | X | X | O | O
-O | . | O | O | O | X | X
-X | . | X | X | O | O | O
-O | O | X | X | O | X | X
-X | X | X | O | X | O | O
-0   1   2   3   4   5   6
-Current player: X",21,invalid_or_unparseable_move,,22,21,1
-20260318_235243,20260318_235243,cf_case_33,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",invalid_move,,4,5
+20260321_002804,case_33,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1935,17 +1038,8 @@ Board:
 . | X | . | . | X | . | .
 O | X | O | O | X | . | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | X | O | X | .
-. | . | . | O | X | O | .
-. | . | . | X | O | X | .
-. | . | . | O | O | O | .
-. | X | . | X | X | X | O
-O | X | O | O | X | O | X
-0   1   2   3   4   5   6
-Current player: X",15,terminal_state_reached,O,15,15,0
-20260318_235243,20260318_235243,cf_case_34,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",invalid_move,,4,5
+20260321_002804,case_34,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1954,17 +1048,8 @@ Board:
 . | . | O | . | . | . | .
 . | . | X | . | . | . | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | O | O | . | .
-. | . | . | X | X | . | .
-. | . | . | O | O | . | .
-. | . | . | X | X | . | .
-. | . | O | O | O | . | .
-. | . | X | X | X | X | .
-0   1   2   3   4   5   6
-Current player: O",13,terminal_state_reached,X,13,13,0
-20260318_235243,20260318_235243,cf_case_35,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",invalid_move,,6,7
+20260321_002804,case_35,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1973,17 +1058,8 @@ Board:
 . | . | . | . | . | . | .
 . | O | X | . | . | . | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | O | O | X | .
-. | . | . | X | X | O | .
-. | . | . | O | O | X | .
-. | . | . | X | X | O | .
-. | . | . | O | O | X | .
-. | O | X | X | X | O | X
-0   1   2   3   4   5   6
-Current player: O",19,invalid_or_unparseable_move,,20,19,1
-20260318_235243,20260318_235243,cf_case_36,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",invalid_move,,5,6
+20260321_002804,case_36,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -1992,17 +1068,8 @@ Board:
 . | . | . | . | . | . | O
 O | . | X | X | X | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | . | . | O
-O | . | X | X | X | X | O
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_37,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_37,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | O | . | . | . | . | O
 . | X | . | . | . | . | O
@@ -2011,17 +1078,8 @@ X | X | X | X | . | X | X
 X | X | O | X | O | O | O
 O | O | X | X | O | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | O | . | . | . | . | O
-. | X | . | . | . | . | O
-. | O | . | . | . | X | O
-X | X | X | X | . | X | X
-X | X | O | X | O | O | O
-O | O | X | X | O | X | O
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_38,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_38,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2030,17 +1088,8 @@ Board:
 . | X | O | . | . | . | X
 O | O | X | O | . | X | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-X | . | X | X | X | O | O
-O | . | O | O | O | X | X
-X | . | X | X | X | O | X
-O | O | X | O | O | X | O
-O | X | O | X | X | O | X
-O | O | X | O | O | X | X
-0   1   2   3   4   5   6
-Current player: O",27,invalid_or_unparseable_move,,28,27,1
-20260318_235243,20260318_235243,cf_case_39,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",invalid_move,,3,4
+20260321_002804,case_39,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | X | . | . | . | .
 O | . | O | . | . | . | .
@@ -2049,17 +1098,8 @@ O | . | O | X | O | X | O
 X | . | O | O | X | X | X
 O | O | X | O | X | O | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-X | . | X | X | O | X | O
-O | . | O | O | X | O | X
-X | . | X | X | O | X | O
-O | . | O | X | O | X | O
-X | . | O | O | X | X | X
-O | O | X | O | X | O | X
-0   1   2   3   4   5   6
-Current player: O",12,invalid_or_unparseable_move,,13,12,1
-20260318_235243,20260318_235243,cf_case_40,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,O,3,3
+20260321_002804,case_40,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | O | .
 . | . | . | . | X | X | .
@@ -2068,17 +1108,8 @@ O | . | . | X | O | X | .
 X | . | . | X | X | O | .
 O | X | O | X | O | O | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | X | O | .
-. | . | . | . | X | X | .
-. | . | . | O | X | O | .
-O | . | . | X | O | X | .
-X | . | . | X | X | O | .
-O | X | O | X | O | O | O
-0   1   2   3   4   5   6
-Current player: X",2,terminal_state_reached,O,2,2,0
-20260318_235243,20260318_235243,cf_case_41,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",invalid_move,,5,6
+20260321_002804,case_41,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2087,17 +1118,8 @@ Board:
 O | . | X | . | . | O | .
 X | . | X | O | O | O | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | . | X | .
-. | . | . | . | . | X | .
-. | . | O | . | . | X | .
-. | . | X | . | O | X | .
-O | . | X | . | O | O | .
-X | . | X | O | O | O | X
-0   1   2   3   4   5   6
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260318_235243,20260318_235243,cf_case_42,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",invalid_move,,6,7
+20260321_002804,case_42,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2106,17 +1128,8 @@ Board:
 . | O | O | X | . | O | .
 . | X | X | X | O | O | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | X | . | . | .
-. | . | X | X | . | O | .
-. | O | O | X | . | O | .
-. | X | X | X | O | O | .
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_43,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_43,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2125,17 +1138,8 @@ Board:
 . | . | O | X | O | . | .
 X | O | X | O | X | . | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | O | O | . | .
-. | . | . | X | X | . | .
-. | . | . | O | O | . | .
-. | . | X | X | X | X | .
-. | . | O | X | O | O | .
-X | O | X | O | X | X | O
-0   1   2   3   4   5   6
-Current player: O",10,terminal_state_reached,X,10,10,0
-20260318_235243,20260318_235243,cf_case_44,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",invalid_move,,5,6
+20260321_002804,case_44,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2144,17 +1148,8 @@ Board:
 . | O | X | X | X | X | O
 O | O | X | O | X | O | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | O | . | X | .
-. | . | . | O | . | X | .
-. | O | X | X | X | X | O
-O | O | X | O | X | O | X
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_45,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_45,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | X | . | . | X | . | O
 . | X | . | . | O | . | X
@@ -2163,17 +1158,8 @@ O | X | O | O | O | X | O
 X | X | O | X | X | O | X
 X | O | O | O | X | X | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | X | . | X | X | X | O
-. | X | . | O | O | O | X
-O | O | O | X | X | X | O
-O | X | O | O | O | X | O
-X | X | O | X | X | O | X
-X | O | O | O | X | X | O
-0   1   2   3   4   5   6
-Current player: X",6,terminal_state_reached,O,6,6,0
-20260318_235243,20260318_235243,cf_case_46,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",invalid_move,,0,1
+20260321_002804,case_46,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2182,17 +1168,8 @@ Board:
 X | . | . | . | . | O | X
 X | . | . | X | . | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | X | . | .
-. | . | . | . | O | . | .
-. | . | . | O | X | . | O
-. | . | . | X | O | . | O
-X | . | . | O | X | O | X
-X | . | . | X | O | X | O
-0   1   2   3   4   5   6
-Current player: X",9,terminal_state_reached,O,9,9,0
-20260318_235243,20260318_235243,cf_case_47,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",invalid_move,,6,7
+20260321_002804,case_47,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2201,17 +1178,8 @@ Board:
 O | O | . | X | X | . | X
 O | X | . | X | O | X | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | O | O | .
-. | . | . | O | X | X | .
-. | . | . | X | O | O | X
-. | O | . | O | X | X | X
-O | O | . | X | X | O | X
-O | X | . | X | O | X | O
-0   1   2   3   4   5   6
-Current player: O",13,terminal_state_reached,X,13,13,0
-20260318_235243,20260318_235243,cf_case_48,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: X",invalid_move,,3,4
+20260321_002804,case_48,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | . | . | . | X | . | .
 . | . | . | O | O | . | X
@@ -2220,17 +1188,8 @@ Board:
 . | O | X | X | O | X | O
 . | X | O | O | X | X | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | X | . | .
-. | . | . | O | O | . | X
-. | . | . | X | X | . | O
-. | . | O | O | X | . | O
-. | O | X | X | O | X | O
-. | X | O | O | X | X | X
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260318_235243,20260318_235243,cf_case_49,connect_four,groq,llama-3.1-8b-instant,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_002804,case_49,connect_four,llama-3.1-8b-instant,"Columns are 0-indexed.
 Board:
 . | X | X | . | . | X | .
 . | O | X | . | . | O | .
@@ -2239,17 +1198,8 @@ O | O | X | O | . | O | O
 X | O | X | X | X | O | O
 X | O | X | O | O | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | X | X | . | . | X | .
-. | O | X | . | . | O | .
-X | X | O | . | . | X | X
-O | O | X | O | O | O | O
-X | O | X | X | X | O | O
-X | O | X | O | O | X | O
-0   1   2   3   4   5   6
-Current player: X",1,terminal_state_reached,O,1,1,0
-20260319_001633,20260319_001633,cf_case_0,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",invalid_move,,0,1
+20260321_004747,case_0,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 X | . | . | . | . | . | .
 O | . | . | . | . | . | .
@@ -2258,17 +1208,8 @@ X | X | . | . | . | O | .
 O | O | X | . | O | O | .
 X | X | O | X | O | X | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-X | . | . | . | . | . | .
-O | . | . | . | . | . | .
-X | O | . | . | . | X | .
-X | X | . | . | . | O | .
-O | O | X | . | O | O | .
-X | X | O | X | O | X | .
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_1,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_1,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | X | . | .
@@ -2277,17 +1218,8 @@ Board:
 . | X | . | O | O | X | .
 X | X | O | O | X | O | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | O | . | . | .
-. | . | . | X | X | . | .
-. | . | . | O | X | . | .
-. | . | . | X | O | O | .
-. | X | X | O | O | X | .
-X | X | O | O | X | O | .
-0   1   2   3   4   5   6
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260319_001633,20260319_001633,cf_case_2,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",invalid_move,,1,2
+20260321_004747,case_2,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2296,17 +1228,8 @@ Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-0   1   2   3   4   5   6
-Current player: X",6,invalid_or_unparseable_move,,7,6,1
-20260319_001633,20260319_001633,cf_case_3,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",invalid_move,,16,17
+20260321_004747,case_3,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2315,17 +1238,8 @@ Board:
 O | O | O | . | . | . | .
 X | X | X | O | . | X | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | X | X | . | . | .
-. | . | O | O | . | . | .
-O | O | O | X | . | . | .
-X | X | X | O | O | X | X
-0   1   2   3   4   5   6
-Current player: O",7,invalid_or_unparseable_move,,8,7,1
-20260319_001633,20260319_001633,cf_case_4,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",invalid_move,,7,8
+20260321_004747,case_4,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2334,17 +1248,8 @@ O | . | O | . | X | . | .
 O | . | O | X | X | . | X
 X | . | O | O | X | X | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-O | . | O | . | . | . | .
-O | . | O | . | X | . | .
-O | . | O | X | X | . | X
-X | . | O | O | X | X | X
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260319_001633,20260319_001633,cf_case_5,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_004747,case_5,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2353,17 +1258,8 @@ X | X | X | . | . | . | O
 O | O | O | O | O | X | X
 X | X | X | O | X | O | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-X | . | . | . | . | . | O
-X | X | X | . | . | . | O
-O | O | O | O | O | X | X
-X | X | X | O | X | O | O
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260319_001633,20260319_001633,cf_case_6,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_004747,case_6,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | O | . | . | . | X | .
 . | X | O | . | . | O | .
@@ -2372,17 +1268,8 @@ Board:
 . | O | O | X | O | X | X
 O | X | O | O | X | X | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | O | . | . | . | X | .
-. | X | O | . | . | O | .
-. | O | O | . | . | X | .
-. | X | X | X | X | O | O
-. | O | O | X | O | X | X
-O | X | O | O | X | X | X
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_7,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_7,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2391,17 +1278,8 @@ Board:
 . | . | . | . | . | . | .
 X | X | . | . | . | . | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | X | X | . | . | .
-X | X | O | O | . | . | O
-0   1   2   3   4   5   6
-Current player: O",8,invalid_or_unparseable_move,,9,8,1
-20260319_001633,20260319_001633,cf_case_8,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",invalid_move,,7,8
+20260321_004747,case_8,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2410,17 +1288,8 @@ Board:
 . | O | X | O | . | X | .
 X | O | O | X | X | O | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | O | . | X | . | . | .
-. | O | X | X | . | O | .
-. | O | X | O | . | X | .
-X | O | O | X | X | O | .
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260319_001633,20260319_001633,cf_case_9,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_004747,case_9,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | X | . | .
@@ -2429,17 +1298,8 @@ Board:
 . | O | O | X | X | X | .
 X | X | O | X | O | X | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | O | . | . | .
-. | . | X | X | X | . | .
-. | . | O | O | O | . | .
-. | . | X | O | O | . | .
-. | O | O | X | X | X | .
-X | X | O | X | O | X | .
-0   1   2   3   4   5   6
-Current player: O",6,invalid_or_unparseable_move,,7,6,1
-20260319_001633,20260319_001633,cf_case_10,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",invalid_move,,9,10
+20260321_004747,case_10,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2448,17 +1308,8 @@ Board:
 . | . | . | . | . | . | .
 O | X | . | . | . | . | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-O | X | O | O | . | . | X
-0   1   2   3   4   5   6
-Current player: X",7,invalid_or_unparseable_move,,8,7,1
-20260319_001633,20260319_001633,cf_case_11,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",invalid_move,,11,12
+20260321_004747,case_11,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2467,17 +1318,8 @@ Board:
 . | . | . | X | X | . | .
 O | X | O | O | X | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | O | X | . | .
-. | . | . | O | X | . | .
-. | . | . | X | X | . | .
-O | X | O | O | X | X | O
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_12,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_12,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2486,17 +1328,8 @@ Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-0   1   2   3   4   5   6
-Current player: X",6,invalid_or_unparseable_move,,7,6,1
-20260319_001633,20260319_001633,cf_case_13,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,X,9,9
+20260321_004747,case_13,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2505,17 +1338,8 @@ Board:
 . | . | X | . | . | O | X
 . | . | O | . | O | X | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | X | X | O | . | .
-. | . | O | O | X | . | .
-. | . | X | X | O | X | .
-. | . | O | O | X | O | X
-. | . | X | X | O | O | X
-. | . | O | O | O | X | X
-0   1   2   3   4   5   6
-Current player: O",18,terminal_state_reached,X,18,18,0
-20260319_001633,20260319_001633,cf_case_14,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,O,5,5
+20260321_004747,case_14,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2524,17 +1348,8 @@ Board:
 . | . | . | O | . | X | .
 X | X | X | O | . | O | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | X | O | . | . | .
-. | . | X | X | . | . | .
-. | . | O | O | . | . | .
-. | . | X | O | O | X | .
-X | X | X | O | O | O | .
-0   1   2   3   4   5   6
-Current player: O",10,invalid_or_unparseable_move,,11,10,1
-20260319_001633,20260319_001633,cf_case_15,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",invalid_move,,10,11
+20260321_004747,case_15,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2543,17 +1358,8 @@ Board:
 . | X | X | . | O | O | O
 X | X | O | . | X | X | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | O | . | O
-. | O | . | . | X | . | X
-. | X | X | O | O | O | O
-X | X | O | X | X | X | O
-0   1   2   3   4   5   6
-Current player: X",2,terminal_state_reached,O,2,2,0
-20260319_001633,20260319_001633,cf_case_16,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,X,7,7
+20260321_004747,case_16,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2562,17 +1368,8 @@ X | . | . | . | X | . | .
 O | . | O | . | X | . | .
 O | . | O | X | X | . | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | X | X | . | . | .
-X | . | O | O | X | . | .
-O | . | O | X | X | . | .
-O | . | O | X | X | . | O
-0   1   2   3   4   5   6
-Current player: O",7,invalid_or_unparseable_move,,8,7,1
-20260319_001633,20260319_001633,cf_case_17,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",invalid_move,,5,6
+20260321_004747,case_17,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | X | . | . | . | . | .
@@ -2581,17 +1378,8 @@ O | O | . | . | O | . | X
 X | X | . | X | O | O | X
 O | X | . | O | O | X | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | X | . | O | . | . | .
-O | X | . | X | . | . | .
-O | O | . | O | O | . | X
-X | X | X | X | O | O | X
-O | X | O | O | O | X | X
-0   1   2   3   4   5   6
-Current player: O",6,terminal_state_reached,X,6,6,0
-20260319_001633,20260319_001633,cf_case_18,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,O,5,5
+20260321_004747,case_18,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2600,17 +1388,8 @@ Board:
 . | O | . | X | X | X | X
 . | X | O | O | X | O | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | O | X | .
-. | O | . | X | X | X | X
-. | X | O | O | X | O | O
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_19,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_19,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 X | O | . | . | . | . | .
 O | X | . | . | X | . | .
@@ -2619,17 +1398,8 @@ X | O | O | . | X | O | .
 X | O | O | X | O | X | .
 O | X | O | X | O | X | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-X | O | . | . | . | . | .
-O | X | . | . | X | . | .
-X | O | O | . | X | . | .
-X | O | O | . | X | O | .
-X | O | O | X | O | X | .
-O | X | O | X | O | X | .
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260319_001633,20260319_001633,cf_case_20,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_004747,case_20,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | X | . | . | .
 . | X | . | X | X | . | .
@@ -2638,17 +1408,8 @@ Board:
 X | X | O | X | X | O | X
 O | X | O | O | O | X | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | X | . | X | X | . | .
-. | O | . | O | O | . | .
-. | X | . | O | O | O | O
-X | X | O | X | X | O | X
-O | X | O | O | O | X | X
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260319_001633,20260319_001633,cf_case_21,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_004747,case_21,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2657,17 +1418,8 @@ Board:
 . | . | . | . | . | O | .
 . | . | . | . | . | X | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | X | X | X | . | .
-. | . | O | O | O | . | .
-. | . | X | X | X | X | .
-. | . | O | O | O | X | .
-. | . | X | X | X | O | .
-. | . | O | O | O | X | O
-0   1   2   3   4   5   6
-Current player: O",20,terminal_state_reached,X,20,20,0
-20260319_001633,20260319_001633,cf_case_22,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",invalid_move,,8,9
+20260321_004747,case_22,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2676,17 +1428,8 @@ Board:
 . | . | . | . | . | . | O
 X | . | O | O | . | X | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | . | X | . | . | O
-X | . | O | O | . | X | X
-0   1   2   3   4   5   6
-Current player: O",5,invalid_or_unparseable_move,,6,5,1
-20260319_001633,20260319_001633,cf_case_23,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",invalid_move,,6,7
+20260321_004747,case_23,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2695,17 +1438,8 @@ Board:
 . | O | . | . | . | . | .
 . | X | . | X | O | . | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | X | O | . | . | .
-. | . | X | O | . | . | .
-. | O | X | X | O | . | .
-. | X | O | O | O | . | .
-. | O | X | X | O | . | .
-. | X | X | X | O | . | .
-0   1   2   3   4   5   6
-Current player: X",14,terminal_state_reached,O,14,14,0
-20260319_001633,20260319_001633,cf_case_24,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",invalid_move,,6,7
+20260321_004747,case_24,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 X | . | . | O | . | . | X
 O | X | . | O | . | . | O
@@ -2714,17 +1448,8 @@ X | O | . | O | . | . | X
 O | O | . | X | X | . | O
 O | X | O | X | X | O | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-X | . | . | O | . | . | X
-O | X | . | O | . | . | O
-X | X | . | X | . | . | O
-X | O | X | O | . | . | X
-O | O | O | X | X | . | O
-O | X | O | X | X | O | X
-0   1   2   3   4   5   6
-Current player: O",2,terminal_state_reached,X,2,2,0
-20260319_001633,20260319_001633,cf_case_25,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,6,6
+20260321_004747,case_25,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2733,17 +1458,8 @@ Board:
 . | . | O | X | . | . | O
 O | . | O | X | . | . | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | X | . | . | .
-. | . | . | X | . | . | .
-. | . | O | X | . | . | O
-O | . | O | X | . | . | X
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_26,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_26,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2752,17 +1468,8 @@ X | X | . | . | X | O | .
 O | X | O | O | X | O | .
 O | O | O | X | X | X | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-O | . | . | . | X | X | .
-X | X | . | . | X | O | .
-O | X | O | O | X | O | .
-O | O | O | X | X | X | .
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_27,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_27,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 X | . | . | . | O | . | .
 O | X | . | . | O | . | X
@@ -2771,17 +1478,8 @@ X | O | . | X | X | . | X
 O | O | O | O | O | O | X
 O | X | O | X | X | O | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-X | . | . | . | O | . | .
-O | X | . | . | O | . | X
-X | O | . | X | X | . | O
-X | O | . | X | X | . | X
-O | O | O | O | O | O | X
-O | X | O | X | X | O | X
-0   1   2   3   4   5   6
-Current player: X",0,terminal_state_reached,O,0,0,0
-20260319_001633,20260319_001633,cf_case_28,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,0,0
+20260321_004747,case_28,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2790,17 +1488,8 @@ O | . | . | X | O | . | .
 O | . | X | O | X | O | .
 X | O | X | X | O | X | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-X | . | X | X | . | . | .
-O | . | O | X | O | . | .
-O | . | X | O | X | O | .
-X | O | X | X | O | X | O
-0   1   2   3   4   5   6
-Current player: O",5,terminal_state_reached,X,5,5,0
-20260319_001633,20260319_001633,cf_case_29,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,8,8
+20260321_004747,case_29,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2809,17 +1498,8 @@ Board:
 . | O | O | . | O | . | .
 X | X | O | O | X | X | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | O | . | . | . | .
-. | X | X | . | . | . | .
-. | O | O | O | O | . | .
-X | X | O | O | X | X | X
-0   1   2   3   4   5   6
-Current player: X",1,terminal_state_reached,O,1,1,0
-20260319_001633,20260319_001633,cf_case_30,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",invalid_move,,4,5
+20260321_004747,case_30,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2828,17 +1508,8 @@ O | . | X | . | O | O | .
 X | O | X | . | O | O | X
 X | O | X | . | X | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | X | O | . | . | .
-X | . | O | X | X | O | .
-O | . | X | O | O | O | .
-X | O | X | X | O | O | X
-X | O | X | O | X | X | O
-0   1   2   3   4   5   6
-Current player: O",8,invalid_or_unparseable_move,,9,8,1
-20260319_001633,20260319_001633,cf_case_31,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,2,2
+20260321_004747,case_31,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2847,17 +1518,8 @@ Board:
 X | X | X | X | O | O | X
 O | O | O | X | X | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | . | O | .
-. | . | O | . | . | X | .
-X | X | X | X | O | O | X
-O | O | O | X | X | X | O
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_32,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_32,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 X | . | . | . | . | . | .
@@ -2866,17 +1528,8 @@ X | . | . | . | . | O | .
 O | O | X | X | O | X | .
 X | X | X | O | X | O | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | O | . | . | .
-X | . | . | O | . | . | .
-O | . | X | X | . | . | .
-X | . | X | O | . | O | .
-O | O | X | X | O | X | .
-X | X | X | O | X | O | O
-0   1   2   3   4   5   6
-Current player: O",6,terminal_state_reached,X,6,6,0
-20260319_001633,20260319_001633,cf_case_33,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,4,4
+20260321_004747,case_33,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2885,17 +1538,8 @@ Board:
 . | X | . | . | X | . | .
 O | X | O | O | X | . | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | X | X | O | . | .
-. | . | O | X | X | . | .
-. | . | X | O | O | . | .
-. | . | O | X | O | . | .
-. | X | X | O | X | X | O
-O | X | O | O | X | O | X
-0   1   2   3   4   5   6
-Current player: O",16,invalid_or_unparseable_move,,17,16,1
-20260319_001633,20260319_001633,cf_case_34,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",invalid_move,,5,6
+20260321_004747,case_34,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2904,17 +1548,8 @@ Board:
 . | . | O | . | . | . | .
 . | . | X | . | . | . | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-. | . | O | O | . | . | .
-. | . | X | X | . | . | .
-0   1   2   3   4   5   6
-Current player: X",6,invalid_or_unparseable_move,,7,6,1
-20260319_001633,20260319_001633,cf_case_35,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",invalid_move,,6,7
+20260321_004747,case_35,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2923,17 +1558,8 @@ Board:
 . | . | . | . | . | . | .
 . | O | X | . | . | . | .
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | . | X | . | . | .
-. | . | X | O | X | . | .
-. | . | O | X | O | . | .
-. | . | X | O | X | O | .
-. | O | X | X | O | O | O
-0   1   2   3   4   5   6
-Current player: X",16,terminal_state_reached,O,16,16,0
-20260319_001633,20260319_001633,cf_case_36,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,X,13,13
+20260321_004747,case_36,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2942,17 +1568,8 @@ Board:
 . | . | . | . | . | . | O
 O | . | X | X | X | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | . | . | . | O
-O | . | X | X | X | X | O
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_37,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_37,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | O | . | . | . | . | O
 . | X | . | . | . | . | O
@@ -2961,17 +1578,8 @@ X | X | X | X | . | X | X
 X | X | O | X | O | O | O
 O | O | X | X | O | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | O | . | . | . | . | O
-. | X | . | . | . | . | O
-. | O | . | . | . | X | O
-X | X | X | X | . | X | X
-X | X | O | X | O | O | O
-O | O | X | X | O | X | O
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_38,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_38,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -2980,17 +1588,8 @@ Board:
 . | X | O | . | . | . | X
 O | O | X | O | . | X | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | . | O | . | . | O
-. | . | . | X | . | . | X
-. | O | X | O | . | . | O
-. | X | O | X | . | . | X
-O | O | X | O | . | X | X
-0   1   2   3   4   5   6
-Current player: O",7,invalid_or_unparseable_move,,8,7,1
-20260319_001633,20260319_001633,cf_case_39,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,X,7,7
+20260321_004747,case_39,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | X | . | . | . | .
 O | . | O | . | . | . | .
@@ -2999,17 +1598,8 @@ O | . | O | X | O | X | O
 X | . | O | O | X | X | X
 O | O | X | O | X | O | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | X | O | . | . | .
-O | . | O | X | . | . | .
-X | . | X | O | X | X | .
-O | . | O | X | O | X | O
-X | . | O | O | X | X | X
-O | O | X | O | X | O | X
-0   1   2   3   4   5   6
-Current player: O",4,terminal_state_reached,X,4,4,0
-20260319_001633,20260319_001633,cf_case_40,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,O,7,7
+20260321_004747,case_40,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | O | .
 . | . | . | . | X | X | .
@@ -3018,17 +1608,8 @@ O | . | . | X | O | X | .
 X | . | . | X | X | O | .
 O | X | O | X | O | O | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | . | . | O | .
-. | . | . | . | X | X | .
-. | . | . | X | X | O | .
-O | . | . | X | O | X | .
-X | . | . | X | X | O | .
-O | X | O | X | O | O | O
-0   1   2   3   4   5   6
-Current player: O",1,terminal_state_reached,X,1,1,0
-20260319_001633,20260319_001633,cf_case_41,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,X,1,1
+20260321_004747,case_41,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -3037,17 +1618,8 @@ Board:
 O | . | X | . | . | O | .
 X | . | X | O | O | O | X
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | X | O | . | . | .
-. | . | O | X | . | O | .
-. | . | X | O | . | X | .
-O | . | X | X | . | O | .
-X | . | X | O | O | O | X
-0   1   2   3   4   5   6
-Current player: O",7,invalid_or_unparseable_move,,8,7,1
-20260319_001633,20260319_001633,cf_case_42,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",invalid_move,,2,3
+20260321_004747,case_42,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -3056,17 +1628,8 @@ Board:
 . | O | O | X | . | O | .
 . | X | X | X | O | O | .
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | X | . | . | .
-. | . | X | X | . | O | .
-. | O | O | X | . | O | .
-. | X | X | X | O | O | .
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_43,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_43,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -3075,17 +1638,8 @@ Board:
 . | . | O | X | O | . | .
 X | O | X | O | X | . | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | O | X | . | . | .
-. | . | X | O | . | . | .
-. | . | X | X | X | . | .
-. | . | X | O | X | . | .
-. | . | O | X | O | . | O
-X | O | X | O | X | O | O
-0   1   2   3   4   5   6
-Current player: O",10,invalid_or_unparseable_move,,11,10,1
-20260319_001633,20260319_001633,cf_case_44,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,O,7,7
+20260321_004747,case_44,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -3094,17 +1648,8 @@ Board:
 . | O | X | X | X | X | O
 O | O | X | O | X | O | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | . | . | .
-. | . | . | . | . | . | .
-. | . | . | O | . | X | .
-. | . | . | O | . | X | .
-. | O | X | X | X | X | O
-O | O | X | O | X | O | X
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_45,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_45,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | X | . | . | X | . | O
 . | X | . | . | O | . | X
@@ -3113,17 +1658,8 @@ O | X | O | O | O | X | O
 X | X | O | X | X | O | X
 X | O | O | O | X | X | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | X | . | X | X | . | O
-. | X | . | O | O | . | X
-O | O | O | X | X | X | O
-O | X | O | O | O | X | O
-X | X | O | X | X | O | X
-X | O | O | O | X | X | O
-0   1   2   3   4   5   6
-Current player: X",4,terminal_state_reached,O,4,4,0
-20260319_001633,20260319_001633,cf_case_46,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,O,4,4
+20260321_004747,case_46,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -3132,17 +1668,8 @@ Board:
 X | . | . | . | . | O | X
 X | . | . | X | . | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | O | . | . | .
-. | . | . | X | . | . | O
-. | . | . | O | . | . | O
-. | . | . | X | . | . | O
-X | . | . | O | . | O | X
-X | . | X | X | . | X | O
-0   1   2   3   4   5   6
-Current player: X",7,invalid_or_unparseable_move,,8,7,1
-20260319_001633,20260319_001633,cf_case_47,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",invalid_move,,2,3
+20260321_004747,case_47,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | . | . | .
 . | . | . | . | . | . | .
@@ -3151,17 +1678,8 @@ Board:
 O | O | . | X | X | . | X
 O | X | . | X | O | X | O
 0   1   2   3   4   5   6
-Current player: X","Columns are 0-indexed.
-Board:
-. | . | . | X | . | . | .
-. | . | . | O | . | . | .
-. | . | . | X | . | . | .
-. | O | . | O | . | . | X
-O | O | X | X | X | . | X
-O | X | O | X | O | X | O
-0   1   2   3   4   5   6
-Current player: O",5,invalid_or_unparseable_move,,6,5,1
-20260319_001633,20260319_001633,cf_case_48,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: X",terminal_state_reached,X,9,9
+20260321_004747,case_48,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | . | . | . | X | . | .
 . | . | . | O | O | . | X
@@ -3170,17 +1688,8 @@ Board:
 . | O | X | X | O | X | O
 . | X | O | O | X | X | X
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | . | . | . | X | . | .
-. | . | . | O | O | . | X
-. | . | . | X | X | . | O
-. | . | O | O | X | . | O
-. | O | X | X | O | X | O
-. | X | O | O | X | X | X
-0   1   2   3   4   5   6
-Current player: O",0,terminal_state_reached,X,0,0,0
-20260319_001633,20260319_001633,cf_case_49,connect_four,groq,qwen/qwen3-32b,"Columns are 0-indexed.
+Current player: O",terminal_state_reached,X,0,0
+20260321_004747,case_49,connect_four,qwen/qwen3-32b,"Columns are 0-indexed.
 Board:
 . | X | X | . | . | X | .
 . | O | X | . | . | O | .
@@ -3189,13 +1698,4 @@ O | O | X | O | . | O | O
 X | O | X | X | X | O | O
 X | O | X | O | O | X | O
 0   1   2   3   4   5   6
-Current player: O","Columns are 0-indexed.
-Board:
-. | X | X | . | . | X | .
-. | O | X | X | . | O | .
-X | X | O | O | . | X | X
-O | O | X | O | O | O | O
-X | O | X | X | X | O | O
-X | O | X | O | O | X | O
-0   1   2   3   4   5   6
-Current player: X",3,terminal_state_reached,O,3,3,0
+Current player: O",terminal_state_reached,O,3,3

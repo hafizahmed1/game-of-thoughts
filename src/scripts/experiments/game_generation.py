@@ -3,7 +3,8 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[3] 
+
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
@@ -34,7 +35,7 @@ def main():
     response = model.generate(prompt)
 
     prompts_dir = ROOT / "results" / "prompts"
-    responses_dir = ROOT / "results" / "responses"
+    responses_dir = ROOT / "results" / "responses"/"game_generation"
     prompts_dir.mkdir(parents=True, exist_ok=True)
     responses_dir.mkdir(parents=True, exist_ok=True)
 

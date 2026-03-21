@@ -1,5 +1,0 @@
-model,game,non_terminal_cases,completed_cases,total_turns,valid_turns,invalid_turns,avg_completed_turns,x_wins,o_wins,draws,completion_rate,move_accuracy,invalid_move_rate,x_win_rate,o_win_rate,draw_rate
-llama-3.1-8b-instant,connect_four,32,26,371,365,6,11.40625,12,14,0,81.25,98.38,1.62,46.15,53.85,0.0
-qwen/qwen3-32b,connect_four,32,15,252,235,17,7.34375,9,6,0,46.88,93.25,6.75,60.0,40.0,0.0
-llama-3.1-8b-instant,tictactoe,39,39,155,155,0,3.9743589743589745,21,17,1,100.0,100.0,0.0,53.85,43.59,2.56
-qwen/qwen3-32b,tictactoe,39,37,153,151,2,3.871794871794872,19,15,3,94.87,98.69,1.31,51.35,40.54,8.11

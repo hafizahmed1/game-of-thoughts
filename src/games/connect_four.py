@@ -8,6 +8,7 @@ from src.games.base_game import BaseGame
 
 ROWS = 6
 COLS = 7
+EMPTY = " "
 
 
 @dataclass(frozen=True)
@@ -21,20 +22,30 @@ class ConnectFourGame(BaseGame):
     players = ["X", "O"]
 
     def initial_state(self) -> ConnectFourState:
+        """
+        Create the initial empty Connect Four board.
+        """
         return ConnectFourState(
-            board=[[" " for _ in range(COLS)] for _ in range(ROWS)],
+            board=[[EMPTY for _ in range(COLS)] for _ in range(ROWS)],
             current_player="X",
         )
 
     def state_from_dict(self, data: dict) -> ConnectFourState:
-        board = data["board"]
-        current_player = data["current_player"]
-        return ConnectFourState(board=board, current_player=current_player)
+        """
+        Reconstruct a game state from a dictionary.
+        """
+        return ConnectFourState(
+            board=data["board"],
+            current_player=data["current_player"],
+        )
 
     def state_to_text(self, state: ConnectFourState) -> str:
+        """
+        Convert the current state into a readable text representation.
+        """
         lines = ["Columns are 0-indexed.", "Board:"]
         for row in state.board:
-            rendered = " | ".join(cell if cell != " " else "." for cell in row)
+            rendered = " | ".join(cell if cell != EMPTY else "." for cell in row)
             lines.append(rendered)
         lines.append("0   1   2   3   4   5   6")
         lines.append(f"Current player: {state.current_player}")
@@ -42,7 +53,9 @@ class ConnectFourGame(BaseGame):
 
     def parse_move(self, move_text: str) -> int:
         """
-        Accepts formats like:
+        Parse a move from model output.
+
+        Accepted formats include:
         - 3
         - column 3
         - col=3
@@ -57,12 +70,20 @@ class ConnectFourGame(BaseGame):
         try:
             return int(parts[0])
         except ValueError as exc:
-            raise ValueError(f"Move must be a single integer column index: {move_text!r}") from exc
+            raise ValueError(
+                f"Move must be a single integer column index: {move_text!r}"
+            ) from exc
 
     def move_to_text(self, move: int) -> str:
+        """
+        Convert a move to its text form.
+        """
         return str(move)
 
     def get_move_format_instructions(self) -> str:
+        """
+        Return instructions for the expected move format.
+        """
         return (
             "Return only one move as a single integer column index.\n"
             "Columns are 0-indexed from 0 to 6.\n"
@@ -70,76 +91,110 @@ class ConnectFourGame(BaseGame):
         )
 
     def is_valid_move(self, state: ConnectFourState, move: int) -> bool:
+        """
+        Check whether a move is valid for the given state.
+        """
         if not isinstance(move, int):
             return False
         if not (0 <= move < COLS):
             return False
-        return state.board[0][move] == " "
+        return state.board[0][move] == EMPTY
 
     def get_legal_moves(self, state: ConnectFourState) -> Iterable[int]:
-        return [c for c in range(COLS) if state.board[0][c] == " "]
+        """
+        Return all currently legal columns.
+        """
+        return [c for c in range(COLS) if state.board[0][c] == EMPTY]
 
     def apply_move(self, state: ConnectFourState, move: int) -> ConnectFourState:
+        """
+        Apply a valid move and return the next state.
+
+        The piece is dropped into the chosen column and occupies the
+        lowest available row.
+        """
         if not self.is_valid_move(state, move):
             raise ValueError(f"Invalid move for Connect Four: {move}")
 
         new_board = [row[:] for row in state.board]
 
-        placed_row = None
+        placed = False
         for r in range(ROWS - 1, -1, -1):
-            if new_board[r][move] == " ":
+            if new_board[r][move] == EMPTY:
                 new_board[r][move] = state.current_player
-                placed_row = r
+                placed = True
                 break
 
-        if placed_row is None:
+        if not placed:
             raise ValueError(f"Could not place move in column {move}")
 
         next_player = "O" if state.current_player == "X" else "X"
         return ConnectFourState(board=new_board, current_player=next_player)
 
     def is_terminal(self, state: ConnectFourState) -> bool:
+        """
+        A state is terminal if there is a winner or a draw.
+        """
         return self.get_winner(state) is not None
 
-    def get_winner(self, state: ConnectFourState) -> str | None:
-        board = state.board
+    def _check_line(self, cells: list[str]) -> str | None:
+        """
+        Check whether four cells form a winning line.
+        """
+        if cells[0] != EMPTY and all(cell == cells[0] for cell in cells):
+            return cells[0]
+        return None
 
-        def check_four(cells: list[str]) -> str | None:
-            if cells[0] != " " and all(cell == cells[0] for cell in cells):
-                return cells[0]
-            return None
+    def _board_full(self, board: list[list[str]]) -> bool:
+        """
+        Return True if the board is completely full.
+        """
+        return all(board[0][c] != EMPTY for c in range(COLS))
+
+    def get_winner(self, state: ConnectFourState) -> str | None:
+        """
+        Return:
+        - 'X' or 'O' if a player has four in a row
+        - 'draw' if the board is full and nobody wins
+        - None otherwise
+        """
+        board = state.board
 
         # Horizontal
         for r in range(ROWS):
             for c in range(COLS - 3):
-                winner = check_four([board[r][c + i] for i in range(4)])
+                winner = self._check_line([board[r][c + i] for i in range(4)])
                 if winner:
                     return winner
 
         # Vertical
         for r in range(ROWS - 3):
             for c in range(COLS):
-                winner = check_four([board[r + i][c] for i in range(4)])
+                winner = self._check_line([board[r + i][c] for i in range(4)])
                 if winner:
                     return winner
 
-        # Diagonal down-right
+        # Diagonal down-right (\)
         for r in range(ROWS - 3):
             for c in range(COLS - 3):
-                winner = check_four([board[r + i][c + i] for i in range(4)])
+                winner = self._check_line([board[r + i][c + i] for i in range(4)])
                 if winner:
                     return winner
 
-        # Diagonal up-right
+        # Diagonal up-right (/)
         for r in range(3, ROWS):
             for c in range(COLS - 3):
-                winner = check_four([board[r - i][c + i] for i in range(4)])
+                winner = self._check_line([board[r - i][c + i] for i in range(4)])
                 if winner:
                     return winner
 
-        if all(board[0][c] != " " for c in range(COLS)):
+        if self._board_full(board):
             return "draw"
 
         return None
+
     def get_max_moves(self) -> int:
-        return 42
+        """
+        Maximum number of moves possible in Connect Four.
+        """
+        return ROWS * COLS

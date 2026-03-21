@@ -2,32 +2,38 @@
   "required_items": {
     "board_size": [
       "6 rows and 7 columns",
+      "7 columns and 6 rows",
       "7 columns",
       "6x7",
       "grid of 6 by 7"
     ],
     "players": [
       "two-player game",
-      "two players"
+      "two players",
+      "two-player"
     ],
     "turn_order": [
       "alternate turns",
-      "take turns"
+      "take turns",
+      "players take turns"
     ],
     "move_type": [
-      "drop a disc into a column",
-      "choose a column",
-      "place a disc in a column"
-    ],
+  "drop a disc into a column",
+  "choose a column",
+  "place a disc in a column",
+  "drop a piece"
+],
     "gravity": [
-      "falls to the lowest available space",
-      "drops to the bottom",
-      "disc falls down"
-    ],
+  "falls to the lowest available space",
+  "drops to the bottom",
+  "disc falls down",
+  "falls down"
+],
     "illegal_full_column": [
       "cannot play in a full column",
       "column is full",
-      "illegal if the column is full"
+      "illegal if the column is full",
+      "cannot drop into a full column"
     ],
     "win_condition": [
       "connect four",
@@ -41,6 +47,11 @@
       "board is full",
       "no moves left",
       "no player wins"
+    ],
+    "start_player": [
+      "starting player is chosen at random",
+      "starting player is random",
+      "chosen at random"
     ]
   },
   "forbidden_items": {
