@@ -1,152 +1,166 @@
-Game-of-Thoughts
-This project investigates whether Large Language Models (LLMs) can understand structured rule systems and generate new games with logically consistent rules. Board games provide a controlled environment with explicit rules, constraints, and objectives, making them a useful testbed for evaluating reasoning abilities in language models.
+# Game of Thoughts: Evaluating LLM Reasoning via Board Games
+
+## Overview
+
+This project investigates whether large language models (LLMs) can understand, apply, and reason over structured rule-based systems using board games.
+
+We use two controlled environments:
+- **Tic-Tac-Toe**
+- **Connect Four**
+
+These games allow systematic evaluation of reasoning abilities such as rule comprehension, consistency, and multi-step planning.
+
 ---
-Research Question
-Can large language models understand existing game rules and generate new games with logically consistent rule systems?
+
+## Research Objective
+
+Can LLMs:
+1. Understand and explain game rules?
+2. Detect inconsistencies in rule descriptions?
+3. Simulate gameplay while respecting constraints?
+4. Generate new games with coherent and playable rules?
+
 ---
-Project Overview
-Games provide structured environments where players must follow strict rules to reach defined goals. In this project, we evaluate whether LLMs can interpret, apply, analyze, and extend such rule systems.
-The project focuses on two main capabilities.
-Game Understanding
-The model is provided with the rules of an existing game (Tic-Tac-Toe). It must:
-explain the rules clearly
-detect inconsistencies or missing constraints
-suggest valid moves for different board states
-This evaluates whether the model can internalize structured rule systems.
-Game Generation
-The model is asked to design a new board game based on a given theme. The generated rules are evaluated for:
-structural completeness
-logical consistency
-playability
-This evaluates whether the model can extend rule systems creatively while maintaining logical constraints.
+
+## Project Structure
+
+```
+game-of-thoughts-oop-refactor/
+├── notebooks/
+│   └── demo.ipynb              # Final analysis and visualization
+├── src/
+│   ├── games/                 # Tic-Tac-Toe and Connect Four logic
+│   ├── llm/                   # Model wrappers
+│   ├── prompts/               # Prompt construction
+│   ├── pipelines/             # Experiment pipelines
+│   ├── evaluation/            # Metrics and scoring
+│   ├── analysis/              # Result processing utilities
+│   └── scripts/               # Run experiments and generate outputs
+├── results/
+│   ├── tables/                # Aggregated results
+│   ├── plots/                 # Generated visualizations
+│   └── responses/             # Raw model outputs
+├── requirements.txt
+└── README.md
+```
+
 ---
-Experiments
-The project evaluates four different reasoning abilities of LLMs.
-Experiment 1 — Rule Understanding
-The model receives the rules of Tic-Tac-Toe and must explain them clearly.
-Three input conditions are tested:
-clean rules
-raw rulebook text
-broken or incomplete rules
-Evaluation metrics:
-rule completeness score
-invented rules
-missed constraints
-This experiment measures how well the model understands structured rule descriptions.
+
+## Experiments
+
+### 1. Rule Understanding
+Models explain game rules.
+
+**Metrics:** precision, recall, F1-score
+
 ---
-Experiment 2 — Move Prediction
-The model is given different Tic-Tac-Toe board states and must suggest a valid move.
-Evaluation metrics:
-valid move rate
-optimal move rate
-This experiment tests whether the model can apply game rules to specific board situations.
+
+### 2. Rule Error Detection
+Models identify inconsistencies in incorrect rules.
+
+**Metrics:** precision, recall, F1-score
+
 ---
-Experiment 3 — Rule Error Detection
-The model is given a deliberately flawed rule set and must identify logical issues.
-The model must:
-detect missing rules
-explain why they are problematic
-propose corrected rules
-Evaluation metric:
-number of detected rule inconsistencies
-This experiment evaluates logical reasoning about rule systems.
+
+### 3. Game Simulation
+Models play games step-by-step.
+
+**Metrics:**
+- legal move rate
+- completion rate
+- valid turns
+
+
 ---
-Experiment 4 — Game Generation
-The model is prompted to create a new two-player board game.
-The generated output must include:
-game name
-objective
-setup
-turn structure
-rules
-winning condition
-Evaluation criteria:
-structural completeness
-logical consistency
-playability
-This experiment evaluates creative rule synthesis under logical constraints.
+
+### 4. Game Generation
+Models generate new board games.
+
+**Metrics:**
+- clarity
+- consistency
+- completeness
+
+
 ---
-Project Structure
-game-of-thoughts  
-│  
-├── data  
-│   ├── raw  
-│   │   └── TIC_TAC_TOE_RULES.docx  
-│   │  
-│   └── processed  
-│       ├── tictactoe_rulebook.json  
-│       └── broken_tic_tac_toe.txt  
-│  
-├── experiments  
-│   ├── experiment_01_tictactoe.ipynb  
-│   ├── prepare_tictactoe_rulebook.py  
-│   ├── rule_understanding.py  
-│   ├── move_prediction.py  
-│   ├── rule_errors.py  
-│   └── game_generation.py  
-│  
-├── results  
-│   ├── figures  
-│   ├── prompts  
-│   ├── responses  
-│   └── tables  
-│  
-├── src  
-│   ├── games  
-│   ├── prompts  
-│   ├── pipelines  
-│   ├── utils  
-│   └── evaluation  
-│  
-├── report  
-│  
-├── README.md  
-└── requirements.txt
----
-How to Reproduce the Experiments
-1. Clone the Repository
-git clone https://github.com/hafizahmed1/game-of-thoughts.git  
-cd game-of-thoughts
----
-2. Create a Virtual Environment
-python -m venv .venv  
-source .venv/bin/activate
-On Windows:
-.venv\Scripts\activate
----
-3. Install Dependencies
+
+## Setup
+
+```bash
+git clone <https://github.com/hafizahmed1/game-of-thoughts>
+cd game-of-thoughts-oop-refactor
+
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+
 pip install -r requirements.txt
+```
+
 ---
-4. Configure API Access
-Create a `.env` file in the project root and add your API key:
-GEMINI_API_KEY=your_api_key_here  
-MODEL_NAME=models/gemini-3.1-flash-lite-preview
-The project uses the Gemini API to run the language model.
+
+## Running the Project
+
+### Run experiments
+```bash
+python -m src.scripts.run_all_experiments
+```
+
+### Evaluate results
+```bash
+python -m src.scripts.evaluate_all
+```
+
+### Generate plots
+```bash
+python -m src.scripts.plot_results
+```
+
+### Open notebook
+```bash
+jupyter notebook notebooks/demo.ipynb
+```
+
 ---
-5. Prepare the Rulebook Data
-Convert the rulebook document into structured JSON format:
-python experiments/prepare_tictactoe_rulebook.py
-This generates:
-data/processed/tictactoe_rulebook.json
+
+## Outputs
+
+Results are stored in:
+
+- `results/tables/` → aggregated metrics  
+- `results/plots/` → visualizations  
+- `results/responses/` → raw outputs (if available)
+
 ---
-6. Run the Experiments
-Run the following scripts from the project root.
-Rule Understanding:
-python experiments/rule_understanding.py
-Move Prediction:
-python experiments/move_prediction.py
-Rule Error Detection:
-python experiments/rule_errors.py
-Game Generation:
-python experiments/game_generation.py
+
+## Key Findings
+
+- Models perform well on **rule understanding** but struggle with **consistent multi-step reasoning**.
+- Simulation results show **gradual degradation in rule adherence** over time.
+- Error detection reveals **partial understanding of constraints**.
+- Generated games are structurally valid but often **lack balance and depth**.
+
 ---
-Results
-Experiment outputs are stored in the `results` directory.
-results  
-│  
-├── prompts  
-├── responses  
-├── tables  
-└── figures
-These files contain the prompts sent to the model, the model responses, and the evaluation metrics used in the analysis.
+
+## Limitations
+
+- Some evaluations rely on heuristic scoring.
+- Raw simulation traces may be limited.
+- Results are sensitive to prompt design.
+- Generated games are not validated through real gameplay.
+
 ---
+
+## AI Usage Disclaimer
+
+This project was developed with assistance from generative AI tools for:
+- code refactoring
+- documentation
+- notebook structuring
+
+All outputs were manually reviewed, tested, and validated. The final implementation and analysis are my own.
+
+---
+
+## Conclusion
+
+This project demonstrates that LLMs can approximate structured reasoning but still struggle with maintaining consistency over extended interactions. Board games provide an effective framework for evaluating these limitations in a controlled setting.
