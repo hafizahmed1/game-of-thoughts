@@ -10,7 +10,7 @@ if str(ROOT) not in sys.path:
 
 load_dotenv(ROOT / ".env")
 
-from src.prompts.prompt_builder import build_game_generation_prompt
+from src.prompts.prompt_builder import build_rule_error_detection_prompt
 from src.llm.gemini_model import GeminiModel
 from src.llm.groq_model import GroqModel
 
@@ -52,17 +52,41 @@ def load_model(model_name: str):
     raise ValueError(f"Unsupported model: {model_name}")
 
 
+def load_rules(game_name: str) -> tuple[str, str]:
+    clean_path = ROOT / "data" / "raw" / game_name / "rules.txt"
+    broken_path = ROOT / "data" / "raw" / game_name / "broken_rules.txt"
+
+    with open(clean_path, "r", encoding="utf-8") as f:
+        clean_rules = f.read()
+
+    with open(broken_path, "r", encoding="utf-8") as f:
+        broken_rules = f.read()
+
+    return clean_rules, broken_rules
+
+
+def parse_args():
+    if "--model" not in sys.argv or "--game" not in sys.argv:
+        raise ValueError(
+            "Usage: python experiments/rule_error_detection.py --model <gemini|groq> --game <game_name>"
+        )
+
+    model_name = sys.argv[sys.argv.index("--model") + 1]
+    game_name = sys.argv[sys.argv.index("--game") + 1]
+    return model_name, game_name
+
+
 def main():
-    if len(sys.argv) > 1:
-        selected_model = sys.argv[1].lower()
-    else:
-        selected_model = "gemini"
+    model_name, game_name = parse_args()
 
-    model = load_model(selected_model)
+    model = load_model(model_name)
+    clean_rules, broken_rules = load_rules(game_name)
 
-    theme = "a simple two-player strategy board game about collecting treasure"
-
-    prompt = build_game_generation_prompt(seed_idea=theme)
+    prompt = build_rule_error_detection_prompt(
+        game_name=game_name,
+        clean_rules=clean_rules,
+        broken_rules=broken_rules,
+    )
     response = model.generate(prompt)
 
     prompts_dir = ROOT / "results" / "prompts"
@@ -70,8 +94,8 @@ def main():
     prompts_dir.mkdir(parents=True, exist_ok=True)
     responses_dir.mkdir(parents=True, exist_ok=True)
 
-    prompt_path = prompts_dir / f"game_generation_{selected_model}_prompt.txt"
-    response_path = responses_dir / f"game_generation_{selected_model}.txt"
+    prompt_path = prompts_dir / f"rule_error_detection_{game_name}_{model_name}_prompt.txt"
+    response_path = responses_dir / f"rule_error_detection_{game_name}_{model_name}.txt"
 
     with open(prompt_path, "w", encoding="utf-8") as f:
         f.write(prompt)
