@@ -1,0 +1,8 @@
+• The grid is described as vertical, but the typical Connect Four grid is horizontal.
+• Pieces do not need to be dropped into a column, contradicting the basic gameplay.
+• The winning condition is simplified to "four in a row" without specifying horizontal, vertical, or diagonal.
+• The description of the grid dimensions is correct, but the terminology is inconsistent.
+• The game does not specify how the starting player is chosen.
+• The rule about pieces not moving once placed is missing.
+• The rule about pieces not being captured or removed is missing.
+• The winning conditions do not specify the direction of the line (horizontal, vertical, or diagonal).

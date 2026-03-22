@@ -1,0 +1,4 @@
+• The broken rules state that a player can place a mark on any square, including one that is already occupied, which contradicts the clean rules where players alternate turns placing their mark in an empty cell.
+• The broken rules do not specify the winning conditions for vertical and diagonal alignments.
+• The broken rules do not specify the representation of moves (row, column) or the range of rows and columns (0 to 2).
+• The clean rules specify that the first player to align three marks horizontally, vertically, or diagonally wins, but the broken rules only mention horizontal alignments.

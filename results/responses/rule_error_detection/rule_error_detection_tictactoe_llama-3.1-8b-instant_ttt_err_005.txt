@@ -1,0 +1,5 @@
+• The broken rules do not specify the winning conditions (horizontally, vertically, or diagonally).
+• The broken rules do not mention the representation of moves (row, column).
+• The broken rules do not specify the range of rows and columns (0 to 2).
+• The broken rules do not mention the possibility of a draw (game ending without a winner).
+• The broken rules imply that a player can win with only three marks in a row, but the clean rules specify that three marks must be aligned horizontally, vertically, or diagonally.

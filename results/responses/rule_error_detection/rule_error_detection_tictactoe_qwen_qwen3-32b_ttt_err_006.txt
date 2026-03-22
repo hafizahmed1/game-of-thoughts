@@ -1,0 +1,4 @@
+- Missing specification of which player uses X and which uses O.  
+- Does not mention that players alternate turns.  
+- Does not define move notation (e.g., (row, column)).  
+- Does not specify valid range for rows and columns (0 to 2).

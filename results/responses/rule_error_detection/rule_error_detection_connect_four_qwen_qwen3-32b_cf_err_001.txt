@@ -1,0 +1,6 @@
+- Pieces may remain suspended above empty spaces (violates gravity rule).  
+- No mention of players using their own colored pieces for winning.  
+- No mention of starting player being chosen at random.  
+- No mention that a player drops one piece per turn.  
+- No mention that pieces are not captured or removed.  
+- No explicit rule that a column must not be full to drop a piece.

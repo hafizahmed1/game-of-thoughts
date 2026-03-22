@@ -1,0 +1,7 @@
+• The grid is described as vertical, but Connect Four is typically played on a horizontal grid.
+• The number of rows is not specified in the broken version, but it should be 6.
+• The broken version states that players alternate turns, but the clean version says they take turns.
+• The clean version specifies that a player drops one piece into any column that is not already full, but the broken version does not provide this detail.
+• The clean version explains how pieces fall to the lowest available space, but the broken version does not.
+• The clean version states that a player wins by forming a line of four of their own pieces, but the broken version says five.
+• The clean version explains the winning conditions (horizontally, vertically, or diagonally), but the broken version does not.

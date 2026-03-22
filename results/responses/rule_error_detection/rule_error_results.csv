@@ -1,0 +1,5 @@
+model,game,num_cases,precision,recall,f1
+llama,connect_four,7,0.2633,1.0,0.3929
+llama,tictactoe,6,0.2139,1.0,0.3389
+qwen,connect_four,7,0.2151,1.0,0.3336
+qwen,tictactoe,6,0.1683,1.0,0.2782

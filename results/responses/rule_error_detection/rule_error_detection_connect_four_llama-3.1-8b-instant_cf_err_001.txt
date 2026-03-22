@@ -1,0 +1,6 @@
+• The broken version does not specify that the board is empty at the start of the game.
+• The broken version does not mention the starting player being chosen at random.
+• The broken version allows pieces to remain suspended above empty spaces, which contradicts the clean version where pieces fall to the lowest available space.
+• The broken version does not specify that a player drops one piece into a column on each turn.
+• The broken version does not mention that pieces are not captured or removed.
+• The broken version only mentions horizontal lines of four pieces as a winning condition, whereas the clean version includes horizontal, vertical, and diagonal lines.

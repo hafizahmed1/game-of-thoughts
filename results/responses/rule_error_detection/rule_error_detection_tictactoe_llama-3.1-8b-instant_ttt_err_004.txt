@@ -1,0 +1,5 @@
+• The broken version states three players, but the clean version specifies two players.
+• The broken version does not specify which player uses X and which uses O.
+• The clean version mentions diagonal alignment as a winning condition, but the broken version does not.
+• The clean version specifies that rows and columns range from 0 to 2, but the broken version does not.
+• The clean version provides a clear representation of moves as (row, column), but the broken version does not.

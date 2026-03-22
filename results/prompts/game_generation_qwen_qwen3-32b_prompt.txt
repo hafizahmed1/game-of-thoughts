@@ -1,0 +1,11 @@
+Invent a simple board or turn-based game.
+
+Output requirements:
+- Return ONLY these 5 sections:
+1. Game name
+2. Objective
+3. Setup
+4. Rules
+5. Example turn
+
+Optional idea to inspire the game: a simple two-player strategy board game about collecting treasure

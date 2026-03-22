@@ -1,0 +1,39 @@
+You are given the rules of connect_four.
+
+Task:
+Extract the essential rule information and write it in the exact format below.
+
+Output requirements:
+- Return ONLY the requested fields.
+- Keep each field short and factual.
+- Write exactly one line per field.
+- If a detail is not explicitly stated, write: unknown
+- Do NOT add bullet points or extra commentary.
+
+Required output format:
+board_size: ...
+players: ...
+turn_order: ...
+move_type: ...
+gravity: ...
+illegal_full_column: ...
+win_condition: ...
+draw_condition: ...
+start_player: ...
+
+Rules:
+Connect Four is played on a vertical grid with 7 columns and 6 rows.
+
+Two players take turns dropping their pieces into one of the columns.
+
+Before the game begins, the board is empty and the starting player is chosen at random.
+
+On each turn, a player drops one piece into any column that is not already full.
+
+The piece falls to the lowest available space in that column.
+
+Once placed, a piece does not move again, and pieces are not captured or removed.
+
+A player wins by forming a line of four of their own pieces horizontally, vertically, or diagonally.
+
+If the board becomes completely full and neither player has formed a line of four, the game ends in a draw.

@@ -1,152 +1,169 @@
-Game-of-Thoughts
-This project investigates whether Large Language Models (LLMs) can understand structured rule systems and generate new games with logically consistent rules. Board games provide a controlled environment with explicit rules, constraints, and objectives, making them a useful testbed for evaluating reasoning abilities in language models.
+# Game of Thoughts
+
+This project evaluates whether Large Language Models (LLMs) can understand, apply, and generate rule-based systems using board games.
+
+We use two games:
+- Tic-Tac-Toe
+- Connect Four
+
+The goal is to study how well LLMs handle structured reasoning beyond simple text generation.
+
 ---
-Research Question
-Can large language models understand existing game rules and generate new games with logically consistent rule systems?
+
+## Research Question
+
+To what extent can LLMs understand, apply, critique, and generate rule-based game systems?
+
 ---
-Project Overview
-Games provide structured environments where players must follow strict rules to reach defined goals. In this project, we evaluate whether LLMs can interpret, apply, analyze, and extend such rule systems.
-The project focuses on two main capabilities.
-Game Understanding
-The model is provided with the rules of an existing game (Tic-Tac-Toe). It must:
-explain the rules clearly
-detect inconsistencies or missing constraints
-suggest valid moves for different board states
-This evaluates whether the model can internalize structured rule systems.
-Game Generation
-The model is asked to design a new board game based on a given theme. The generated rules are evaluated for:
-structural completeness
-logical consistency
-playability
-This evaluates whether the model can extend rule systems creatively while maintaining logical constraints.
+
+## Experiments
+
+The project includes four tasks:
+
+- Rule Understanding – explain game rules  
+- Rule Error Detection – identify incorrect or missing rules  
+- Game Simulation – play games step-by-step  
+- Game Generation – create new board games  
+
 ---
-Experiments
-The project evaluates four different reasoning abilities of LLMs.
-Experiment 1 — Rule Understanding
-The model receives the rules of Tic-Tac-Toe and must explain them clearly.
-Three input conditions are tested:
-clean rules
-raw rulebook text
-broken or incomplete rules
-Evaluation metrics:
-rule completeness score
-invented rules
-missed constraints
-This experiment measures how well the model understands structured rule descriptions.
+
+
+
+## Project Structure
+
+game-of-thoughts/  
+├── notebooks/        # Final analysis notebook  
+├── src/              # Core logic and pipelines  
+├── results/          # Tables, plots, responses  
+├── requirements.txt  
+└── README.md  
+
 ---
-Experiment 2 — Move Prediction
-The model is given different Tic-Tac-Toe board states and must suggest a valid move.
-Evaluation metrics:
-valid move rate
-optimal move rate
-This experiment tests whether the model can apply game rules to specific board situations.
----
-Experiment 3 — Rule Error Detection
-The model is given a deliberately flawed rule set and must identify logical issues.
-The model must:
-detect missing rules
-explain why they are problematic
-propose corrected rules
-Evaluation metric:
-number of detected rule inconsistencies
-This experiment evaluates logical reasoning about rule systems.
----
-Experiment 4 — Game Generation
-The model is prompted to create a new two-player board game.
-The generated output must include:
-game name
-objective
-setup
-turn structure
-rules
-winning condition
-Evaluation criteria:
-structural completeness
-logical consistency
-playability
-This experiment evaluates creative rule synthesis under logical constraints.
----
-Project Structure
-game-of-thoughts  
-│  
-├── data  
-│   ├── raw  
-│   │   └── TIC_TAC_TOE_RULES.docx  
-│   │  
-│   └── processed  
-│       ├── tictactoe_rulebook.json  
-│       └── broken_tic_tac_toe.txt  
-│  
-├── experiments  
-│   ├── experiment_01_tictactoe.ipynb  
-│   ├── prepare_tictactoe_rulebook.py  
-│   ├── rule_understanding.py  
-│   ├── move_prediction.py  
-│   ├── rule_errors.py  
-│   └── game_generation.py  
-│  
-├── results  
-│   ├── figures  
-│   ├── prompts  
-│   ├── responses  
-│   └── tables  
-│  
-├── src  
-│   ├── games  
-│   ├── prompts  
-│   ├── pipelines  
-│   ├── utils  
-│   └── evaluation  
-│  
-├── report  
-│  
-├── README.md  
-└── requirements.txt
----
-How to Reproduce the Experiments
-1. Clone the Repository
-git clone https://github.com/hafizahmed1/game-of-thoughts.git  
+## Code Organization
+
+All core experiment logic is implemented inside the `src/` directory, including:
+
+- game logic
+- experiment pipelines
+- evaluation metrics
+- data processing
+
+The notebook (`notebooks/demo.ipynb`) is used only for visualizing results and presenting analysis. It does not contain the main implementation.
+-----------
+
+
+## Setup
+
+```bash
+git clone https://github.com/hafizahmed1/game-of-thoughts.git
 cd game-of-thoughts
----
-2. Create a Virtual Environment
-python -m venv .venv  
-source .venv/bin/activate
-On Windows:
-.venv\Scripts\activate
----
-3. Install Dependencies
+
+python -m venv .venv
+source .venv/bin/activate   # Windows: .venv\Scripts\activate
+
 pip install -r requirements.txt
+```
+
 ---
-4. Configure API Access
-Create a `.env` file in the project root and add your API key:
-GEMINI_API_KEY=your_api_key_here  
-MODEL_NAME=models/gemini-3.1-flash-lite-preview
-The project uses the Gemini API to run the language model.
+
+## API Key Setup (IMPORTANT)
+
+1. Go to: https://console.groq.com/keys  
+2. Sign in  
+3. Click **Create API Key**  
+4. Copy your key  
+
+Create a `.env` file in the project root and add:
+
+```
+GROQ_API_KEY=gskxxxxxxxxxxxxxxxxx
+```
+
 ---
-5. Prepare the Rulebook Data
-Convert the rulebook document into structured JSON format:
-python experiments/prepare_tictactoe_rulebook.py
-This generates:
-data/processed/tictactoe_rulebook.json
+
+## Fix Common Path Issues
+
+If you get:
+
+```
+ModuleNotFoundError: No module named 'src'
+```
+
+Run:
+
+```bash
+export PYTHONPATH=$(pwd)
+```
+
+On Windows (PowerShell):
+
+```bash
+$env:PYTHONPATH = (Get-Location)
+```
+
 ---
-6. Run the Experiments
-Run the following scripts from the project root.
-Rule Understanding:
-python experiments/rule_understanding.py
-Move Prediction:
-python experiments/move_prediction.py
-Rule Error Detection:
-python experiments/rule_errors.py
-Game Generation:
-python experiments/game_generation.py
+## Quick Testing (Optional)
+
+If you want to run a quick test instead of full experiments, you can reduce the number of simulation cases.
+
+Go to:
+
+src/scripts/experiments/game_simulation.py
+
+Search for:
+
+num_cases = 50
+
+Change it to a smaller value such as:
+
+num_cases = 5  
+or  
+num_cases = 10  
+
+This will significantly reduce runtime for testing and debugging.
 ---
-Results
-Experiment outputs are stored in the `results` directory.
-results  
-│  
-├── prompts  
-├── responses  
-├── tables  
-└── figures
-These files contain the prompts sent to the model, the model responses, and the evaluation metrics used in the analysis.
+
+## Run the Project
+
+```bash
+python -m src.scripts.run_all_experiments
+python -m src.scripts.evaluate_all
+python -m src.scripts.plot_results
+```
+
+Open the notebook:
+
+Aun All
+
 ---
+
+## Results
+
+Outputs are stored in:
+
+- results/tables/ – metrics  
+- results/plots/ – visualizations  
+- results/responses/ – model outputs  
+
+---
+
+## Notes
+
+- Experiments use LLaMA and Qwen models via Groq (free tier)  
+- Earlier experiments with Gemini had rate limits and slower execution  
+
+---
+
+## Conclusion
+
+LLMs can understand and describe rules well, but struggle with long-term consistency and strategic reasoning during gameplay.
+
+---
+
+## AI Usage Disclaimer
+
+This project was developed with assistance from generative AI tools, including ChatGPT and Gemini, for tasks such as code refactoring, documentation, and structuring the notebook.
+
+These tools were used in accordance with the project guidelines, both as an object of investigation and as support during development (e.g., ideation, drafting, and experimentation).
+
+All outputs were carefully reviewed, tested, and modified. The final implementation, analysis, and conclusions are my own.

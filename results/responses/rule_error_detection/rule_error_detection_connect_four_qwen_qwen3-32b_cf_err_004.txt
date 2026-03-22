@@ -1,0 +1,6 @@
+- Allows placing pieces in full columns  
+- Does not specify that pieces fall to the lowest available space  
+- Does not mention that the starting player is chosen at random  
+- Does not clarify that players use their own pieces (own color)  
+- Omits the vertical, horizontal, and diagonal win conditions  
+- Does not state that once placed, pieces do not move or get removed

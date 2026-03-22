@@ -1,0 +1,9 @@
+board_size: 7x6
+players: 2
+turn_order: Alternating
+move_type: Dropping
+gravity: Downward
+illegal_full_column: Yes
+win_condition: Four-in-a-row
+draw_condition: Full board
+start_player: Random

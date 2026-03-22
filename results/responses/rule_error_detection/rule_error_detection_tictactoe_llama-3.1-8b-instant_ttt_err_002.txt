@@ -1,0 +1,4 @@
+• The grid size is inconsistent between the clean version (3x3) and the broken version (4x4).
+• The clean version specifies that rows and columns range from 0 to 2, while the broken version does not provide a range.
+• The clean version uses "Player 1" and "Player 2" to refer to the players, while the broken version uses "X" and "O" directly.
+• The clean version specifies that moves are represented as (row, column), but the broken version uses "empty squares" without a clear representation.

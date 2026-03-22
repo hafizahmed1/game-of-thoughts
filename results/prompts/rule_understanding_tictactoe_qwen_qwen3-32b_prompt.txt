@@ -1,0 +1,38 @@
+You are given the rules of tictactoe.
+
+Task:
+Extract the essential rule information and write it in the exact format below.
+
+Output requirements:
+- Return ONLY the requested fields.
+- Keep each field short and factual.
+- Write exactly one line per field.
+- If a detail is not explicitly stated, write: unknown
+- Do NOT add bullet points or extra commentary.
+
+Required output format:
+board_size: ...
+players: ...
+symbols: ...
+turn_order: ...
+legal_move: ...
+win_condition: ...
+draw_condition: ...
+start_player: ...
+
+Rules:
+Tic-Tac-Toe Rules
+
+Two players take turns placing marks on a 3×3 grid.
+
+Player 1 uses X.
+Player 2 uses O.
+
+Players alternate turns placing their mark in an empty cell.
+
+The first player to align three marks horizontally, vertically, or diagonally wins.
+
+If all cells are filled without a winner, the game ends in a draw.
+
+Moves are represented as (row, column).
+Rows and columns range from 0 to 2.

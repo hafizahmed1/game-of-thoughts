@@ -1,0 +1,6 @@
+- Allows placing a mark on an already occupied square (invalid move).
+- Does not specify that players must alternate turns.
+- Does not assign specific symbols (X/O) to each player.
+- Does not define the starting player.
+- Does not mention the use of (row, column) for move representation.
+- Does not specify that rows and columns range from 0 to 2.

@@ -1,0 +1,28 @@
+You are given two versions of the rules for connect_four.
+
+Task:
+Identify inconsistencies, errors, or contradictions in the broken version compared to the clean version.
+
+Output requirements:
+- Return ONLY a bullet list of issues.
+- Each bullet must be short and specific.
+
+Clean rules:
+Connect Four is played on a vertical grid with 7 columns and 6 rows.
+
+Two players take turns dropping their pieces into one of the columns.
+
+Before the game begins, the board is empty and the starting player is chosen at random.
+
+On each turn, a player drops one piece into any column that is not already full.
+
+The piece falls to the lowest available space in that column.
+
+Once placed, a piece does not move again, and pieces are not captured or removed.
+
+A player wins by forming a line of four of their own pieces horizontally, vertically, or diagonally.
+
+If the board becomes completely full and neither player has formed a line of four, the game ends in a draw.
+
+Broken rules:
+Broken rules: Connect Four is played on a vertical grid with 7 columns and 6 rows. Two players alternate turns dropping pieces into non-full columns. The first player to connect five pieces in a row wins. If the board is full and nobody wins, the game ends in a draw.

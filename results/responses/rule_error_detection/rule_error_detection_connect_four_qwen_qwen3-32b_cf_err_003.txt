@@ -1,0 +1,5 @@
+- Winning condition requires connecting five instead of four pieces.
+- No mention of starting player being chosen at random.
+- No clarification that pieces fall to the lowest available space.
+- No mention that pieces do not move after placement.
+- No mention of valid piece placement on turns (each player drops one piece).

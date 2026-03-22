@@ -1,0 +1,5 @@
+• The broken version does not specify that the starting player is chosen at random.
+• The broken version does not mention diagonal lines as a way to win.
+• The broken version does not specify that pieces are not captured or removed.
+• The broken version uses the phrase "alternate turns" instead of "take turns".
+• The broken version does not specify that a player drops one piece into a column on each turn.

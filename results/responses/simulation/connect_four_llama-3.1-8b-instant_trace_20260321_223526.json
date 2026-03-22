@@ -1,0 +1,1878 @@
+[
+  {
+    "case_id": "case_0",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\nX | . | . | . | . | . | .\nO | . | . | . | . | . | .\nX | O | . | . | . | X | .\nX | X | . | . | . | O | .\nO | O | X | . | O | O | .\nX | X | O | X | O | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\nX | . | . | . | . | . | .\nO | . | . | . | . | . | .\nX | O | . | . | . | X | .\nX | X | . | . | . | O | .\nO | O | X | . | O | O | .\nX | X | O | X | O | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_1",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | X | . | .\n. | . | . | . | O | O | .\n. | X | . | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | O | . | .\n. | O | . | . | X | . | .\n. | X | . | X | X | . | .\n. | O | . | X | O | O | .\nX | X | O | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | X | . | .\n. | . | . | . | O | O | .\n. | X | . | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "**SPATIAL ANALYSIS:**\n\nThe current board state is as follows:\n\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | X | . | .\n. | . | . | . | O | O | .\n. | X | . | O | O | X | .\nX | X | O | O | X | O | .\n\nMy pieces (X) are located at the following positions:\n- Column 5, Row 2\n- Column 5, Row 3\n- Column 5, Row 4\n- Column 6, Row 1\n- Column 6, Row 5\n\nThe opponent's pieces (O) are located at the following positions:\n- Column 4, Row 3\n- Column 4, Row 4\n- Column 4, Row 5\n- Column 5, Row 4\n- Column 5, Row 5\n- Column 2, Row 6\n- Column 3, Row 6\n- Column 5, Row 6\n\n**THREAT ASSESSMENT:**\n\nThere are no immediate 3-in-a-row threats that need to be blocked. However, there is a potential 4-in-a-row opportunity for me to take by creating a line of four X's in a row.\n\n**STRATEGY:**\n\nTo create a 4-in-a-row opportunity, I need to focus on Column 5, where I already have three pieces. I will drop my next piece in Column 5 to try and create a line of four X's horizontally.\n\n**FINAL MOVE:**\n\n3",
+        "move": "3",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | X | . | .\n. | . | . | X | O | O | .\n. | X | . | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "**SPATIAL ANALYSIS:**\n\nThe current board state is as follows:\n\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | X | . | .\n. | . | . | X | O | O | .\n. | X | . | O | O | X | .\nX | X | O | O | X | O | .\n\nMy pieces (O) are located at the following positions:\n- Row 4, Column 3\n- Row 4, Column 4\n- Row 4, Column 5\n\nThe opponent's pieces (X) are located at the following positions:\n- Row 2, Column 5\n- Row 3, Column 5\n- Row 5, Column 0\n- Row 5, Column 1\n- Row 5, Column 2\n- Row 5, Column 4\n- Row 5, Column 6\n\n**THREAT ASSESSMENT:**\n\nThere are no immediate 3-in-a-row threats that I need to block. However, I should be aware of the opponent's potential to create a 4-in-a-row opportunity.\n\n**STRATEGY:**\n\nMy goal is to create a 4-in-a-row opportunity or block the opponent's potential 4-in-a-row. Since the opponent has a strong presence in the bottom row, I should focus on the middle and upper rows.\n\nI will aim to create a potential 4-in-a-row opportunity by placing my next piece in a column where I can create a horizontal or vertical line with my existing pieces.\n\n**FINAL MOVE:**\n\nConsidering the current board state and my strategy, I will place my next piece in Column 1. This move will allow me to create a potential 4-in-a-row opportunity and challenge the opponent's control of the board.\n\nFINAL MOVE: 1",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | X | . | .\n. | O | . | X | O | O | .\n. | X | . | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "**SPATIAL ANALYSIS:**\n\nThe current board state is as follows:\n\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | X | . | .\n. | O | . | X | O | O | .\n. | X | . | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\n\nMy pieces (X) are located at columns 1, 2, 4, 5, and 6. The opponent's pieces (O) are located at columns 0, 2, 3, 4, and 5.\n\n**THREAT ASSESSMENT:**\n\nThere are no immediate 3-in-a-row threats that I need to block. However, I should be aware of the opponent's potential to create a 3-in-a-row or 4-in-a-row. The opponent has a strong presence in columns 3 and 4, with two pieces in each column. I should also note that the opponent has a potential 3-in-a-row in column 5.\n\n**STRATEGY:**\n\nMy goal is to create a 4-in-a-row or block the opponent's potential 3-in-a-row. To achieve this, I need to place my piece in a strategic location. Considering the current board state, I should aim to place my piece in a column where I can create a potential 4-in-a-row or block the opponent's 3-in-a-row.\n\nGiven the opponent's strong presence in columns 3 and 4, I should avoid placing my piece in these columns. Instead, I should focus on columns 0, 1, 2, 5, or 6. Since the opponent has a potential 3-in-a-row in column 5, I should avoid placing my piece in this column as well.\n\nConsidering the above factors, I will place my piece in column 0. This will give me a chance to create a potential 4-in-a-row in the future and block the opponent's potential 3-in-a-row.\n\n**FINAL MOVE:**\n\n0",
+        "move": "0",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | X | . | .\n. | O | . | X | O | O | .\nX | X | . | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "**SPATIAL ANALYSIS:**\nThe current board state is as follows:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | X | . | .\n. | O | . | X | O | O | .\nX | X | . | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\n\nMy pieces (O) are located at positions (1, 4), (3, 4), and (3, 5), and (3, 6).\nThe opponent's pieces (X) are located at positions (2, 4), (2, 5), (4, 1), (4, 2), (4, 3), (4, 5), (4, 6), (5, 1), (5, 2), (5, 3), (5, 5), and (5, 6).\n\n**THREAT ASSESSMENT:**\nThere are no immediate 3-in-a-row threats that I need to block. However, I should be aware of the opponent's potential to create a 4-in-a-row opportunity.\n\n**STRATEGY:**\nMy goal is to create a 4-in-a-row opportunity or block the opponent's potential 4-in-a-row. Since the opponent has a strong presence in columns 4 and 5, I should focus on creating a presence in a different column. I will choose column 2, which is currently empty, to place my next piece. This will give me a chance to create a 4-in-a-row opportunity in the future and limit the opponent's options.\n\n**FINAL MOVE:**\n2",
+        "move": "2",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | X | . | .\n. | O | . | X | O | O | .\nX | X | O | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "**SPATIAL ANALYSIS:**\n\nThe current board state is as follows:\n\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | X | . | .\n. | O | . | X | O | O | .\nX | X | O | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\n\nMy pieces (X) are located at columns 4, 5, and 6, with multiple pieces in columns 5 and 6. The opponent's pieces (O) are located at columns 2, 3, 4, 5, and 6, with multiple pieces in columns 4, 5, and 6.\n\n**THREAT ASSESSMENT:**\n\nThere are no immediate 3-in-a-row threats that I need to block. However, I need to be cautious of the opponent's potential to create a 4-in-a-row opportunity. The opponent has multiple pieces in columns 4, 5, and 6, which could potentially lead to a 4-in-a-row if they continue to place pieces in these columns.\n\n**STRATEGY:**\n\nMy strategy is to place a piece in a column that will not allow the opponent to create a 4-in-a-row opportunity. I will place a piece in column 3, which is currently empty. This will prevent the opponent from creating a 4-in-a-row in columns 3, 4, 5, and 6.\n\n**FINAL MOVE:**\n\n3",
+        "move": "3",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | X | X | . | .\n. | O | . | X | O | O | .\nX | X | O | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "**SPATIAL ANALYSIS:**\n\nThe current board state is as follows:\n\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | X | X | . | .\n. | O | . | X | O | O | .\nX | X | O | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\n\nMy pieces (O) are located at positions (1, 4), (2, 4), and (4, 2). The opponent's pieces (X) are located at positions (2, 5), (3, 5), (3, 4), (3, 3), (4, 5), (4, 6), (5, 5), (5, 6), (6, 5), and (6, 6).\n\n**THREAT ASSESSMENT:**\n\nThere are no immediate 3-in-a-row threats that I need to block. However, I should be aware of the opponent's potential to create a 4-in-a-row opportunity. The opponent has a strong presence in columns 5 and 6, and they have a chance to create a line of four in these columns.\n\n**STRATEGY:**\n\nMy goal is to prevent the opponent from creating a line of four and to create opportunities for myself to win. To achieve this, I will focus on blocking the opponent's potential lines and creating a strong presence in the middle of the board.\n\nConsidering the current board state, I will aim to place my next piece in a column that will block the opponent's potential line or create a strong foundation for myself. I will choose column 4, as it will allow me to create a line of three pieces and potentially block the opponent's line.\n\n**FINAL MOVE:**\n\n4",
+        "move": "4",
+        "move_valid": true
+      },
+      {
+        "turn_index": 6,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | O | . | .\n. | . | . | . | X | . | .\n. | . | . | X | X | . | .\n. | O | . | X | O | O | .\nX | X | O | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 500000, Requested 460. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 7,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | O | . | .\n. | . | . | . | X | . | .\n. | X | . | X | X | . | .\n. | O | . | X | O | O | .\nX | X | O | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 500000, Requested 460. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 8,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | O | . | .\n. | O | . | . | X | . | .\n. | X | . | X | X | . | .\n. | O | . | X | O | O | .\nX | X | O | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 500000, Requested 460. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 9,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | O | . | .\n. | O | . | . | X | . | .\n. | X | . | X | X | . | .\n. | O | . | X | O | O | .\nX | X | O | O | O | X | .\nX | X | O | O | X | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 500000, Requested 457. Please try again in 1m18.9696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_2",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 500000, Requested 463. Please try again in 1m20.0064s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 500000, Requested 463. Please try again in 1m20.0064s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 500000, Requested 463. Please try again in 1m20.0064s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499999, Requested 463. Please try again in 1m19.8336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499999, Requested 463. Please try again in 1m19.8336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499999, Requested 463. Please try again in 1m19.8336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 6,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499999, Requested 460. Please try again in 1m19.3152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_3",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\nO | O | O | . | . | . | .\nX | X | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | O | . | . | . | .\nO | O | O | . | . | . | .\nX | X | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\nO | O | O | . | . | . | .\nX | X | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499999, Requested 464. Please try again in 1m20.0064s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | O | . | . | . | .\nO | O | O | . | . | . | .\nX | X | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499999, Requested 464. Please try again in 1m20.0064s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | O | . | . | . | .\nO | O | O | . | . | . | .\nX | X | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499998, Requested 464. Please try again in 1m19.8336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | O | . | . | . | .\nO | O | O | . | . | . | .\nX | X | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499998, Requested 464. Please try again in 1m19.8336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | O | . | . | . | .\nO | O | O | . | . | . | .\nX | X | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499998, Requested 461. Please try again in 1m19.3152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_4",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nO | . | O | . | . | . | .\nO | . | O | . | X | . | .\nO | . | O | X | X | . | X\nX | . | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nO | . | O | . | . | . | .\nO | . | O | . | X | . | .\nO | . | O | X | X | . | X\nX | . | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "O",
+    "turns": []
+  },
+  {
+    "case_id": "case_5",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | . | . | O\nX | X | X | . | . | . | O\nO | O | O | O | O | X | X\nX | X | X | O | X | O | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | . | . | O\nX | X | X | . | . | . | O\nO | O | O | O | O | X | X\nX | X | X | O | X | O | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "O",
+    "turns": []
+  },
+  {
+    "case_id": "case_6",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | X | .\n. | X | O | . | . | O | .\n. | O | O | . | . | X | .\n. | X | X | X | X | O | O\n. | O | O | X | O | X | X\nO | X | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | X | .\n. | X | O | . | . | O | .\n. | O | O | . | . | X | .\n. | X | X | X | X | O | O\n. | O | O | X | O | X | X\nO | X | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_7",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | X | . | . | . | . | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | . | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | X | . | . | . | . | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499998, Requested 464. Please try again in 1m19.8336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | . | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499998, Requested 464. Please try again in 1m19.8336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | . | . | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499998, Requested 464. Please try again in 1m19.8336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | . | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499998, Requested 464. Please try again in 1m19.8336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | . | . | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499997, Requested 464. Please try again in 1m19.6608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | . | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499997, Requested 461. Please try again in 1m19.1424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_8",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | X | . | . | .\n. | O | X | X | . | O | .\n. | O | X | O | . | X | .\nX | O | O | X | X | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | X | . | . | .\n. | O | X | X | . | O | .\n. | O | X | O | . | X | .\nX | O | O | X | X | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "O",
+    "turns": []
+  },
+  {
+    "case_id": "case_9",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | O | . | .\n. | . | . | O | O | . | .\n. | O | O | X | X | X | .\nX | X | O | X | O | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | X | . | .\n. | X | . | . | O | . | .\n. | O | . | O | O | . | .\n. | O | O | X | X | X | .\nX | X | O | X | O | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | O | . | .\n. | . | . | O | O | . | .\n. | O | O | X | X | X | .\nX | X | O | X | O | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499997, Requested 463. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | . | . | . | O | . | .\n. | O | . | O | O | . | .\n. | O | O | X | X | X | .\nX | X | O | X | O | X | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499997, Requested 463. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | X | . | .\n. | X | . | . | O | . | .\n. | O | . | O | O | . | .\n. | O | O | X | X | X | .\nX | X | O | X | O | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499997, Requested 463. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | O | . | . | X | . | .\n. | X | . | . | O | . | .\n. | O | . | O | O | . | .\n. | O | O | X | X | X | .\nX | X | O | X | O | X | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499997, Requested 463. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | X | . | .\n. | X | . | . | O | . | .\n. | O | . | O | O | . | .\n. | O | O | X | X | X | .\nX | X | O | X | O | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499997, Requested 460. Please try again in 1m18.9696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_10",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nO | X | . | . | . | . | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nO | X | . | . | . | . | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nO | X | . | . | . | . | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499996, Requested 464. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\nO | X | . | . | . | . | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499996, Requested 464. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nO | X | . | . | . | . | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499996, Requested 464. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nO | X | . | . | . | . | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499996, Requested 464. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nO | X | . | . | . | . | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499996, Requested 464. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nO | X | . | . | . | . | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499996, Requested 461. Please try again in 1m18.9696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_11",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | O | X | . | .\n. | . | . | O | X | . | .\n. | . | . | X | X | . | .\nO | X | O | O | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | O | X | . | .\n. | . | . | O | X | . | .\n. | . | . | X | X | . | .\nO | X | O | O | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_12",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499996, Requested 463. Please try again in 1m19.3152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499995, Requested 463. Please try again in 1m19.1424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499995, Requested 463. Please try again in 1m19.1424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499995, Requested 463. Please try again in 1m19.1424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499995, Requested 463. Please try again in 1m19.1424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499995, Requested 463. Please try again in 1m19.1424s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 6,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499995, Requested 460. Please try again in 1m18.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_13",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | X | . | . | O | X\n. | . | O | . | O | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | X | . | . | O | X\n. | O | O | . | O | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | X | . | . | O | X\n. | . | O | . | O | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499995, Requested 465. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | X | . | . | O | X\n. | O | O | . | O | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499995, Requested 465. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | X | . | . | O | X\n. | O | O | . | O | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499994, Requested 465. Please try again in 1m19.3152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | X | . | . | O | X\n. | O | O | . | O | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499994, Requested 465. Please try again in 1m19.3152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | X | . | . | O | X\n. | O | O | . | O | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499994, Requested 465. Please try again in 1m19.3152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | X | . | . | O | X\n. | O | O | . | O | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499994, Requested 465. Please try again in 1m19.3152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 6,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | X | . | . | O | X\n. | O | O | . | O | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499994, Requested 462. Please try again in 1m18.7968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_14",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | O | . | X | .\nX | X | X | O | . | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | O | . | X | .\nX | X | X | O | . | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | O | . | X | .\nX | X | X | O | . | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499994, Requested 463. Please try again in 1m18.9696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | O | . | X | .\nX | X | X | O | . | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499994, Requested 463. Please try again in 1m18.9696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | O | . | X | .\nX | X | X | O | . | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499993, Requested 463. Please try again in 1m18.7968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | O | . | X | .\nX | X | X | O | . | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499993, Requested 463. Please try again in 1m18.7968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | O | . | X | .\nX | X | X | O | . | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499993, Requested 463. Please try again in 1m18.7968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | O | . | X | .\nX | X | X | O | . | O | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499993, Requested 460. Please try again in 1m18.2784s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_15",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | O | . | O\n. | O | . | . | X | . | X\n. | X | X | . | O | O | O\nX | X | O | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | O | . | O\n. | O | . | . | X | . | X\n. | X | X | . | O | O | O\nX | X | O | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | O | . | O\n. | O | . | . | X | . | X\n. | X | X | . | O | O | O\nX | X | O | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499993, Requested 467. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | O | . | O\n. | O | . | . | X | . | X\n. | X | X | . | O | O | O\nX | X | O | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499993, Requested 467. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | O | . | O\n. | O | . | . | X | . | X\n. | X | X | . | O | O | O\nX | X | O | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499993, Requested 467. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | O | . | O\n. | O | . | . | X | . | X\n. | X | X | . | O | O | O\nX | X | O | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499992, Requested 464. Please try again in 1m18.7968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_16",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | X | . | .\nO | . | O | . | X | . | .\nO | . | O | X | X | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | X | . | .\nO | O | O | . | X | . | .\nO | X | O | X | X | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | X | . | .\nO | . | O | . | X | . | .\nO | . | O | X | X | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499992, Requested 464. Please try again in 1m18.7968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | X | . | .\nO | . | O | . | X | . | .\nO | X | O | X | X | . | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499992, Requested 464. Please try again in 1m18.7968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | X | . | .\nO | O | O | . | X | . | .\nO | X | O | X | X | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499992, Requested 464. Please try again in 1m18.7968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | X | . | . | X | . | .\nO | O | O | . | X | . | .\nO | X | O | X | X | . | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499992, Requested 464. Please try again in 1m18.7968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | X | . | .\nO | O | O | . | X | . | .\nO | X | O | X | X | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499992, Requested 464. Please try again in 1m18.7968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | X | . | .\nO | O | O | . | X | . | .\nO | X | O | X | X | . | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499992, Requested 464. Please try again in 1m18.7968s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 6,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | X | . | .\nO | O | O | . | X | . | .\nO | X | O | X | X | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499991, Requested 461. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_17",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\nO | X | . | . | . | . | .\nO | O | . | . | O | . | X\nX | X | . | X | O | O | X\nO | X | . | O | O | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\nO | X | . | . | . | . | .\nO | O | . | . | O | . | X\nX | X | . | X | O | O | X\nO | X | . | O | O | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\nO | X | . | . | . | . | .\nO | O | . | . | O | . | X\nX | X | . | X | O | O | X\nO | X | . | O | O | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499991, Requested 466. Please try again in 1m18.9696s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\nO | X | . | . | . | . | .\nO | O | . | . | O | . | X\nX | X | . | X | O | O | X\nO | X | . | O | O | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499991, Requested 463. Please try again in 1m18.4512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_18",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | O | X | .\n. | O | . | X | X | X | X\n. | X | O | O | X | O | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | O | X | .\n. | O | . | X | X | X | X\n. | X | O | O | X | O | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_19",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\nX | O | . | . | . | . | .\nO | X | . | . | X | . | .\nX | O | O | . | X | . | .\nX | O | O | . | X | O | .\nX | O | O | X | O | X | .\nO | X | O | X | O | X | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\nX | O | . | . | . | . | .\nO | X | . | . | X | . | .\nX | O | O | . | X | . | .\nX | O | O | . | X | O | .\nX | O | O | X | O | X | .\nO | X | O | X | O | X | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "O",
+    "turns": []
+  },
+  {
+    "case_id": "case_20",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | X | . | . | .\n. | X | . | X | X | . | .\n. | O | . | O | O | . | .\n. | X | . | O | O | O | O\nX | X | O | X | X | O | X\nO | X | O | O | O | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | X | . | . | .\n. | X | . | X | X | . | .\n. | O | . | O | O | . | .\n. | X | . | O | O | O | O\nX | X | O | X | X | O | X\nO | X | O | O | O | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "O",
+    "turns": []
+  },
+  {
+    "case_id": "case_21",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | X | .\n. | . | . | . | . | O | .\n. | . | . | . | . | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | X | .\n. | X | . | . | . | O | .\n. | O | . | . | . | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | X | .\n. | . | . | . | . | O | .\n. | . | . | . | . | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499991, Requested 463. Please try again in 1m18.4512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | X | .\n. | . | . | . | . | O | .\n. | O | . | . | . | X | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499991, Requested 463. Please try again in 1m18.4512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | X | .\n. | X | . | . | . | O | .\n. | O | . | . | . | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499991, Requested 463. Please try again in 1m18.4512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | X | .\n. | X | . | . | . | O | .\n. | O | . | . | . | X | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499991, Requested 463. Please try again in 1m18.4512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | X | .\n. | X | . | . | . | O | .\n. | O | . | . | . | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499991, Requested 463. Please try again in 1m18.4512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | X | .\n. | X | . | . | . | O | .\n. | O | . | . | . | X | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499990, Requested 463. Please try again in 1m18.2784s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 6,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | X | .\n. | X | . | . | . | O | .\n. | O | . | . | . | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499990, Requested 460. Please try again in 1m17.759999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_22",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | O\nX | . | O | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | O\nX | X | O | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | O\nX | . | O | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499990, Requested 465. Please try again in 1m18.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | O\nX | X | O | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499990, Requested 465. Please try again in 1m18.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | O\nX | X | O | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499990, Requested 465. Please try again in 1m18.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | O\nX | X | O | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499990, Requested 465. Please try again in 1m18.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | O\nX | X | O | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499989, Requested 465. Please try again in 1m18.4512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | O\nX | X | O | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499989, Requested 465. Please try again in 1m18.4512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 6,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | O\nX | X | O | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499989, Requested 462. Please try again in 1m17.9328s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_23",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | X | O | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | X | O | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | X | O | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499989, Requested 463. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | X | O | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499989, Requested 463. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | X | O | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499989, Requested 460. Please try again in 1m17.5872s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_24",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\nX | . | . | O | . | . | X\nO | X | . | O | . | . | O\nX | X | . | X | . | . | O\nX | O | . | O | . | . | X\nO | O | . | X | X | . | O\nO | X | O | X | X | O | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\nX | O | . | O | . | . | X\nO | X | . | O | . | . | O\nX | X | . | X | . | . | O\nX | O | . | O | . | . | X\nO | O | . | X | X | . | O\nO | X | O | X | X | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\nX | . | . | O | . | . | X\nO | X | . | O | . | . | O\nX | X | . | X | . | . | O\nX | O | . | O | . | . | X\nO | O | . | X | X | . | O\nO | X | O | X | X | O | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499989, Requested 460. Please try again in 1m17.5872s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\nX | O | . | O | . | . | X\nO | X | . | O | . | . | O\nX | X | . | X | . | . | O\nX | O | . | O | . | . | X\nO | O | . | X | X | . | O\nO | X | O | X | X | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499988, Requested 457. Please try again in 1m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_25",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | X | . | . | .\n. | . | . | X | . | . | .\n. | . | O | X | . | . | O\nO | . | O | X | . | . | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | X | . | . | .\n. | . | . | X | . | . | .\n. | . | O | X | . | . | O\nO | . | O | X | . | . | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_26",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nO | . | . | . | X | X | .\nX | X | . | . | X | O | .\nO | X | O | O | X | O | .\nO | O | O | X | X | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nO | . | . | . | X | X | .\nX | X | . | . | X | O | .\nO | X | O | O | X | O | .\nO | O | O | X | X | X | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_27",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\nX | . | . | . | O | . | .\nO | X | . | . | O | . | X\nX | O | . | X | X | . | O\nX | O | . | X | X | . | X\nO | O | O | O | O | O | X\nO | X | O | X | X | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\nX | . | . | . | O | . | .\nO | X | . | . | O | . | X\nX | O | . | X | X | . | O\nX | O | . | X | X | . | X\nO | O | O | O | O | O | X\nO | X | O | X | X | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "O",
+    "turns": []
+  },
+  {
+    "case_id": "case_28",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | . | . | .\nO | . | . | X | O | . | .\nO | . | X | O | X | O | .\nX | O | X | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | . | . | .\nO | O | . | X | O | . | .\nO | X | X | O | X | O | .\nX | O | X | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | . | . | .\nO | . | . | X | O | . | .\nO | . | X | O | X | O | .\nX | O | X | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499988, Requested 464. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | . | . | .\nO | . | . | X | O | . | .\nO | X | X | O | X | O | .\nX | O | X | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499988, Requested 464. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | . | . | .\nO | O | . | X | O | . | .\nO | X | X | O | X | O | .\nX | O | X | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499988, Requested 464. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | X | . | . | . | . | .\nO | O | . | X | O | . | .\nO | X | X | O | X | O | .\nX | O | X | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499988, Requested 464. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | . | . | .\nO | O | . | X | O | . | .\nO | X | X | O | X | O | .\nX | O | X | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499988, Requested 464. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | . | . | .\nO | O | . | X | O | . | .\nO | X | X | O | X | O | .\nX | O | X | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499988, Requested 461. Please try again in 1m17.5872s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_29",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\n. | X | X | . | . | . | .\n. | O | O | . | O | . | .\nX | X | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | . | .\n. | O | O | . | O | . | .\nX | X | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\n. | X | X | . | . | . | .\n. | O | O | . | O | . | .\nX | X | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499987, Requested 464. Please try again in 1m17.9328s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | . | .\n. | O | O | . | O | . | .\nX | X | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499987, Requested 464. Please try again in 1m17.9328s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | . | .\n. | O | O | . | O | . | .\nX | X | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499987, Requested 464. Please try again in 1m17.9328s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | . | .\n. | O | O | . | O | . | .\nX | X | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499987, Requested 461. Please try again in 1m17.4144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_30",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | X | O | .\nO | . | X | . | O | O | .\nX | O | X | . | O | O | X\nX | O | X | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | X | O | .\nO | O | X | . | O | O | .\nX | O | X | . | O | O | X\nX | O | X | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | X | O | .\nO | . | X | . | O | O | .\nX | O | X | . | O | O | X\nX | O | X | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499987, Requested 465. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | . | . | . | X | O | .\nO | O | X | . | O | O | .\nX | O | X | . | O | O | X\nX | O | X | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499987, Requested 465. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\nX | X | . | . | X | O | .\nO | O | X | . | O | O | .\nX | O | X | . | O | O | X\nX | O | X | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499987, Requested 465. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | X | O | .\nO | O | X | . | O | O | .\nX | O | X | . | O | O | X\nX | O | X | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499987, Requested 465. Please try again in 1m18.1056s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\nX | X | . | . | X | O | .\nO | O | X | . | O | O | .\nX | O | X | . | O | O | X\nX | O | X | . | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499986, Requested 462. Please try again in 1m17.4144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_31",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | O | .\n. | . | O | . | . | X | .\nX | X | X | X | O | O | X\nO | O | O | X | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | O | .\n. | . | O | . | . | X | .\nX | X | X | X | O | O | X\nO | O | O | X | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_32",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\nX | . | . | . | . | . | .\nO | . | . | . | . | . | .\nX | . | . | . | . | O | .\nO | O | X | X | O | X | .\nX | X | X | O | X | O | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\nX | O | . | . | . | . | .\nO | X | . | . | . | . | .\nX | O | . | . | . | O | .\nO | O | X | X | O | X | .\nX | X | X | O | X | O | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\nX | . | . | . | . | . | .\nO | . | . | . | . | . | .\nX | . | . | . | . | O | .\nO | O | X | X | O | X | .\nX | X | X | O | X | O | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499986, Requested 464. Please try again in 1m17.759999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\nX | . | . | . | . | . | .\nO | . | . | . | . | . | .\nX | O | . | . | . | O | .\nO | O | X | X | O | X | .\nX | X | X | O | X | O | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499986, Requested 464. Please try again in 1m17.759999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\nX | . | . | . | . | . | .\nO | X | . | . | . | . | .\nX | O | . | . | . | O | .\nO | O | X | X | O | X | .\nX | X | X | O | X | O | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499986, Requested 464. Please try again in 1m17.759999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\nX | O | . | . | . | . | .\nO | X | . | . | . | . | .\nX | O | . | . | . | O | .\nO | O | X | X | O | X | .\nX | X | X | O | X | O | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499986, Requested 464. Please try again in 1m17.759999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\nX | O | . | . | . | . | .\nO | X | . | . | . | . | .\nX | O | . | . | . | O | .\nO | O | X | X | O | X | .\nX | X | X | O | X | O | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499986, Requested 461. Please try again in 1m17.2416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_33",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | O | . | .\n. | X | . | . | X | . | .\nO | X | O | O | X | . | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | O | . | .\n. | X | . | . | X | . | .\nO | X | O | O | X | . | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | O | . | .\n. | X | . | . | X | . | .\nO | X | O | O | X | . | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499986, Requested 464. Please try again in 1m17.759999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | O | . | .\n. | X | . | . | X | . | .\nO | X | O | O | X | . | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499985, Requested 464. Please try again in 1m17.5872s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | O | . | .\n. | X | . | . | X | . | .\nO | X | O | O | X | . | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499985, Requested 464. Please try again in 1m17.5872s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | O | . | .\n. | X | . | . | X | . | .\nO | X | O | O | X | . | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499985, Requested 464. Please try again in 1m17.5872s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | O | . | .\n. | X | . | . | X | . | .\nO | X | O | O | X | . | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499985, Requested 461. Please try again in 1m17.0688s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_34",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\n. | . | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\n. | . | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499985, Requested 463. Please try again in 1m17.4144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\n. | X | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499985, Requested 463. Please try again in 1m17.4144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499985, Requested 463. Please try again in 1m17.4144s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499984, Requested 463. Please try again in 1m17.2416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499984, Requested 463. Please try again in 1m17.2416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499984, Requested 463. Please try again in 1m17.2416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 6,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499984, Requested 460. Please try again in 1m16.7232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_35",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499984, Requested 463. Please try again in 1m17.2416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499984, Requested 463. Please try again in 1m17.2416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499984, Requested 463. Please try again in 1m17.2416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499983, Requested 463. Please try again in 1m17.0688s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499983, Requested 463. Please try again in 1m17.0688s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | X | . | . | . | .\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499983, Requested 460. Please try again in 1m16.5504s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_36",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | O\nO | . | X | X | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | O\nO | . | X | X | X | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_37",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | O\n. | X | . | . | . | . | O\n. | O | . | . | . | X | O\nX | X | X | X | . | X | X\nX | X | O | X | O | O | O\nO | O | X | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | O\n. | X | . | . | . | . | O\n. | O | . | . | . | X | O\nX | X | X | X | . | X | X\nX | X | O | X | O | O | O\nO | O | X | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_38",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | X\n. | O | . | . | . | . | O\n. | X | O | . | . | . | X\nO | O | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | X\n. | O | . | . | . | . | O\n. | X | O | . | . | . | X\nO | O | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | X\n. | O | . | . | . | . | O\n. | X | O | . | . | . | X\nO | O | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499983, Requested 467. Please try again in 1m17.759999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | X\n. | O | . | . | . | . | O\n. | X | O | . | . | . | X\nO | O | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499983, Requested 467. Please try again in 1m17.759999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | X\n. | O | . | . | . | . | O\n. | X | O | . | . | . | X\nO | O | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499983, Requested 467. Please try again in 1m17.759999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | X\n. | O | . | . | . | . | O\n. | X | O | . | . | . | X\nO | O | X | O | . | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499983, Requested 464. Please try again in 1m17.2416s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_39",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | X | . | . | . | .\nO | . | O | . | . | . | .\nX | . | X | . | . | X | .\nO | . | O | X | O | X | O\nX | . | O | O | X | X | X\nO | O | X | O | X | O | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | X | . | . | . | .\nO | . | O | . | . | . | .\nX | O | X | . | . | X | .\nO | X | O | X | O | X | O\nX | O | O | O | X | X | X\nO | O | X | O | X | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "O",
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | X | . | . | . | .\nO | . | O | . | . | . | .\nX | . | X | . | . | X | .\nO | . | O | X | O | X | O\nX | . | O | O | X | X | X\nO | O | X | O | X | O | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499982, Requested 463. Please try again in 1m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | X | . | . | . | .\nO | . | O | . | . | . | .\nX | . | X | . | . | X | .\nO | . | O | X | O | X | O\nX | O | O | O | X | X | X\nO | O | X | O | X | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499982, Requested 463. Please try again in 1m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | X | . | . | . | .\nO | . | O | . | . | . | .\nX | . | X | . | . | X | .\nO | X | O | X | O | X | O\nX | O | O | O | X | X | X\nO | O | X | O | X | O | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499982, Requested 463. Please try again in 1m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      }
+    ]
+  },
+  {
+    "case_id": "case_40",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | O | .\n. | . | . | . | X | X | .\n. | . | . | . | X | O | .\nO | . | . | X | O | X | .\nX | . | . | X | X | O | .\nO | X | O | X | O | O | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | O | .\n. | O | . | . | X | X | .\n. | X | . | . | X | O | .\nO | O | . | X | O | X | .\nX | X | . | X | X | O | .\nO | X | O | X | O | O | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | O | .\n. | . | . | . | X | X | .\n. | . | . | . | X | O | .\nO | . | . | X | O | X | .\nX | . | . | X | X | O | .\nO | X | O | X | O | O | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499982, Requested 461. Please try again in 1m16.5504s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | O | .\n. | . | . | . | X | X | .\n. | . | . | . | X | O | .\nO | . | . | X | O | X | .\nX | X | . | X | X | O | .\nO | X | O | X | O | O | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499982, Requested 461. Please try again in 1m16.5504s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | O | .\n. | . | . | . | X | X | .\n. | . | . | . | X | O | .\nO | O | . | X | O | X | .\nX | X | . | X | X | O | .\nO | X | O | X | O | O | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499982, Requested 461. Please try again in 1m16.5504s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | O | .\n. | . | . | . | X | X | .\n. | X | . | . | X | O | .\nO | O | . | X | O | X | .\nX | X | . | X | X | O | .\nO | X | O | X | O | O | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499982, Requested 461. Please try again in 1m16.5504s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | O | .\n. | O | . | . | X | X | .\n. | X | . | . | X | O | .\nO | O | . | X | O | X | .\nX | X | . | X | X | O | .\nO | X | O | X | O | O | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499981, Requested 461. Please try again in 1m16.3776s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | O | .\n. | O | . | . | X | X | .\n. | X | . | . | X | O | .\nO | O | . | X | O | X | .\nX | X | . | X | X | O | .\nO | X | O | X | O | O | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499981, Requested 458. Please try again in 1m15.8592s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_41",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\n. | . | X | . | . | X | .\nO | . | X | . | . | O | .\nX | . | X | O | O | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | X | .\nO | O | X | . | . | O | .\nX | X | X | O | O | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\n. | . | X | . | . | X | .\nO | . | X | . | . | O | .\nX | . | X | O | O | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499981, Requested 464. Please try again in 1m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\n. | . | X | . | . | X | .\nO | . | X | . | . | O | .\nX | X | X | O | O | O | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499981, Requested 464. Please try again in 1m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\n. | . | X | . | . | X | .\nO | O | X | . | . | O | .\nX | X | X | O | O | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499981, Requested 464. Please try again in 1m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | O | . | . | . | .\n. | X | X | . | . | X | .\nO | O | X | . | . | O | .\nX | X | X | O | O | O | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499981, Requested 464. Please try again in 1m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | X | .\nO | O | X | . | . | O | .\nX | X | X | O | O | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499981, Requested 464. Please try again in 1m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | X | .\nO | O | X | . | . | O | .\nX | X | X | O | O | O | X\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499981, Requested 464. Please try again in 1m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 6,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | O | . | . | . | .\n. | X | X | . | . | X | .\nO | O | X | . | . | O | .\nX | X | X | O | O | O | X\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499980, Requested 461. Please try again in 1m16.204799999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_42",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | X | . | . | .\n. | . | X | X | . | O | .\n. | O | O | X | . | O | .\n. | X | X | X | O | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | X | . | . | .\n. | . | X | X | . | O | .\n. | O | O | X | . | O | .\n. | X | X | X | O | O | .\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_43",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | X | . | X | . | .\n. | . | O | X | O | . | .\nX | O | X | O | X | . | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | X | . | X | . | .\n. | O | O | X | O | . | .\nX | O | X | O | X | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | X | . | X | . | .\n. | . | O | X | O | . | .\nX | O | X | O | X | . | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499980, Requested 464. Please try again in 1m16.7232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | X | . | X | . | .\n. | O | O | X | O | . | .\nX | O | X | O | X | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499980, Requested 464. Please try again in 1m16.7232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | X | . | X | . | .\n. | O | O | X | O | . | .\nX | O | X | O | X | . | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499980, Requested 464. Please try again in 1m16.7232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | X | . | X | . | .\n. | O | O | X | O | . | .\nX | O | X | O | X | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499980, Requested 464. Please try again in 1m16.7232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | X | . | X | . | .\n. | O | O | X | O | . | .\nX | O | X | O | X | . | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499980, Requested 464. Please try again in 1m16.7232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | X | . | X | . | .\n. | O | O | X | O | . | .\nX | O | X | O | X | . | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499980, Requested 461. Please try again in 1m16.204799999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_44",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | O | . | X | .\n. | . | . | O | . | X | .\n. | O | X | X | X | X | O\nO | O | X | O | X | O | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | O | . | X | .\n. | . | . | O | . | X | .\n. | O | X | X | X | X | O\nO | O | X | O | X | O | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_45",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | X | . | O\n. | X | . | . | O | . | X\nO | O | . | . | X | X | O\nO | X | O | O | O | X | O\nX | X | O | X | X | O | X\nX | O | O | O | X | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | X | . | O\n. | X | . | . | O | . | X\nO | O | . | . | X | X | O\nO | X | O | O | O | X | O\nX | X | O | X | X | O | X\nX | O | O | O | X | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | X | . | O\n. | X | . | . | O | . | X\nO | O | . | . | X | X | O\nO | X | O | O | O | X | O\nX | X | O | X | X | O | X\nX | O | O | O | X | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499979, Requested 460. Please try again in 1m15.8592s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_46",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | O\n. | . | . | . | . | . | O\nX | . | . | . | . | O | X\nX | . | . | X | . | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | O\n. | O | . | . | . | . | O\nX | X | . | . | . | O | X\nX | O | . | X | . | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | O\n. | . | . | . | . | . | O\nX | . | . | . | . | O | X\nX | . | . | X | . | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499979, Requested 467. Please try again in 1m17.0688s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | O\n. | . | . | . | . | . | O\nX | . | . | . | . | O | X\nX | O | . | X | . | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499979, Requested 467. Please try again in 1m17.0688s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | O\n. | . | . | . | . | . | O\nX | X | . | . | . | O | X\nX | O | . | X | . | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499979, Requested 467. Please try again in 1m17.0688s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | O\n. | O | . | . | . | . | O\nX | X | . | . | . | O | X\nX | O | . | X | . | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499979, Requested 467. Please try again in 1m17.0688s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 4,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | O\n. | O | . | . | . | . | O\nX | X | . | . | . | O | X\nX | O | . | X | . | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499979, Requested 467. Please try again in 1m17.0688s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 5,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | O\n. | O | . | . | . | . | O\nX | X | . | . | . | O | X\nX | O | . | X | . | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499979, Requested 467. Please try again in 1m17.0688s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 6,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | O\n. | O | . | . | . | . | O\nX | X | . | . | . | O | X\nX | O | . | X | . | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499978, Requested 464. Please try again in 1m16.3776s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_47",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | O | . | . | X\nO | O | . | X | X | . | X\nO | X | . | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | O | . | . | X\nO | O | . | X | X | . | X\nO | X | . | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | O | . | O | . | . | X\nO | O | . | X | X | . | X\nO | X | . | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499978, Requested 466. Please try again in 1m16.7232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 1,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | . | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | O | . | . | X\nO | O | . | X | X | . | X\nO | X | . | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499978, Requested 466. Please try again in 1m16.7232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 2,
+        "player": "X",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | . | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | O | . | . | X\nO | O | . | X | X | . | X\nO | X | . | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: X",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499978, Requested 466. Please try again in 1m16.7232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": true
+      },
+      {
+        "turn_index": 3,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | . | . | . | . | .\n. | O | . | . | . | . | .\n. | X | . | . | . | . | .\n. | O | . | O | . | . | X\nO | O | . | X | X | . | X\nO | X | . | X | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499978, Requested 463. Please try again in 1m16.204799999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  },
+  {
+    "case_id": "case_48",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | X | . | .\n. | . | . | O | O | . | X\n. | . | . | X | X | . | O\n. | . | O | O | X | . | O\n. | O | X | X | O | X | O\n. | X | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | . | . | . | X | . | .\n. | . | . | O | O | . | X\n. | . | . | X | X | . | O\n. | . | O | O | X | . | O\n. | O | X | X | O | X | O\n. | X | O | O | X | X | X\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "terminal_state_reached",
+    "winner": "X",
+    "turns": []
+  },
+  {
+    "case_id": "case_49",
+    "model": "llama-3.1-8b-instant",
+    "game": "connect_four",
+    "initial_board": "Columns are 0-indexed.\nBoard:\n. | X | X | . | . | X | .\n. | O | X | . | . | O | .\nX | X | O | . | . | X | X\nO | O | X | O | . | O | O\nX | O | X | X | X | O | O\nX | O | X | O | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "final_board": "Columns are 0-indexed.\nBoard:\n. | X | X | . | . | X | .\n. | O | X | . | . | O | .\nX | X | O | . | . | X | X\nO | O | X | O | . | O | O\nX | O | X | X | X | O | O\nX | O | X | O | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+    "stopped_reason": "invalid_move",
+    "winner": null,
+    "turns": [
+      {
+        "turn_index": 0,
+        "player": "O",
+        "board_state": "Columns are 0-indexed.\nBoard:\n. | X | X | . | . | X | .\n. | O | X | . | . | O | .\nX | X | O | . | . | X | X\nO | O | X | O | . | O | O\nX | O | X | X | X | O | O\nX | O | X | O | O | X | O\n0   1   2   3   4   5   6\nCurrent player: O",
+        "thought": "ERROR: Groq API error (llama-3.1-8b-instant): Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kkqfcm05evrsmznkzwsb85gk` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499978, Requested 458. Please try again in 1m15.3408s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
+        "move": "1",
+        "move_valid": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+• The broken version does not specify that the board is empty at the start of the game.
+• The broken version does not mention that the starting player is chosen at random.
+• The broken version incorrectly states that pieces fall to the lowest available space in the "chosen column", it should be "that column".
+• The broken version does not specify that a player drops one piece into a column on each turn.
+• The broken version does not mention that once placed, a piece does not move again, and pieces are not captured or removed.
+• The broken version incorrectly states that a player wins by forming "four in a row", it should be "a line of four".

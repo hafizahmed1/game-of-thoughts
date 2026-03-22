@@ -1,0 +1,5 @@
+- The broken version does not mention that players choose a column that is not already full.  
+- The broken version does not specify that the starting player is chosen at random.  
+- The broken version does not state that once placed, a piece does not move again.  
+- The broken version does not mention that pieces are not captured or removed.  
+- The broken version incorrectly states that play continues after the board is full, contradicting the draw condition.

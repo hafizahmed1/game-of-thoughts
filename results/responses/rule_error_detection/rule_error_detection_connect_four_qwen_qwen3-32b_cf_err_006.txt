@@ -1,0 +1,6 @@
+- Missing rule about diagonal wins  
+- Missing rule about starting player being chosen at random  
+- Missing rule that a player drops one piece per turn  
+- Missing rule that pieces are not captured or removed  
+- Missing rule that a column must not be full to drop a piece  
+- Missing rule that the board starts empty

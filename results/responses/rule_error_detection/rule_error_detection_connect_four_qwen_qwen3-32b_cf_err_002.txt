@@ -1,0 +1,10 @@
+- Allows placing pieces in any cell, ignoring the drop mechanic  
+- Pieces do not fall to the lowest available space  
+- Does not specify that turns are taken alternately  
+- Does not mention the starting player is chosen at random  
+- Does not specify that pieces are dropped into columns  
+- Omits the requirement that the board starts empty  
+- Does not clarify that only one piece is placed per turn  
+- Does not mention horizontal, vertical, and diagonal win conditions explicitly  
+- Does not specify that pieces belong to a player (own pieces)  
+- Lacks detail on column full condition and invalid moves

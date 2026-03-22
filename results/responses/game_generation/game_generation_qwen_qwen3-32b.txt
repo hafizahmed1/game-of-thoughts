@@ -1,0 +1,25 @@
+1. **Game Name**: **Treasure Hunt: Island Showdown**
+
+2. **Objective**:  
+Collect the most treasure tokens by strategically moving across the island board and outmaneuvering your opponent.
+
+3. **Setup**:  
+- The game is played on a 5x5 grid board with randomly placed treasure tokens (10 total).  
+- Each player starts with a pawn in opposite corners of the board.  
+- Players take turns moving their pawn one space in any direction (up, down, left, right, or diagonally).  
+- The game includes 10 treasure tokens placed face-down on the board before the game begins.
+
+4. **Rules**:  
+- On your turn, move your pawn one space in any direction.  
+- If you land on a space with a treasure token, you collect it and place it in your treasure pile.  
+- If both players land on the same treasure space on the same turn, the treasure is split evenly (or one token is randomly assigned if odd).  
+- Players cannot move onto the space occupied by the opponent.  
+- The game ends when all treasure tokens have been collected or when all possible moves are blocked.  
+- The player with the most treasure tokens wins.
+
+5. **Example Turn**:  
+- Player 1 moves their pawn diagonally from (1,1) to (2,2), collecting a treasure token.  
+- Player 2 moves their pawn from (5,5) to (4,4), collecting another treasure token.  
+- On the next turn, Player 1 moves to (3,3), but Player 2 is already there, so they must move elsewhere.  
+- Player 1 moves to (3,2) and collects another treasure token.  
+- The game continues until all treasures are collected or no more moves are possible.

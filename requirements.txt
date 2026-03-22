@@ -3,6 +3,11 @@ python-dotenv
 numpy
 pandas
 matplotlib
+seaborn
 tabulate
+tqdm
+scikit-learn
+jsonschema
 python-docx
 pypdf
+jupyter

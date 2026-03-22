@@ -1,0 +1,5 @@
+- Incorrect number of players: states three players instead of two.
+- Confusing mark assignment: mentions three players using only X and O.
+- No turn order specified: lacks information on player turn sequence.
+- Missing win condition details: does not specify horizontal, vertical, or diagonal alignment.
+- No move notation: omits (row, column) format for moves.

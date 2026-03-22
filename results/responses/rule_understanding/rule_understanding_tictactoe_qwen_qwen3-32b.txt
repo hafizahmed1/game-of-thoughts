@@ -1,0 +1,8 @@
+board_size: 3x3  
+players: 2  
+symbols: X, O  
+turn_order: alternate  
+legal_move: place mark in empty cell  
+win_condition: three marks aligned horizontally, vertically, or diagonally  
+draw_condition: all cells filled without winner  
+start_player: Player 1

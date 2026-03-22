@@ -1,0 +1,4 @@
+• The broken rules state a player wins by forming four in a row, but the clean rules state a player wins by forming three in a row.
+• The broken rules do not specify the representation of moves, but the clean rules state moves are represented as (row, column).
+• The clean rules specify rows and columns range from 0 to 2, but the broken rules do not provide this information.
+• The clean rules state players alternate turns placing their mark in an empty cell, but the broken rules state players alternate turns placing X and O without specifying empty squares.

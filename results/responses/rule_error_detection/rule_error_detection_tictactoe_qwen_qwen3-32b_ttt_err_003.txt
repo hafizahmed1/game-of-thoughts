@@ -1,0 +1,5 @@
+- Game is won by forming "four in a row" instead of three.  
+- No explicit mention of players using X and O consistently.  
+- No definition of player symbols (X/O) being tied to specific players.  
+- No mention of valid move format (row, column).  
+- No range specified for rows and columns.

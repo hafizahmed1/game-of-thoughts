@@ -1,0 +1,6 @@
+• The broken version does not specify which player uses X and which player uses O.
+• The broken version does not mention that players alternate turns.
+• The broken version does not specify how moves are represented (row, column).
+• The broken version does not specify the range of rows and columns (0 to 2).
+• The broken version uses the term "empty squares" instead of "empty cell".
+• The broken version does not provide a clear definition of a "row" in the context of the game.

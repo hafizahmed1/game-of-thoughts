@@ -1,0 +1,4 @@
+• The broken version states "Two players alternate turns dropping pieces into columns", which is incorrect as the clean version states "Two players take turns dropping their pieces into one of the columns".
+• The broken version allows players to continue placing pieces into a full column, which contradicts the clean version that states a piece falls to the lowest available space in that column.
+• The broken version simplifies the winning condition to "connecting four pieces in a row", which is incomplete as the clean version specifies that the line can be horizontal, vertical, or diagonal.
+• The clean version specifies that the starting player is chosen at random, which is missing in the broken version.

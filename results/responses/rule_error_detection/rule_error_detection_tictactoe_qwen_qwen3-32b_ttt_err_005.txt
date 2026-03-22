@@ -1,0 +1,7 @@
+- Missing information about player marks (which player uses X/O)  
+- No mention of draw condition  
+- Does not specify players alternate turns  
+- Winning condition lacks detail (no mention of horizontal, vertical, or diagonal)  
+- No turn order or starting player specified  
+- Move notation (row, column) not defined  
+- Row and column ranges not specified

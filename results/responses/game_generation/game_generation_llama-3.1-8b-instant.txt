@@ -1,0 +1,24 @@
+**Game Name:** Island Quest
+
+**Objective:** Be the first player to collect three treasures and return to the starting island, while navigating through a treacherous sea route.
+
+**Setup:**
+
+1. The game board consists of a grid representing the sea route, with several islands and a starting island.
+2. Each player chooses a game piece (e.g., a small boat) and places it on the starting island.
+3. Each player has a set of treasure cards, which are shuffled and placed face down on designated islands.
+4. Each player has a set of action cards, which are shuffled and placed face down on designated islands.
+
+**Rules:**
+
+1. On each turn, a player rolls a die to determine how many spaces they can move their game piece.
+2. The player can move their game piece to an adjacent island or stay on the current island.
+3. If a player lands on an island with a treasure card, they can choose to pick it up and add it to their collection.
+4. If a player lands on an island with an action card, they can choose to play it to gain an advantage (e.g., move extra spaces, swap one of their treasures with a treasure on another island).
+5. If a player lands on an island with another player's game piece, they can choose to engage in a "battle" by rolling a die and adding a modifier based on the number of treasures they have collected. The player with the higher total wins the battle and can move the other player's game piece to a designated "jail" island.
+6. A player can only collect a maximum of three treasures. If they collect a fourth treasure, they must return one of their existing treasures to the starting island.
+7. The game ends when one player collects three treasures and returns to the starting island. That player is declared the winner.
+
+**Example Turn:**
+
+Player 1 rolls a 4 on the die and moves their game piece to an island with a treasure card. They choose to pick up the treasure and add it to their collection. They now have two treasures. Player 1 can choose to stay on the current island or move to an adjacent island on their next turn.

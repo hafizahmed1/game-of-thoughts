@@ -111,9 +111,7 @@ Thumbs.db
 # Experiment outputs (IMPORTANT)
 # =========================
 
-# ❌ Ignore heavy raw outputs
-results/prompts/
-results/responses/
+
 
 # ❌ Ignore all tables by default
 results/tables/*

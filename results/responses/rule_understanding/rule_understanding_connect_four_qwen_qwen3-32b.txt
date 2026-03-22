@@ -1,0 +1,9 @@
+board_size: 7 columns, 6 rows  
+players: 2  
+turn_order: alternating  
+move_type: drop piece into column  
+gravity: yes  
+illegal_full_column: yes  
+win_condition: four in a row (horizontal, vertical, diagonal)  
+draw_condition: board full with no winner  
+start_player: random

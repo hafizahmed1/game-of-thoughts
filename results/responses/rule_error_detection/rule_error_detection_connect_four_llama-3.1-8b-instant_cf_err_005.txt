@@ -1,0 +1,7 @@
+• The broken version does not specify that the starting player is chosen at random.
+• The broken version does not mention that a player can drop their piece into any column that is not already full.
+• The broken version does not specify that pieces do not move again and are not captured or removed.
+• The broken version incorrectly states that pieces fall to the lowest available space (it should be "the lowest available space in that column").
+• The broken version incorrectly states that a player wins by connecting four pieces in a row (it should be "a line of four of their own pieces").
+• The broken version does not specify the number of rows in the grid.
+• The broken version incorrectly states that play continues until someone wins when the board is completely full and no player has connected four (it should be a draw).

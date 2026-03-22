@@ -1,0 +1,6 @@
+- Missing mention of players using their own pieces for winning lines  
+- Missing clarification that players take turns (could imply simultaneous play)  
+- Missing note that pieces do not move after placement  
+- Missing mention that pieces belong to each player (implied but not explicit)  
+- Missing detail about the starting player being chosen at random  
+- Missing statement that the board starts empty
