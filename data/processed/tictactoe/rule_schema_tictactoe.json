@@ -1,27 +1,84 @@
 {
   "required_items": {
-"board_size": [
-  "6 rows and 7 columns",
-  "7 columns and 6 rows",
-  "6x7",
-  "7x6",
-  "grid of 6 by 7"
-],    "players": [
-  "two players",
-  "two-player game",
-  "two player game"
-],
-    "symbols": ["x and o", "x", "o", "xs and os"],
-    "turn_order": ["take turns", "alternate turns", "players take turns"],
-    "legal_move": ["unoccupied space", "empty space", "empty square", "available space"],
-    "win_condition": ["three in a row", "row", "column", "diagonal", "diagonally"],
-    "draw_condition": ["grid is filled", "board is full", "draw", "no empty spaces"],
-    "start_player": ["player one goes first", "player one starts", "starting player is player one"]
+    "board_size": [
+      "3x3",
+      "3 by 3",
+      "3 rows and 3 columns",
+      "3 columns and 3 rows",
+      "grid of 3 by 3"
+    ],
+    "players": [
+      "two players",
+      "two-player game",
+      "two player game",
+      "two-player"
+    ],
+    "symbols": [
+      "x and o",
+      "x",
+      "o",
+      "xs and os"
+    ],
+    "turn_order": [
+      "take turns",
+      "alternate turns",
+      "players take turns"
+    ],
+    "legal_move": [
+      "unoccupied space",
+      "empty space",
+      "empty square",
+      "available space",
+      "empty cell"
+    ],
+    "win_condition": [
+      "three in a row",
+      "three marks in a row",
+      "row",
+      "column",
+      "diagonal",
+      "diagonally"
+    ],
+    "draw_condition": [
+      "grid is filled",
+      "board is full",
+      "draw",
+      "no empty spaces",
+      "no winner"
+    ],
+    "start_player": [
+      "player one goes first",
+      "player one starts",
+      "starting player is player one",
+      "x goes first"
+    ]
   },
   "forbidden_items": {
-    "three_players": ["three player game", "third player participates"],
-    "free_symbol_choice": ["either player can place either an x or an o"],
-    "occupied_space_allowed": ["place in occupied space", "can place on an occupied space"],
-    "solo_mode": ["solo rules", "single-player official mode"]
+    "three_players": [
+      "three player game",
+      "third player participates"
+    ],
+    "free_symbol_choice": [
+      "either player can place either an x or an o"
+    ],
+    "occupied_space_allowed": [
+      "place in occupied space",
+      "can place on an occupied space"
+    ],
+    "gravity": [
+      "falls to the lowest available space",
+      "drops to the bottom",
+      "disc falls down",
+      "falls down"
+    ],
+    "full_column_rule": [
+      "cannot play in a full column",
+      "column is full",
+      "cannot drop into a full column"
+    ],
+    "solo_mode": [
+      "solo rules",
+      "single-player official mode"
+    ]
   }
 }

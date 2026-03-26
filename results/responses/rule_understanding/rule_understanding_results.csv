@@ -1,5 +1,5 @@
 model,game,completeness,precision,f1,correct_items,filled_items,total_items,missing_items,incorrect_items,hallucinated_items
 llama,connect_four,0.3333333333333333,0.3333333333333333,0.3333333333333333,3,9,9,,"board_size, players, turn_order, move_type, gravity, illegal_full_column","manual_row_choice, wrong_win_condition, allow_full_column"
 qwen,connect_four,0.5555555555555556,0.5555555555555556,0.5555555555555556,5,9,9,,"players, turn_order, gravity, illegal_full_column","manual_row_choice, wrong_win_condition, allow_full_column"
-llama,tictactoe,0.5,0.5714285714285714,0.5333333333333333,4,7,8,start_player,"board_size, players, legal_move",three_players
-qwen,tictactoe,0.75,0.75,0.75,6,8,8,,"board_size, players","three_players, free_symbol_choice, occupied_space_allowed"
+llama,tictactoe,0.625,0.7142857142857143,0.6666666666666666,5,7,8,start_player,"players, legal_move","three_players, full_column_rule"
+qwen,tictactoe,0.875,0.875,0.875,7,8,8,,players,"three_players, free_symbol_choice, occupied_space_allowed"
